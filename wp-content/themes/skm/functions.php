@@ -9,6 +9,20 @@
  *
  */
 
+// add more buttons to editor
+function add_more_buttons($buttons) {
+ $buttons[] = 'hr';
+ $buttons[] = 'del';
+ $buttons[] = 'sub';
+ $buttons[] = 'sup';
+ $buttons[] = 'fontselect';
+ $buttons[] = 'fontsizeselect';
+ $buttons[] = 'cleanup';
+ $buttons[] = 'styleselect';
+ return $buttons;
+}
+add_filter("mce_buttons_3", "add_more_buttons");
+
 /**
  * Theme Setup
  *
@@ -31,7 +45,7 @@ function child_theme_setup(){
     //* Enqueue Google Fonts
     add_action( 'wp_enqueue_scripts', 'genesis_sample_google_fonts' );
     function genesis_sample_google_fonts() {
-            wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700', array(), CHILD_THEME_VERSION );
+            wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:400|Rock+Salt', array(), CHILD_THEME_VERSION );
     }
 
     //* Add HTML5 markup structure
@@ -44,13 +58,47 @@ function child_theme_setup(){
     add_theme_support( 'genesis-footer-widgets', 3 );
 
     
+    // CUSTOMIZE OUR HEADER
+    // remove site title, site description
+    // insert thumbnails
+    remove_action( 'genesis_site_title', 'genesis_seo_site_title' );
+    remove_action( 'genesis_site_description', 'genesis_seo_site_description');
+    
+    
+    //* THUMBNAIL Nav
+    add_action( 'genesis_header', 'skm_thumbs_nav' );
+    function skm_thumbs_nav() {
+        ?>
+        <div class="skm-title">
+            <a href="/" title="Stacy Mark - Paintings">
+                <span class="hdr-name">STACY MARK  <span style="font-size:0.8em;padding:0 5px">|</span>  </span><span class="hdr-paintings">Paintings</span>
+            </a>
+        </div><!--skm-title-->
+            <ul class="ptg-thumbs">
+            <?php
+            $thumbs = new WP_Query('category_name=Painting');
+            $x = 0;
+            while ( $thumbs->have_posts() ) {
+                $thumbs->the_post();
+                global $post;
+                echo '<li class="ptg-thumb">';
+                echo '<a href="' . get_permalink() . '">' . get_the_post_thumbnail( $post->ID, 'thumbnail' ) . '</a>';
+                echo '</li>';
+            }
+            echo '</ul><br class="clearfix"/>';
+            wp_reset_query();
+        
+    }
+    
+    
     //* FOOTER Customization
     remove_action( 'genesis_footer', 'genesis_do_footer' );
     add_action( 'genesis_footer', 'skm_custom_footer' );
     function skm_custom_footer() {
+        $saved_aw_credit = ' &middot; An <a href="http://ambitionsweb.com" target="_blank" title="Ambitions Website Design">AmbitionsWeb</a> Project';
         ?>
-        <p>
-            &copy; Copyright 2015 <a href="http://stacymark.com/">Stacy Mark</a> &middot; All Rights Reserved &middot; An <a href="http://ambitionsweb.com" target="_blank" title="Ambitions Website Design">AmbitionsWeb</a> Project</p>
+        <p class="copyright">
+            &copy; Copyright 2015 <a href="http://stacymark.com/">Stacy Mark</a> &middot; All Rights Reserved</p>
         <?php
     }
     

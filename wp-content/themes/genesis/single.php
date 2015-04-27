@@ -11,5 +11,30 @@
  * @link    http://my.studiopress.com/themes/genesis/
  */
 
+// Remove Page Title
+remove_action( 'genesis_post_title', 'genesis_do_post_title' );
+
+// Content Area
+remove_action( 'genesis_loop', 'genesis_do_loop' );
+add_action( 'genesis_loop', 'skm_ptg_loop' );
+
+
+/**
+ * Content Area
+ *
+ */
+
+function skm_ptg_loop() {
+    
+    global $post;
+    
+    echo '<div class="clearfix ptg-display">';
+    echo '<a href="' . get_permalink() . '">' . get_the_post_thumbnail( $post->ID, 'full' ) . '</a>';
+    get_template_part('templates/content', get_post_format());
+    do_action('genesis_post_content');
+    echo '</div>';
+
+}
+
 //* This file handles single entries, but only exists for the sake of child theme forward compatibility.
 genesis();
