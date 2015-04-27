@@ -1,0 +1,196 @@
+/*********************************************
+	Footer Module
+*********************************************/
+
+.builder-module-footer .builder-module-element .alignleft,
+.builder-module-footer .builder-module-element .alignright {
+	float: none;
+	margin: 0 0 1.5em 0;
+	text-align: left;
+}
+.builder-module-content .builder-module-element .alignleft,
+.builder-module-content .builder-module-element .alignright {
+	float: none;
+	margin: 0;
+	text-align: left;
+}
+.builder-module-content .builder-module-element .loop-utility .alignleft {
+	float: left;
+}
+.builder-module-content .builder-module-element .loop-utility .alignright {
+	float: right;
+}
+
+/*********************************************
+	Navigation Module (Mobile/Responsive)
+*********************************************/
+
+.builder-module-navigation-background-wrapper {
+	padding: 0;
+}
+.builder-module-navigation.mobile {
+	padding-top: .5em !important;
+}
+.builder-module-navigation.mobile .builder-module-navigation-menu-wrapper {
+    display: inherit;
+    margin: 0;
+}
+.builder-module-navigation.mobile ul {
+	margin-top: .5em;
+	background: #FFFFFF;
+}
+.builder-module-navigation.mobile li {
+	width: 100%;
+	position: relative;
+}
+
+/* second level stuff */
+
+.builder-module-navigation.mobile li ul {
+	position: relative !important;
+	left: 0 !important;
+	border: 0;
+	width: 100%;
+	margin: 0;
+}
+.builder-module-navigation.mobile li a,
+.builder-module-navigation.mobile .current_page_item li a,
+.builder-module-navigation.mobile .current-cat li a,
+.builder-module-navigation.mobile .current-menu-item li a {
+	font-size: 1em;
+	margin: 0;
+	background: transparent;
+	border-color: transparent;
+	color: #3B3F42;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	line-height: 1;
+	padding: .5em 0;
+	padding-left: 1em;
+}
+.builder-module-navigation.mobile li a:hover,
+.builder-module-navigation.mobile .current_page_item li a:hover,
+.builder-module-navigation.mobile .current-cat li a li a:hover,
+.builder-module-navigation.mobile .current-menu-item li a:hover {
+	background: #1C212E;
+	color: #ECECEC;
+}
+.builder-module-navigation.mobile li li {
+	border: 0;
+	width: 100%;
+}
+.builder-module-navigation.mobile li ul ul {
+	margin: 0;
+}
+.builder-module-navigation.mobile li li a {
+	padding-left: 2em;
+	line-height: 1;
+}
+.builder-module-navigation.mobile li li li a {
+	padding-left: 4em;
+}
+.builder-module-navigation .menu.it-mobile-menu-hidden {
+	display: none;
+}
+.it-mobile-menu {
+	color: #43425E;
+	padding: .25em .75em;
+	display: block;
+	cursor: pointer;
+	border-radius: 2px;
+	-webkit-font-smoothing: antialiased;
+}
+.builder-module-navigation.mobile.borderless {
+	border: 0;
+}
+
+
+/*********************************************
+	Comments
+*********************************************/
+
+.commentlist li.comment,
+.commentlist li.trackback,
+.commentlist li.pingback {
+	padding-right: 0;
+	padding-left: .75em;
+}
+.commentlist .comment-body {
+	margin-right: .5em;
+}
+.commentlist .children li.comment,
+.commentlist .children  li.trackback,
+.commentlist .children  li.pingback {
+	border-right: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	padding-right: 0;
+}
+
+
+
+/*********************************************
+	Previous/Next Page Navigation
+*********************************************/
+
+.loop-utility .alignleft,
+.loop-utility .alignright {
+	width: 100%;
+}
+.loop-utility a {
+	display: inline-block;
+	text-align: center;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 3em 0 1em 0;
+}
+
+
+/*********************************************
+	Default Module Styling
+*********************************************/
+
+.builder-module {
+	padding-top: 2.75em !important;
+}
+.builder-module-element {
+	margin-bottom: 2.75em !important;
+}
+.left .builder-module-element {
+	margin-right: 3em;
+}
+.middle .builder-module-element {
+	margin-left: 3em;
+	margin-right: 3em;
+}
+.right .builder-module-element {
+	margin-left: 3em;
+}
+
+
+/*********************************************
+	Header Module
+*********************************************/
+
+.site-title {
+	font-size: 2.75em;
+	line-height: 1.2;
+}
+.site-tagline {
+	font-size: 1em;
+}
+
+
+/*********************************************
+	Content Module
+*********************************************/
+
+.entry-title {
+	font-size: 2em;
+}
+.hentry .entry-meta-wrapper {
+	font-size: .9em;
+	margin-bottom: .25em;
+}

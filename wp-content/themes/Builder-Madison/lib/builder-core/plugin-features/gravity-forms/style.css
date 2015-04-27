@@ -1,0 +1,46 @@
+.gform_wrapper input,
+.gform_wrapper textarea {
+	padding: 5px !important;
+	background-color: #F5F5F5;
+	border: 1px solid #C9C9C9;
+	-webkit-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+.gform_wrapper input:hover,
+.gform_wrapper textarea:hover {
+	border: 1px solid #AAAAAA;
+}
+.gform_wrapper input:focus,
+.gform_wrapper textarea:focus {
+	background: #FFFFFF;
+	border: 1px solid #AAAAAA;
+}
+.gform_wrapper label {
+	color: #555555;
+}
+.gform_wrapper input[type="submit"],
+.gform_wrapper input[type="button"] {
+	background: #CCCCCC;
+	color: #444444;
+	border: 1px solid #AAAAAA;
+	cursor: pointer;
+}
+.gform_wrapper input[type="submit"]:hover,
+.gform_wrapper input[type="button"]:hover {
+	background: #444444;
+	color: #CCCCCC;
+	border: 1px solid #222222;
+}
+.gform_wrapper span.ginput_total {
+	color: #A6452E;
+}
+.gform_wrapper .ginput_container input {
+	margin-top: 2px !important;
+}
+.gform_wrapper .ui-datepicker-trigger {
+	margin: 0;
+	vertical-align: top;
+	padding: 3px;
+}

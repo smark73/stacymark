@@ -1,0 +1,10 @@
+1.0.0 - 2010-01-07
+	Initial release version
+1.0.1 - 2010-01-07
+	Added call to wp_footer action
+1.0.2 - 2010-01-12
+	Removed wp_footer action call as the existing get_footer call calls it
+1.0.3 - 2010-04-26
+	Internationalized strings
+1.1.0 - 2011-10-06 - Chris Jean
+	Changed "do_action( 'get_footer' );" to "get_footer();"

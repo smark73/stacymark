@@ -1,0 +1,42 @@
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+	text-align: right;
+}
+
+.builder-module-navigation .builder-module-element ul {
+	float: right;
+}
+.builder-module-navigation .builder-module-element li {
+	float: right;
+}
+
+.entry-footer .alignleft.entry-meta {
+	float: right;
+	margin: 0 0 1.5em 1.5em;
+}
+.entry-footer .alignright.entry-meta {
+	float: left;
+	margin: 0 1.5em 1.5em 0;
+}
+.entry-footer .categories,
+.entry-footer .tags,
+.entry-footer .comments {
+	background-position: right center;
+	padding: 0 1.75em 0 0;
+	text-align: right;
+}
+
+.loop-footer .loop-utility .alignleft {
+	float: right;
+	margin: 0 0 0 1.5em;
+}
+.loop-footer .loop-utility .alignright {
+	float: left;
+	margin: 0 1.5em 0 0;
+}
+
+#comments .vcard .avatar {
+	float: right;
+	margin: 0 0 0 .75em;
+}

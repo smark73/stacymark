@@ -1,0 +1,166 @@
+/*
+Name: Featured Image Grid & Showcase
+Description: Display's Featured Image in a grid layout with colorbox popup.
+
+*/
+
+.extension-columns-wrapper {
+	overflow: hidden;
+}
+.extension-column {
+	float: left;
+	clear: none;
+	width: 33.33333333%;
+	text-align: center;
+}
+.extension-column img {
+	padding: 0;
+	background: 0;
+	border: 0;
+	border-radius: 0;
+}
+.extension-column:nth-child(3n+4) {
+	clear: left;
+}
+.extension-column-inner {
+	overflow: hidden;
+	position: relative;
+	margin: 5% 2% 4%;
+	-webkit-box-shadow: #000 0 10px 15px -10px;
+	-moz-box-shadow: #000 0 10px 15px -10px;
+	-o-box-shadow: #000 0 10px 15px -10px;
+	-khtml-box-shadow: #000 0 10px 15px -10px;
+	box-shadow: #000 0 10px 10px -10px;
+	-webkit-transition:  all .2s linear;
+	-moz-transition:  all .2s linear;
+	-o-transition:  all .2s linear;
+	transition:  all .2s linear;
+}
+.extension-column-inner:hover {
+	margin-top: 2.5%;
+	box-shadow: #000 0 30px 30px -30px;
+}
+.extension-featured-image {
+	vertical-align: top;
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+	margin: 0;
+}
+.extension-slide-box {
+	position: absolute;
+	left: -500px;
+	z-index: 100;
+	width: 100%;
+	max-width: 400px;
+	height: 100%;
+	max-height: 250px;
+	margin: 0 auto;
+	opacity: 0;
+	display: block;
+	background: url('images/trans.png');
+	background: rgba(0,0,0,.5);
+	-webkit-transition:  all .2s linear;
+	-moz-transition:  all .2s linear;
+	-o-transition:  all .2s linear;
+	transition:  all .2s linear;
+}
+.extension-slide-box a img {
+	position: relative;
+	width: 15%;
+	max-width: 32px;
+	height: auto;
+	display: block;
+	margin: 1.5em auto;
+	-webkit-transition:  opacity .2s linear;
+	-moz-transition:  opacity .2s linear;
+	-o-transition:  opacity .2s linear;
+	transition:  opacity .2s linear;
+}
+.extension-column-inner:hover .extension-slide-box {
+	opacity: 1;
+	left: 0;
+}
+.permalink {
+	text-decoration: underline;
+}
+.permalink span {
+	opacity: 0;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	max-width: 400px;
+	padding: 6px;
+	background: url('images/trans.png');
+	background: rgba(0,0,0,.7);
+	color: #FFFFFF;
+	font-size: 1em;
+	line-height: 1.2em;
+	-webkit-transition:  all .2s linear;
+	-moz-transition:  all .2s linear;
+	-o-transition:  all .2s linear;
+	transition:  all .2s linear;
+}
+.permalink:hover span {
+	opacity: 1;
+}
+.permalink,
+.permalink:hover {
+	text-decoration: none;
+}
+.permalink:hover,
+.gallery-image:hover {
+	opacity: .7;
+}
+.loop-footer {
+	clear: both;
+}
+
+/*********************************************
+	Colorbox Fix
+*********************************************/
+#cboxContent button {
+	border: 0;
+}
+
+/*********************************************
+	Media
+*********************************************/
+@media screen and (max-width:800px) {
+	.extension-column {
+		width: 50%;
+	}
+	.extension-column:nth-child(3n+4) {
+		clear: none;
+	}
+	.extension-column:nth-child(2n+3) {
+		clear: left;
+	}
+}
+@media screen and (max-width:500px) {
+	.extension-column:nth-child(2n+3) {
+		clear: none;
+	}
+	.extension-column {
+		width: 100%;
+		clear: both;
+	}
+}
+
+/**************************************
+	Global IE Fixes
+**************************************/
+#ie6 .grid_wrapper,
+#ie7 .grid_wrapper{float:left;clear:none;}
+
+/**************************************
+	IE6 Fixes
+**************************************/
+#ie6 .grid_wrapper .slide_box{position:absolute;width:60px;height:150px;background:#000;left:0;}
+#ie6 .slide_box a img{width:32px;height:32px;display:block;margin:10px 12px;}
+#ie6 .permalink span{width:160px;background:#000;}
+
+/**************************************
+	IE7 Fixes
+**************************************/
+#ie7 .grid_wrapper .inner:hover{margin-top:5%;}

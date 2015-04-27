@@ -1,0 +1,42 @@
+/*
+Name: Teasers Layout - Image Right
+Description: Displays Featured Image (floating right), Post Title, Post Meta & Excerpt in as teasers.
+
+*/
+
+.entry-content.teasers {
+	position: relative;
+	min-height: 200px;
+}
+.entry-content.teasers p {
+	margin-bottom: 0;
+}
+.entry-content.teasers .entry-title {
+	clear: none;
+	margin-bottom: .4em;
+}
+.entry-content.teasers .post-image .teaser-thumb {
+	width: 30%;
+	max-width: 150px;
+	height: auto;
+	margin: 0;
+}
+.entry-content.teasers .add_feature_image a {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+	max-width: 150px;
+	height: 100%;
+	text-indent: -9999px;
+}
+.loop-footer {
+	clear: both;
+}
+/**************************************
+	Global IE Fixes
+**************************************/
+#ie6 .entry-content.teasers,
+#ie7 .entry-content.teasers {
+	clear: both;
+}

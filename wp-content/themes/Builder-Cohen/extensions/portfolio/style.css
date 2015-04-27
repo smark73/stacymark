@@ -1,0 +1,90 @@
+/*
+Name: Portfolio Layout
+Description: Display's Featured Image and Post Title in a grid layout.
+
+*/
+.portfolio-post-loop-wrapper {
+	padding: 3em 2.5em;
+}
+.portfolio-post-wrap.hentry .entry-content {
+	margin: 0;
+	padding: 0;
+}
+.builder-module-content .portfolio-post-wrap.hentry {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 0 5em 0;
+	padding: 0 .5em;
+}
+.portfolio-post-wrap {
+	display: inline-block;
+	width: 32.8%;
+	vertical-align: top;
+}
+.portfolio-post {
+	margin: 0;
+	padding: 0 10px;
+}
+.portfolio-post img {
+	width: 100%;
+	max-width: 350px;
+	height: auto;
+	margin: 0;
+}
+.portfolio-post .portfolio-title {
+	display: block;
+	font-size: 1.4em;
+	line-height: 1.2;
+	font-weight: 300;
+	color: #646D74;
+}
+.portfolio-post .portfolio-title a {
+	text-decoration: none;
+	color: #646D74;
+}
+.portfolio-post .post-image {
+	position: relative;
+}
+.portfolio-post .add_feature_image a {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-indent: -999em;
+}
+.loop-footer {
+	clear: both;
+}
+
+/**************************************
+	Global IE Fixes
+**************************************/
+#ie6 .portfolio-post-wrap,
+#ie7 .portfolio-post-wrap {
+	display: block;
+	float: left;
+	height: 160px;
+}
+/**************************************
+	IE6 Fixes
+**************************************/
+#ie6 .portfolio-post-wrap {
+	width: 31%;
+}
+
+/**************************************
+	IE7 Fixes
+*************************************/
+#ie7 .portfolio-post-wrap {
+	width: 33%;
+}
+/**************************************
+	IE7 Fixes
+*************************************/
+#ie8 .portfolio-post-wrap {
+	height: 160px;
+}

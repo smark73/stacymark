@@ -1,0 +1,21 @@
+0.0.1 - 2009-04-23
+	Initial beta version
+0.0.2 - 2009-06-23
+	Added input validation
+	Added drop-down of default options for sidebar widths
+	Added default custom sidebar width values
+1.0.0 - 2009-12-02
+	Release ready
+2.0.0 - 2009-12-08
+	Updated to work with new version 2.0.0 of LayoutModule
+2.1.0 - 2009-12-10
+	Completely restructured wrapper divs
+2.2.0 - 2010-01-07
+	Removed js directory
+	Updated to new 3.0.0 API structure of class.module.php
+2.2.1 - 2010-01-14
+	Removed view comment as the layout-engine now handles this
+2.2.2 - 2010-04-26
+	Internationalized strings
+3.0.0 - 2011-06-28
+	Updated to support the Loop Standard with the dynamic_loop call

@@ -1,0 +1,185 @@
+/*
+Name: Featured Image Slider
+Description: Displays Featured Image & Post Title of first 6 posts in a custom slider and the Featured Imaged, Post Title & Excerpt for the remaining posts.
+
+*/
+#slides {
+	margin-bottom: 6em;
+}
+#slides .slides_control {
+	height: 300px !important;
+	background: #000000;
+}
+.slides-thumb-wrapper {
+	z-index: 10;
+	width: 100%;
+	max-width: 630px;
+	height: auto;
+	overflow: hidden;
+}
+#slides .slide {
+	margin-top: 0;
+
+}
+#slides img {
+	width: 100%;
+	max-width: 630px;
+	height: auto;
+	margin: 0 auto;
+	padding: 0;
+	background: none;
+	border: none;
+}
+#slides .caption {
+	z-index:500;
+	position:absolute;
+	bottom:-35px;
+	left:0;
+	height:50px;
+	padding:5px 20px 0 20px;
+	background-color: rgba(0,0,0,0.6);
+	width:100%;
+	max-width: 630px;
+	font-size:1.3em;
+	line-height:1.33;
+	color:#fff;
+	border-top:1px solid #000;
+	text-shadow:none;
+}
+#slides .caption p {
+	margin: 0;
+	padding-top: 10px;
+	font-size: 16px;
+	color: #FFFFFF;
+}
+#slides .pagination {
+	overflow: hidden;
+	margin-top: 10px;
+	margin-left: 0;
+	list-style: none;
+}
+#slides .pagination li {
+	float: left;
+	text-indent: -9999px;
+	margin: 0 3px;
+}
+#slides .pagination li a {
+	display: block;
+	opacity: .4;
+	width: 12px;
+	height: 0;
+	padding-top: 12px;
+	background: #888888;
+	background: -webkit-gradient(linear, left top, left bottom, from(#888888), to(#AAAAAA));
+	background: -webkit-linear-gradient(#888888, #AAAAAA);
+	background: -moz-linear-gradient(#888888, #AAAAAA);
+	background: -ms-linear-gradient(#888888, #AAAAAA);
+	background: -o-linear-gradient(#888888, #AAAAAA);
+	background: linear-gradient(#888888, #AAAAAA);
+	border: 1px solid #666666;
+	-webkit-border-radius: 15px;
+	-khtml-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+#slides .pagination li a:hover,
+#slides .pagination li.current a {
+	opacity: 1;
+}
+#slides .add_feature_image {
+	position: absolute;
+	right: 2em;
+	bottom: 1.5em;
+	z-index: 10000;
+}
+#slides .add_feature_image a {
+	color: #F0E438;
+	font-weight: bold;
+	text-decoration: none;
+}
+#slides .add_feature_image a:hover {
+	color: #FFFFFF;
+	font-weight: bold;
+	text-decoration: none;
+}
+#slides .add_feature_image:hover a:after {
+	content: ' →';
+}
+.entry-content.index img {
+	margin: 0 1em 1em 0;
+}
+.older-posts {
+	margin-top: 20px;
+}
+.older-posts .post {
+	border-bottom: 1px solid #DDD;
+	padding-bottom: 3.5em;
+	margin-bottom: 3em;
+}
+.older-posts .post:last-child {
+	margin-bottom: 3em;
+}
+.older-posts .post a.more-link {
+	clear: none;
+	margin-top: 0;
+}
+.older-posts .entry-footer {
+	border: none;
+	padding-bottom:0;
+	margin-bottom: 0;
+	color: #858C90;
+}
+.older-posts .entry-footer a {
+	text-transform: uppercase;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.hentry .alignleft.index-nothumb-wrapper {
+	margin: 0;
+	margin-right: 1em;
+}
+
+.older-posts .entry-footer {
+	clear: both;
+}
+
+
+/* ie fixes */
+#ie6 .older-posts .entry-meta,
+#ie7 .older-posts .entry-meta {
+	clear: both;
+}
+#ie6 #slides img {
+	width: 630px;
+	height: 300px;
+}
+#ie6 #slides .pagination li a {
+	padding: 0;
+}
+#ie6 #slides .pagination li a:hover,
+#ie6 #slides .pagination li.current a,
+#ie7 #slides .pagination li a:hover,
+#ie7 #slides .pagination li.current a {
+	background: #555555;
+}
+#ie6 #slides .caption,
+#ie7 #slides .caption,
+#ie8 #slides .caption {
+	background: #000;
+}
+
+
+
+
+
+
+.has-post-thumbnail .featured-image-wrapper {
+	float: left;
+	width: 20%;
+	margin-right	: 5%;
+}
+.has-post-thumbnail .content-wrapper {
+	float: right;
+	width: 75%;
+}

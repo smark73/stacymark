@@ -1,0 +1,11 @@
+dt {
+	font-weight: bold;
+	float: left;
+}
+dd {
+	margin-left: 100px;
+}
+
+.indent {
+	margin-left: 1.5em;
+}

@@ -1,0 +1,14 @@
+1.0.0 - 2011-07-06 - Justin Kopepasah
+	Release-ready version
+1.0.1 - 2011-07-22 - Justin Kopepasah
+	Fixed issue where category views would list all posts not just posts of
+		that category.
+1.1.0 - 2011-09-27 - Justin Kopepasah
+	Move extension into class
+	Updated image downsize function to Iteration 20
+	Added localization
+1.2.0 - 2013-09-11 - Justin Kopepasah
+	Rewrote the extension to be more future proof.
+	Added responsive feature.
+	Removed is_admin() check.
+	Updated colorbox to the latest version.

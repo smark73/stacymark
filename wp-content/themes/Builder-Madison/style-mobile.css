@@ -1,0 +1,460 @@
+/*********************************************
+	Default font settings and typography.
+*********************************************/
+
+body {
+	font-size: .95em;
+	line-height: 1.5;
+}
+pre, code, tt, kbd {
+	font-size: 1em;
+	line-height: 1.5;
+}
+
+
+/*********************************************
+	Container Div
+*********************************************/
+
+.builder-container-outer-wrapper .builder-container {
+	margin: 0;
+	padding: 0;
+}
+
+
+/*********************************************
+	Default Module Styling
+*********************************************/
+
+.builder-module-outer-wrapper .builder-module {
+	padding: 2em 1em 0 1em;
+}
+.builder-module {
+
+}
+.builder-module-top {
+}
+.builder-module-last {
+	border-bottom: 0;
+}
+.builder-module-element {
+	margin-bottom: 2em !important;
+}
+
+/*********************************************
+	All Sidebars
+*********************************************/
+
+.builder-module-sidebar .widget-background-wrapper {
+	margin-bottom: 2em;
+}
+.builder-module-sidebar h4.widget-title {
+	font-size: 1.125em;
+}
+
+/*********************************************
+	Header Module
+*********************************************/
+
+.builder-module-header .left .builder-module-element,
+.builder-module-header .right .builder-module-element {
+	text-align: center;
+}
+.site-title {
+	font-size: 2.5em;
+}
+.site-tagline {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: normal;
+	font-size: .7em;
+}
+
+
+/*********************************************
+	Default Navigation Module (Mobile/Responsive)
+*********************************************/
+
+.builder-module-outer-wrapper .builder-module-navigation {
+	padding: 1em 0;
+}
+.builder-module-navigation.mobile .builder-module-navigation-menu-wrapper {
+    display: inherit;
+    margin: 0;
+}
+.builder-module-navigation.mobile ul {
+	background: transparent;
+	width: 100%;
+}
+.builder-module-navigation.mobile li {
+	width: 100%;
+	position: relative;
+}
+
+/* second level stuff */
+
+.builder-module-navigation.mobile li ul {
+	position: relative !important;
+	left: 0 !important;
+	border: 0;
+	width: 100%;
+	margin: 0;
+	box-shadow: none;
+}
+.builder-module-navigation.mobile li a,
+.builder-module-navigation.mobile .current_page_item li a,
+.builder-module-navigation.mobile .current-cat li a,
+.builder-module-navigation.mobile .current-menu-item li a {
+	margin: 0;
+	background: transparent;
+	border-color: transparent;
+	color: #8C9EA0;
+	border-bottom: 1px solid #3B3F42;
+}
+.builder-module-navigation.mobile li a:hover,
+.builder-module-navigation.mobile .current_page_item li a:hover,
+.builder-module-navigation.mobile .current-cat li a li a:hover,
+.builder-module-navigation.mobile .current-menu-item li a:hover {
+	background: #3B3F42;
+	color: #ECECEC;
+}
+.builder-module-navigation.mobile li li {
+	background: transparent;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+.builder-module-navigation.mobile li ul ul {
+	margin: 0;
+	background: transparent;
+}
+.builder-module-navigation.mobile li li a {
+	background: transparent;
+	color: #8C9EA0;
+	font-size: 1em;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1px;
+	padding: .25em 1em .35em 2em;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	line-height: inherit;
+}
+.builder-module-navigation.mobile li li li a {
+	padding-left: 4em;
+}
+.builder-module-navigation.mobile li li:last-child a {
+	border-bottom: 1px solid #3B3F42;
+}
+.builder-module-navigation .menu.it-mobile-menu-hidden {
+	display: none;
+	margin-top: 1em;
+}
+.it-mobile-menu {
+	color: #8C9EA0;
+	padding: .1em .75em;
+	font-weight: bold;
+	display: block;
+	cursor: pointer;
+	font-size: 1em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+	border: 3px solid #8C9EA0;
+	border-radius: 2px;
+	float: left;
+}
+
+
+
+/*********************************************
+	Nav with Logo Navigation Module
+*********************************************/
+
+.nav-with-logo.mobile .it-mobile-menu {
+	float: right;
+}
+.nav-with-logo.mobile li a,
+.nav-with-logo.mobile .current_page_item li a,
+.nav-with-logo.mobile .current-cat li a,
+.nav-with-logo.mobile .current-menu-item li a {
+	border-bottom-color: #EBEBEB;
+}
+.nav-with-logo.mobile li li:last-child a {
+	border-bottom-color: #EBEBEB;
+}
+
+
+/*********************************************
+	Content Module
+*********************************************/
+
+.builder-module-content .hentry {
+	margin-bottom: 6em;
+}
+.entry-title {
+	font-size: 2em;
+	margin-bottom: 0.5em;
+}
+.hentry .entry-meta {
+	display: block;
+	float: left;
+	font-size: .9em;
+}
+.hentry .entry-meta.alignleft {
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+}
+.hentry .entry-meta.alignright {
+	float: left;
+	text-align: left;
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+}
+.hentry .entry-footer .entry-pages,
+.hentry .entry-footer .categories,
+.hentry .entry-footer .comments {
+	margin-bottom: 1em;
+}
+.hentry .edit-entry-link {
+	clear: both;
+	padding-top: 2em;
+}
+.loop-title {
+	font-size: 1.5em;
+	display: inline-block;
+	padding: .25em .5em;
+	background: #EBEBEB;
+	font-weight: normal;
+	margin-bottom: 2.25em;
+}
+
+
+/*********************************************
+	Comments
+*********************************************/
+
+.commentlist li.comment,
+.commentlist li.trackback,
+.commentlist li.pingback {
+	padding-right: 0;
+	padding-left: .75em;
+}
+.commentlist .comment-body {
+	margin-right: .5em;
+}
+.commentlist .children li.comment,
+.commentlist .children  li.trackback,
+.commentlist .children  li.pingback {
+	border-right: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	padding-right: 0;
+}
+
+
+/*********************************************
+	Footer Module
+*********************************************/
+
+.builder-module-footer .builder-module-element .alignleft,
+.builder-module-footer .builder-module-element .alignright {
+	float: none;
+	margin: 0 0 1.5em 0;
+	text-align: left;
+}
+
+
+
+/*********************************************
+	Password Protected Post Form
+*********************************************/
+
+.post-password-required input[type="password"] {
+	display: block;
+	width: 100%;
+	margin-top: .2em;
+}
+.post-password-required input[type="submit"] {
+	display: block;
+	width: 50%;
+	margin-top: .5em;
+}
+
+
+
+/*********************************************
+	Text elements
+*********************************************/
+
+blockquote {
+	border-left: 0;
+	padding: 0;
+	font-size: 1em;
+	line-height: 1.42;
+	-webkit-font-smoothing: antialiased;
+}
+/* To prevent nested blockquotes from increasing in size */
+blockquote blockquote {
+	font-size: 100%;
+}
+blockquote p {
+	margin-bottom: 1.5em;
+}
+blockquote cite {
+	display: inline-block;
+	margin-top: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+.loop-utility a {
+	margin-top: 3em;
+	margin-bottom: 1.5em;
+}
+
+
+
+
+
+
+
+/*********************************************
+	Exchange Store Styles
+*********************************************/
+
+.builder-module #it-exchange-store .it-exchange-products li,
+.builder-module #it-exchange-store .it-exchange-products li:nth-child(n) {
+    width: 100%;
+    margin: 0 0 5em 0;
+    clear: none;
+}
+
+/*********************************************
+	Exchange Individual Product Styles
+*********************************************/
+
+.builder-module .it_exchange_prod .entry-header {
+	margin-bottom: 1.5em;
+}
+.builder-module #it-exchange-product .it-exchange-product-no-images {
+    float: none;
+}
+.builder-module #it-exchange-product .it-exchange-product-has-images .it-exchange-product-info {
+width: 100%;
+}
+.builder-module #it-exchange-product .it-exchange-product-has-images .it-exchange-product-info .product-column-inner {
+    margin-right: 2em;
+}
+.builder-module #it-exchange-product .it-exchange-product-has-images .it-exchange-product-images {
+width: 100%;
+}
+.builder-module #it-exchange-product .it-exchange-product-images .it-exchange-column-inner {
+margin-left: 0;
+}
+.builder-module #it-exchange-product .it-exchange-product-standard-content {
+    margin-bottom: 2em;
+}
+.builder-module #it-exchange-product .it-exchange-product-price {
+margin-bottom: .75em;
+}
+.builder-module #it-exchange-product .it-exchange-product-price p {
+    margin: 0;
+    padding: .25em 0;
+}
+.builder-module #it-exchange-product .it-exchange-product-sw {
+    margin-top: 2em;
+}
+.builder-module .it-exchange-product-info .it-exchange-column-inner .single-product-super-widget {
+margin-bottom: 2em;
+}
+
+/*********************************************
+	Exchange Shopping Cart Styles
+*********************************************/
+
+.builder-module #it-exchange-cart .it-exchange-cart-item-thumbnail {
+	display: none;
+}
+.builder-module #it-exchange-cart  .it-exchange-cart-item-title {
+	width: 30%;
+}
+.builder-module #it-exchange-cart .it-exchange-cart-item-quantity input {
+	padding: .5em 0;
+	text-align: center;
+	font-size: .9em;
+}
+.builder-module #it-exchange-cart #it-exchange-cart-actions .it-exchange-cart-apply-coupons {
+	margin: 0 0 3em 0;
+}
+.builder-module #it-exchange-cart #it-exchange-cart-actions .it-exchange-cart-apply-coupons input[type="text"] {
+	width: 100%;
+	margin-bottom: .5em;
+}
+.builder-module #it-exchange-cart #it-exchange-cart-actions .it-exchange-cart-apply-coupons input[type="submit"] {
+	width: 100% !important;
+	margin-right: 0 !important;
+}
+.builder-module #it-exchange-cart #it-exchange-cart-actions input[type="submit"].it-exchange-update-cart,
+.builder-module #it-exchange-cart #it-exchange-cart-actions input[type="submit"].it-exchange-empty-cart {
+
+}
+.builder-module #it-exchange-cart #it-exchange-cart-actions input[type="submit"].it-exchange-update-cart {
+	float: left;
+	margin-right: 5%;
+}
+.builder-module #it-exchange-cart #it-exchange-cart-actions input[type="submit"].it-exchange-empty-cart {
+	float: left;
+}
+.builder-module #it-exchange-cart input[type="submit"].it-exchange-checkout-cart {
+	width: 100%;
+	margin-top: 4em;
+	margin-bottom: 4em;
+	font-size: 1.5em;
+}
+
+
+/*********************************************
+	Nav With Logo
+*********************************************/
+
+.nav-with-logo .builder-module-element {
+	display: block;
+}
+.nav-with-logo .builder-module-element .site-logo {
+	width: 60%;
+	max-width: 225px;
+	margin-right: .5em;
+	float: left;
+}
+.nav-with-logo .builder-module-element .builder-module-navigation-menu-wrapper {
+	width: 100%;
+	display: block;
+}
+.nav-with-logo .builder-module-element .builder-module-navigation-menu-wrapper > ul {
+	margin-top: 2em;
+}
+
+
+/*********************************************
+	Madison Featured Posts Extension
+*********************************************/
+
+.builder-module .hentry.madison-featured-post,
+.builder-module .hentry.madison-featured-post:nth-child(n) {
+    width: 100%;
+    margin: 0 0 5em 0;
+    clear: none;
+}

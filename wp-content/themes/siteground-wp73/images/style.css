@@ -1,0 +1,247 @@
+/*
+Theme Name: siteground-wp73
+Theme URI: http://www.siteground.com/
+Description: A beautiful two-column WordPress template created by the designers of the SiteGround web hosting company.
+Author: SiteGround
+Version: 1.0
+Tags: light, two-columns, fixed-width
+*/
+
+body{background:#e6e0d0;font-family:Tahoma,Arial,Verdana,sans-serif;font-size:11px;line-height:1.2em;margin:0;padding:0}
+.page_bg{background:transparent url(images/page_bg.png) top left repeat}
+.clr{clear:both;font-size:0;line-height:0;overflow:hidden}
+ul{list-style:none}
+a,img{margin:0;outline:none;padding:0}
+img{border:none}
+.theme_title {font-size:12px;font-weight:400;text-shadow: 0 0 1px #fff;margin:0 0 4px;text-align:center;font-family:Arial,Tahoma,Verdana,sans-serif;}
+a{color:#1a569f;font-style:normal;text-decoration:none}
+a:hover{text-decoration:underline}
+.break{clear:both;font-size:0;height:0;width:0}
+.alignleft{float:left;margin:4px 10px 5px 0}
+.alignright{float:right;margin:4px 0 5px 10px}
+.aligncenter{text-align:center;display: block;margin:10px auto;}
+.single .entry h1,.single .entry h2, .single .entry h3, .single .entry h4, .single .entry h5, .single .entry h6 { margin:10px 0;}
+.single .entry h4 {font-size:14px;}
+.single .entry h5 {font-size:12px;}
+.single .entry h6 {font-size:10px;}
+.single ul ul, .single ol ol {margin:0 10px 0 0;}
+#pagelight {background: transparent url(images/pagelight_bg.png) top left repeat-x;}
+#wrapper{font-family:Tahoma,Arial,Verdana,sans-serif;font-size:11px;line-height:1.2em;margin:0 auto;text-align:left;width:990px;}
+.main{margin:0 auto;width:900px}
+.main_t_bg{background:url(images/main_t_bg.png) top center no-repeat}
+#header .buffer{background:url(images/headleft.gif) no-repeat 0 0}
+#header .buffer .buffer{background:url(images/headright.gif) no-repeat top right;height:169px;padding-top:5px}
+#header ul{list-style-type:none}
+#header ul li{float:left;font-size:.8em}
+#header ul li a{color:#727272;display:block;padding:5px 10px;text-transform:uppercase}
+#header ul li a:hover{color:#4DB200;text-decoration:none}
+#header .ad{float:right;padding:25px 20px 0 0}
+#navi ol{clear:both;float:left;list-style-type:none;width:900px}
+#navi ol.main_menu{position:relative;z-index:9900}
+#wrapper #navi ol.main_menu li.current_page_item ul a{color:#777}
+#navi ol.main_menu li{float:left;font-size:11px;font-weight:700;position:relative}
+#navi ol.main_menu li a,#navi ol.main_menu li a:link,#navi ol.main_menu li a:visited{background:transparent url(images/separator.png) top right no-repeat;color:#777;float:left;height:28px;line-height:27px;padding:0 12px 0 10px;text-decoration:none;text-shadow:1px 1px 0 #fff}
+#navi ol.main_menu li a span.arrow{color:#999}
+#navi ol.main_menu li ul{border:1px solid #d9d9d9;border-top:none;display:none;left:-2px;position:absolute;top:28px;width:200px}
+#navi ol.main_menu li ul li{background:none;padding:0;position:relative}
+#navi ol.main_menu li ul li a,#navi ol.main_menu li ul li a:link,#navi ol.main_menu li ul li a:visited{background:#fff;display:block;float:none;font-size:11px;height:30px;line-height:30px;padding:0 10px;width:180px}
+#navi ol.main_menu li ul li ul{border-top:1px solid #d9d9d9;left:200px;position:absolute;top:-1px}
+
+/* Top Menu */
+#topMenu { background: url(images/top-menu.png) repeat-x center top;}
+#topMenu .leftBg { background: url(images/top-menu-left.png) no-repeat left top }
+#topMenu .rightBg { background: url(images/top-menu-right.png) no-repeat right top;height: 34px; }
+
+#topMenu ul { float:left;width: 700px; }
+#topMenu ul li { float: left; }
+#topMenu ul li a { display: block }
+#topMenu ul li a span { display:block;height: 34px;padding:0 10px;line-height: 34px;font-size: 1.1em;font-weight: 700;text-transform: uppercase;color: #fff; }
+
+/* hover Top Menu Items*/
+#topMenu ul li:hover { background: transparent url(images/top-menu-hover.png) repeat-x center top; }
+#topMenu ul li:hover a { background: transparent url(images/top-menu-left-right-hover.png) no-repeat right top; }
+#topMenu ul li:hover a span { background: transparent url(images/top-menu-left-right-hover.png) no-repeat left top; }
+
+/* curren Top Menu Items*/
+#topMenu ul li.current_page_item { background: transparent url(images/top-menu-hover.png) repeat-x center top; }
+#topMenu ul li.current_page_item a { background: transparent url(images/top-menu-left-right-hover.png) no-repeat right top; }
+#topMenu ul li.first:hover a span,
+#topMenu ul li.first.current_page_item a span
+{ background: transparent url(images/layout/top-menu-left-hover.png) no-repeat left top; }
+
+#sidebar div.author{background:none;border:none;bottom:0;padding:0;position:absolute}
+.author p{color:#727272;margin:0 0 4px;text-align:center;text-shadow:1px 1px #fff;width:260px;}
+.author a,.author a:link,.author a:visited,.author a:hover{color:#727272;text-decoration:none;text-shadow:1px 1px #fff}
+.author .logo{background:url(data:image/png;base64,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);background-position:top center;background-repeat:no-repeat;display:block;height:34px;margin:0 auto;width:260px}
+#content{float:left;position:relative;width:600px;z-index:8000}
+#content.index_post .post{float:left;margin:0;padding:0 10px 20px 20px;width:290px}
+#content.index_post .post h2{color:#777;font-family:Arial, Arial,Tahoma,Verdana,sans-serif;font-size:16px;font-weight:700;margin:10px 0 0}
+#content .post h2 a{color:#777;text-decoration:none;text-shadow:1px 1px 0 #e0e0e0}
+#content .post{margin:0 20px 20px;width:600px}
+#content .post h2{color:#777;font-family:Arial,Tahoma,Verdana,sans-serif;font-size:16px;font-weight:700;height:30px;line-height:30px;margin:0;padding:0}
+#content .post .date{color:#777;float:right;font-size:.8em;height:28px;line-height:27px;margin:0;padding:8px 5px}
+#content .post .date a{color:#4DB200}
+#content .shadow{background:url(images/shadow.png) repeat-x 0 0;padding:8px}
+#content .post .thumb{background:#dddcdc;float:left;height:128px;margin:0 10px 4px 0;padding:6px;width:258px}
+#content .post .thumb img{width:258px}
+#content .box p{color:#777;font-size:11px;height:45px;line-height:15px;margin:0;padding:4px 0;text-align:justify}
+#content .more-link{background:url(images/read_more_btn.png) no-repeat 0 0;clear:both;display:block;float:right;height:19px;margin:10px 0 0;text-indent:-9999px;width:76px}
+#content .post p{line-height:1.4em;padding:10px}
+#content .post .more-link{background:url(images/read_more_btn.png) no-repeat 0 0;display:block;float:right;height:19px;margin:30px 0 0;text-indent:-9999px;width:121px}
+#bottom{clear:both;padding:15px 10px 0}
+#bottom .box{float:left;padding:10px;width:220px}
+#bottom .box h2{border-bottom:1px solid #DDD;color:#4DB200;font-size:1em;padding-bottom:5px}
+#bottom .box ul{list-style-type:none;padding-bottom:10px}
+#bottom .box ul li{background:url(images/bullet.gif) no-repeat 0 11px;border-bottom:1px dotted #ABABAB;font-size:.8em;line-height:1.4em;padding:6px 0 6px 12px}
+#bottom .box ul li a:hover{color:#1a569f;text-decoration:none}
+#bottom .box .comments a{color:#1a569f;font-weight:700}
+#content h2.title{color:#1A569F;font-family:Arial,Tahoma,Verdana,Arial,sans-serif;font-size:20px;font-weight:400;padding:20px 0;text-align:center;text-transform:uppercase}
+#content .postnav{background:url(images/shadow2.png) repeat-x 0 0;border-top:1px solid #e3e3e3;font-size:12px;font-weight:700;height:20px;line-height:19px;padding:20px;text-align:center;text-transform:uppercase}
+#content .postnav a{color:#1a569f;padding:0 50px;text-decoration:none}
+#content .single{clear:both;position:relative}
+#content .single cite:before{ content: '"';font-size:18px;padding:0 10px 0 0;}
+#content .single cite:after{ content: '"';font-size:18px;padding:0 0 0 4px;}
+#content .single h2{margin:0;text-shadow:1px 1px #fff}
+#content .single h2,#content .single h2 a{color:#777;font-family:Arial,Tahoma,Verdana,Arial,sans-serif;font-size:20px;font-weight:400;line-height:normal}
+#content .single .date_holder{height:45px;left:-65px;overflow:hidden;position:absolute;top:0;width:65px}
+#content .single .date{background:transparent url(images/date_bg.png) no-repeat scroll left top;cursor:default;height:45px;left:47px;padding:0 0 0 17px;position:absolute;top:0;width:48px}
+#content .single .date div.post-day{color:#1a569f;cursor:default;font-family:Georgia,serif;font-size:20px;font-weight:700;height:25px;line-height:25px;text-align:center}
+#content .single .date div.post-month-year{color:#777;cursor:default;font-family:Tahoma,serif;font-size:11px;font-weight:400;height:16px;line-height:15px;text-align:center;text-transform:lowercase}
+#content .single p{line-height:1.4em;padding-bottom:10px}
+#content .single ol,#content .single ul{margin:10px 0 20px 40px}
+#content .single li{line-height:1.4em;margin-bottom:10px}
+#content .single blockquote{clear:both;margin:0 auto;padding:20px 0}
+#content .single blockquote p{background-color:#eee;border-color:#e6e6e6;border-style:solid;border-width:1px 0;line-height:1.4em;padding:10px 10px 5px}
+#sidebar{color:#727272;float:right;padding:0 20px 100px;position:relative;width:260px;z-index:9000}
+#sidebar h2{clear:both;color:#999;font-family:Arial,Tahoma,Verdana,sans-serif;font-size:18px;line-height:normal;margin:0;padding:20px 0 4px;text-shadow:1px 1px #fff;text-transform:uppercase}
+#sidebar abbr{background:none;border:none;text-decoration:none}
+#sidebar ul{clear:both;margin:0;padding:0}
+#sidebar ul ul{line-height:normal;margin:0;padding:0}
+#sidebar ul.categories ul li h6{padding:0 0 0 10px}
+#sidebar ul.categories ul ul li h6{padding:0 0 0 20px}
+#sidebar ul.categories ul ul ul li h6{padding:0 0 0 30px}
+#sidebar ul.categories li h6{background:transparent url(images/dots.gif) left bottom repeat-x;font-family:Arial,Tahoma,Verdana,sans-serif;font-size:12px;font-weight:400}
+#sidebar ul.categories li a{background:transparent url(images/arrow.gif) left top no-repeat;color:#727272;display:block;line-height:21px;padding:0 0 0 10px;text-shadow:1px 1px #fff}
+#sidebar ul.categories li a h6{background:transparent url(images/arrow.gif) left top no-repeat;float:left;font-size:11px;font-weight:400;height:20px;line-height:19px;padding:0 0 0 10px;text-shadow:1px 1px #fff}
+#sidebar ul.categories li a span{float:left;height:20px;padding:0 0 0 4px}
+#sidebar ul li a{background:transparent url(images/dots.gif) left bottom repeat-x;color:#727272;display:block;line-height:21px;text-shadow:1px 1px #fff}
+#sidebar ul li a span{background:transparent url(images/bullets.png) left top no-repeat;display:block;height:20px;padding:0 0 0 10px}
+#sidebar ul.xoxo.blogroll li a span{background:transparent url(images/bullets_links.png) left top no-repeat;display:block;height:20px;padding:0 0 0 10px}
+#sidebar form div{background:none;border:none;padding:0}
+#sidebar div{-moz-border-radius:5px;-webkit-border-radius:5px;background:#fff url(images/shadow2.png) repeat-x 0 0;border:1px solid #dedede;border-radius:5px;padding:4px 10px}
+#sidebar div a{line-height:normal}
+#sidebar ul#recentcomments li.recentcomments{-moz-border-radius:5px;-webkit-border-radius:5px;background:#fff url(images/shadow.png) repeat-x 0 0;border:1px solid #dedede;border-radius:5px;color:#727272;margin:0 0 10px;padding:1px}
+#sidebar ul#recentcomments li.recentcomments a.url{background:none;color:#1A569F;display:inline;padding:6px;text-decoration:none;text-shadow:none}
+#sidebar ul#recentcomments li.recentcomments a.url span{background:none;border:none;display:inline}
+#sidebar ul#recentcomments li.recentcomments a{background:none;text-decoration:none}
+#sidebar ul#recentcomments li.recentcomments a span{-moz-border-radius:5px;-webkit-border-radius:5px;background:#fff url(images/shadow2.png) repeat-x 0 0;border:1px solid #fff;border-left:none;border-radius:5px;border-right:none;border-top:1px solid #e3e3e3;height:40px}
+#sidebar #calendar_wrap{padding:2px 10px 10px}
+#sidebar #calendar_wrap #wp-calendar caption{font-weight:700;height:20px;line-height:17px}
+#sidebar #calendar_wrap #wp-calendar{border:1px solid #ccc;border-bottom:none;border-right:none;border-spacing:0;width:100%}
+#sidebar #calendar_wrap #wp-calendar thead th,#sidebar #calendar_wrap #wp-calendar thead td,#sidebar #calendar_wrap #wp-calendar tbody th,#sidebar #calendar_wrap #wp-calendar tbody td{background:#fff url(images/shadow2.png) repeat-x 0 0;border:1px solid #ccc;border-left:none;border-top:none;line-height:19px;text-align:center}
+#sidebar #calendar_wrap #wp-calendar tbody .pad{background:#fff url(images/calendar_btn_bg.png) repeat-x 0 0}
+#sidebar #calendar_wrap #wp-calendar tfoot td{background:#fff url(images/shadow2.png) repeat-x 0 0;border:1px solid #ccc;border-left:none;border-top:none;text-align:center}
+#sidebar #calendar_wrap #wp-calendar tfoot #prev,#sidebar #calendar_wrap #wp-calendar tfoot .pad{border-right:none}
+#sidebar #calendar_wrap #wp-calendar #next{border-right:1px solid #ccc}
+#sidebar #calendar_wrap #wp-calendar tfoot #prev,#sidebar #calendar_wrap #wp-calendar tfoot #next,#sidebar #calendar_wrap #wp-calendar tfoot .pad{line-height:19px}
+#sidebar #calendar_wrap #wp-calendar tbody td a{font-weight:700}
+#sidebar .flickr img{margin:2px}
+#sidebar #searchform{padding:20px 0 0}
+#sidebar #searchform #s{-moz-border-radius:5px;-webkit-border-radius:5px;background:#fff;border:1px solid #ccc;border-radius:5px;color:#666;float:left;font-family:Arial,Tahoma,sans-serif;font-size:12px;height:22px;overflow:hidden;padding-left:4px;padding-right:4px;width:170px}
+#sidebar #searchform #searchsubmit{-moz-border-radius:5px;-webkit-border-radius:5px;background:#fff;border:1px solid #ccc;border-radius:5px;color:#666;float:right;font-family:Arial,Tahoma,sans-serif;font-size:14px;font-weight:700;height:26px;margin:0 0 0 10px}
+#footer{color:#727272;display:block;font-size:11px;height:20px;line-height:19px;margin:0 auto;text-align:center;width:900px}
+#footer a,#footer a:link,#footer a:visited,#footer a:hover{color:#727272;text-decoration:none}
+#comments{padding:20px}
+#comments h2{background-color:#F1F1F1;border-bottom:1px solid #EDEDED;font-size:1em;padding:2px 5px}
+#comments p{clear:both;color:#777;line-height:1.6em;margin-bottom:10px}
+#comments form label small{color:#777;font-size:11px}
+#comments form p{margin-bottom:5px}
+#comments form input{border:1px solid #ccc;margin-right:5px;width:260px}
+#comments form input,textarea{background-position:4px 4px;background-repeat:no-repeat;border:1px solid #ccc;color:#777;font-family:Tahoma;font-size:12px;padding:4px}
+#comments form textarea{border:1px solid #ccc;padding:4px!important;width:350px}
+#comments form button{background:#fff url(images/shadow.png) repeat-x 0 0;border:1px solid #e4e3e3;font-family:Verdana;font-size:12px;padding:2px 6px}
+.commentdetails{margin-top:25px}
+.commentauthor{font-weight:700;margin-bottom:5px!important}
+.commentdate{color:#909090;font-size:.8em;margin-bottom:5px}
+.required{color:red}
+.notfound{padding:40px}
+.notfound h2{font-size:18px;font-weight:400;margin-bottom:10px}
+.commentlist .respond{background:transparent url(images/shadow2.png) repeat-x 0 0;border-top:1px solid #e4e3e3;position:relative}
+.commentlist .respond .cancel-comment-reply{position:absolute;right:6px;top:6px}
+.commentlist .respond .cancel-comment-reply a{background:transparent url(images/close_comments.png) no-repeat 0 0;display:block;height:16px;text-indent:-9999px;width:16px}
+.respond .cancel-comment-reply{padding:10px 0}
+#comments ol{clear:both;list-style-type:none;margin:0;padding:0}
+#comments ol li{border:1px solid #e4e3e3;margin-bottom:10px}
+#comments h3{color:#777;font-family:Arial,Tahoma,sans-serif;font-size:14px;font-weight:700;line-height:normal;margin:0 0 10px}
+#comments ol li div.comment-body{position:relative}
+#comments ol li div.comment-body em{color:red;font-size:11px;font-style:normal}
+#comments ol li.even div.comment-body{background:url(images/shadow.png) repeat-x 0 0;border:1px solid #fff;padding:10px}
+#comments ol li.odd div.comment-body{border:1px solid #fff;padding:10px}
+#comments ol li .avatar{background:#fff;border:1px solid #ccc;float:left;margin:0 10px 0 0;padding:1px}
+#comments ol li .comment-author{border-bottom:1px solid #EBEBEB;float:left;padding:0 0 10px;width:100%}
+#comments ol li .comment-author cite.fn{color:#1a569f;font-style:normal}
+#comments ol li .comment-author .fn{font-size:14px;font-weight:700;height:32px;line-height:31px}
+#comments ol li .url{color:#777;text-decoration:none}
+#comments ol li .comment-meta{position:absolute;right:10px;top:10px}
+#comments ol li .comment-meta a{color:#999;display:block;font-size:11px;height:32px;line-height:32px}
+#comments ol li .reply{font-size:1em;font-weight:400;padding-bottom:10px}
+#comments .children{list-style-type:none;padding:9px}
+#comments .navigation{font-size:.9em;padding:10px 0 20px}
+#comments .navigation a{border:1px solid #ccc;color:#999;padding:3px 8px}
+#comments .navigation a:hover{border-color:#000;color:#000;text-decoration:none}
+.comment-edit-link{position:absolute;right:0;top:16px}
+#flash{bottom:0;left:0;overflow:hidden;position:absolute;right:0;top:0;z-index:100}
+#flash object{bottom:0;left:0;position:absolute;right:0;top:0}
+#background{background:transparent url(images/background.png) repeat 5% 5%;bottom:0;left:0;position:absolute;right:0;top:0;z-index:100}
+#midground{background:transparent url(images/midground.png) repeat 20% 20%;bottom:0;left:0;position:absolute;right:0;top:0;z-index:200}
+#foreground{background:transparent url(images/foreground.png) repeat 90% 110%;bottom:0;left:0;position:absolute;right:0;top:0;z-index:300}
+#header{height:100px}
+#header a.logo,#header a.logo:link,#header a.logo:visited{color:#8a8a8a;font-size:30px;font-weight:700;line-height:normal;text-decoration:none;text-shadow:1px 1px #FFF}
+#header h2 {color: #8a8a8a;margin:10px 0;display:block;font-family:Arial,Lucida,Verdana,sans-serif;font-size:16px;font-weight:700;line-height:normal;text-decoration:none;text-shadow:1px 1px #FFF}
+#navi{background:transparent url(images/navi_bg.png) top center no-repeat;height:28px;margin:0 auto;padding:2px 30px 0;width:900px}
+.m_bg{background:transparent url(images/m_bg.png) center center repeat-y;width:960px}
+.b_bg{background:transparent url(images/b_bg.png) bottom center no-repeat;height:40px;width:960px}
+.postmetadata{border-bottom:1px solid #EBEBEB;color:#999;font-family:Tahoma,Arial,sans-serif;font-size:11px;font-weight:400;height:16px;line-height:15px;margin:0;padding:2px 0;text-shadow:1px 1px #fff;text-transform:lowercase}
+.wp-caption a{background:#f2f2f2;border:1px solid #ccc;border-bottom:none;float:left;padding:4px}
+#content .single p.wp-caption-text{background:transparent url(images/shadow2.png) repeat-x left top;border:1px solid #ccc;color:#777;float:left;font-size:11px;padding:2px 4px;text-align:center}
+.postmetadata a,.postmetadata a:link,.postmetadata a:visited{color:#666;font-family:Tahoma,Arial,sans-serif;font-size:11px;font-weight:400;line-height:normal}
+.postmetadata span.comm{background:transparent url(images/comments.gif) no-repeat scroll left center;float:right;height:16px;margin:0;padding:0 0 0 18px;text-shadow:1px 1px #fff}
+div.entry{color:#777;font-family:Tahoma,Arial;font-size:12px;line-height:18px;padding:10px 0;text-align:justify}
+div.entry pre{background:#f2f2f2;border:1px dashed #ccc;color:#333;padding:10px}
+div.entry ul{list-style:disc;margin:0 20px}
+div.entry h3{color:#777;font-family:Tahoma;font-size:14px;font-weight:700;margin:20px 0 10px}
+.readmore{float:right}
+.keywords{background:#f8f8f8;border:1px solid #e4e3e3;color:#777;padding:10px}
+.demo_download{margin:0 auto}
+a.demo_btn{background:transparent url(images/demo_btn.png) left top no-repeat;float:left;font-size:0;height:40px;text-indent:-9999px;width:140px}
+a.download_btn{background:transparent url(images/download_btn.png) left top no-repeat;float:left;font-size:0;height:40px;text-indent:-9999px;width:140px}
+a.demo_btn:hover,a.download_btn:hover{background-position:bottom left}
+#content .more-link:hover,#sidebar ul li a:hover,#sidebar ul li a:hover span,#sidebar ul.xoxo.blogroll li a:hover span{background-position:0 100%}
+#sidebar #wp125adwrap_2c{background:none;border:none;padding:0}
+#sidebar #wp125adwrap_2c .wp125ad.even{margin:0 0 10px 10px}
+#sidebar .clr,#sidebar #wp125adwrap_2c .wp125ad{background:none;border:none;padding:0}
+ul,ol,#sidebar ul li{margin:0;padding:0}
+p,h1,h2,h3,h4,h5,h6{margin:0}
+.hidden,#sidebar .screen-reader-text,#comments .says{display:none}
+#wrapper #navi ol.main_menu li.current_page_item a,#sidebar ul#recentcomments li.recentcomments a:hover span{color:#1A569F}
+#navi ol.main_menu li a:hover,#content .single h2 a:hover,#sidebar ul.categories li a:hover,#sidebar .tags a:hover{color:#1a569f;text-decoration:none}
+#navi ol.main_menu li ul li a:hover,#content .post h2 a:hover,#content .single a,#comments a{color:#1a569f}
+#content .buffer,.demo_download td{padding:20px 0}
+#content .box,#content .single .entry h1,#content .single .entry h2,#content .single .entry h3,#content .single .entry h4,#content .single .entry h5,#content .single .entry h6{clear:both}
+#bottom .box ul li a,#sidebar .tags a{color:#727272}
+#content h2.title strong,#content .postnav a:hover{color:#b0c730}
+#content .single .entry h2,#content .single .entry h3{border-bottom:1px dotted #ccc;margin:20px 0 10px;padding:0 0 4px}
+#sidebar .tags,#sidebar .flickr,#sidebar .video{padding:0 10px 10px}
+.commentlist #commentform,.commentlist .respond h3{padding:10px}
+.wp-caption a img,.left,#sidebar #wp125adwrap_2c .wp125ad img{float:left}
+.custom_img {background:#fff;padding:6px;border:1px solid #e3e3e3;}
+.error-404-box {position:absolute;top:50%;left:50%;z-index:5000;width:580px;height:360px;margin:-180px 0 0 -290px;background:transparent url(images/error-404-box.png) no-repeat center center;}
+.error-404-box h2{position:absolute;top:160px;left:0;font-size:16px;font-family:Arial,Tahoma,Verdana,sans-serif;color:#9d9e9e;text-shadow:1px 1px #000;text-align:center;width:100%;line-height:normal;}
+.error-404-box .screen-reader-text,
+.error-404-box #searchsubmit {display:none;}
+.error-404-box #s {background:none;border:none;position:absolute;top:229px;left:195px;width:190px;height:26px;font-size:16px;color:#9d9e9e;font-family:Arial,Tahoma,Verdana,sans-serif;font-weight:700;}
+.single .entry table { border-spacing:0; border-top:1px solid #d5d5d5;border-left:1px solid #d5d5d5;}
+.single .entry table th, .single .entry table td{ border-bottom:1px solid #d5d5d5;border-right:1px solid #d5d5d5;padding:2px 4px;}
+.single .entry table tr th{ background:#f2f2f2;font-weight:700;color:#1A569F;}
+.single .entry table tr:nth-child(2n+1) td{ background:#f8f8f8;}
+.single .entry table tr:hover td{ background:#e4e4e4;}

@@ -1,0 +1,166 @@
+/*********************************************
+	Image Module (Full Window)
+*********************************************/
+
+.image-full-window-background-wrapper {
+	padding: 0;
+}
+
+
+/*********************************************
+	Comments
+*********************************************/
+
+.commentlist li.comment,
+.commentlist li.trackback,
+.commentlist li.pingback {
+	padding-right: 0;
+	padding-left: .75em;
+}
+.commentlist .comment-body {
+	margin-right: .5em;
+}
+.commentlist .children li.comment,
+.commentlist .children  li.trackback,
+.commentlist .children  li.pingback {
+	border-right: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	padding-right: 0;
+}
+
+
+/*********************************************
+	Search Form Styling
+*********************************************/
+
+#searchform input[type="text"] {
+	width: 100%;
+}
+#searchform input[type="submit"] {
+	position: relative;
+	width: 100%;
+	margin-top: .25em;
+}
+
+
+@media only screen and (max-width:700px) {
+
+	/*********************************************
+		Footer Module
+	*********************************************/
+
+	.builder-module-footer .builder-module-element .alignleft,
+	.builder-module-footer .builder-module-element .alignright {
+		float: none;
+		margin: 0 0 1.5em 0;
+		text-align: left;
+	}
+
+}
+
+
+/*********************************************
+	Account View - Purchases
+*********************************************/
+
+.builder-module #it-exchange-purchases .it-exchange-purchase-top {
+	display: inline-block;
+}
+.builder-module #it-exchange-purchases .it-exchange-purchase-top .it-exchange-purchase-total {
+	float: none;
+}
+
+/*********************************************
+	Account View - Downloads
+*********************************************/
+
+.builder-module #it-exchange-downloads .it-exchange-download-product {
+	width: 100%;
+	float: left;
+}
+.builder-module #it-exchange-downloads .it-exchange-download-product a {
+	float: left;
+	margin-bottom: .5em;
+}
+
+
+/*********************************************
+	Exchange Store Styles
+*********************************************/
+
+.builder-module #it-exchange-store .it-exchange-products li,
+.builder-module #it-exchange-store .it-exchange-products li:nth-child(n) {
+    width: 45%;
+    margin: 0 5% 5em 0;
+    clear: none;
+}
+.builder-module #it-exchange-store .it-exchange-products li:nth-child(2n) {
+	margin-right: 0;
+}
+.builder-module #it-exchange-store .it-exchange-products li:nth-child(2n+1) {
+    clear: both;
+}
+
+
+/*********************************************
+	Exchange Shopping Cart
+*********************************************/
+
+.builder-module #it-exchange-cart .it-exchange-cart-item-thumbnail {
+	display: none;
+}
+.builder-module #it-exchange-cart  .it-exchange-cart-item-title {
+	width: 30%;
+}
+.builder-module #it-exchange-cart .it-exchange-cart-item-quantity input {
+	padding: .5em 0;
+	text-align: center;
+	font-size: .9em;
+}
+.builder-module #it-exchange-cart #it-exchange-cart-actions input[type="submit"].it-exchange-update-cart,
+.builder-module #it-exchange-cart #it-exchange-cart-actions input[type="submit"].it-exchange-empty-cart {
+	float: right;
+}
+.builder-module #it-exchange-cart #it-exchange-cart-actions input[type="submit"].it-exchange-update-cart {
+	margin-right: 0;
+}
+.builder-module #it-exchange-cart #it-exchange-cart-actions input[type="submit"].it-exchange-empty-cart {
+	margin-right: .5em;
+}
+.builder-module #it-exchange-cart #it-exchange-cart-actions .it-exchange-cart-apply-coupons {
+	margin: 0 0 3em 0;
+}
+.builder-module #it-exchange-cart #it-exchange-cart-actions .it-exchange-cart-apply-coupons > input[type="text"] {
+	margin-bottom: .5em;
+}
+.builder-module #it-exchange-cart #it-exchange-cart-actions .it-exchange-cart-apply-coupons > input[type="submit"] {
+	float: none;
+	margin-right: 0;
+	width: auto;
+}
+.builder-module #it-exchange-cart input[type="submit"].it-exchange-checkout-cart {
+	float: right;
+	clear: both;
+	margin-top: 4em;
+	margin-bottom: 4em;
+	font-size: 1.5em;
+}
+
+
+/*********************************************
+	Madison Featured Posts Extension
+*********************************************/
+
+.builder-module .hentry.madison-featured-post,
+.builder-module .hentry.madison-featured-post:nth-child(n) {
+    width: 45%;
+    margin: 0 5% 5em 0;
+    clear: none;
+}
+.builder-module .hentry.madison-featured-post:nth-child(2n) {
+	margin-right: 0;
+}
+.builder-module .hentry.madison-featured-post:nth-child(2n+1) {
+    clear: both;
+}

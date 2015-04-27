@@ -1,0 +1,32 @@
+0.0.1 - 2009-04-23
+	Initial beta version
+0.0.2 - 2009-06-23
+	Added input validation
+	Added drop-down options for sidebar widths
+	Added default custom sidebar widths
+0.0.3 - 2009-07-27
+	Floated the HTML container div left to solve odd behavior
+1.0.0 - 2009-12-02
+	Release ready
+1.1.0 - 2009-12-03
+	Added option to remove wrapper divs
+2.0.0 - 2009-12-08
+	Updated to work with version 2.0.0 of LayoutModule
+2.0.1 - 2009-12-08
+	Added shortcode and PHP eval support
+2.1.0 - 2009-12-10
+	Completely restructured wrapper divs
+2.1.1 - 2009-12-11
+	Added $classes attribute to _get_module_wrapper_attributes
+2.1.2 - 2009-12-31
+	Divided content wrapper into classed and unclassed wrappers
+2.2.0 - 2010-01-07
+	Updated to new 3.0.0 API of class.modules.php
+2.2.1 - 2010-01-10
+	Removed _get_module_wrapper_attributes method as it is no longer needed
+2.2.2 - 2010-04-26
+	Internationalized strings
+2.3.0 - 2011-07-05 - Chris Jean
+	Updated preview images
+2.3.1 - 2011-10-06 - Chris Jean
+	Added support for BUILDER_DISABLE_HTML_MODULE_PHP define

@@ -1,0 +1,38 @@
+0.0.1 - 2009-04-23
+	Initial beta version
+0.0.2 - 2009-07-27
+	Added sidebars
+0.0.3 - 2009-07-27
+	Fixed sidebar registration issue
+0.0.4 - 2009-11-23
+	Fixed checkbox problem
+1.0.0 - 2009-12-02
+	Release ready
+1.0.1 - 2009-12-02
+	Fixed bug in CSS output
+2.0.0 - 2009-12-08
+	Updated to function with 2.0.0 of LayoutModule
+2.1.0 - 2009-12-10
+	Completely restructured wrapper divs
+2.2.0 - 2010-01-07
+	Updated to 3.0.0 API of class.module.php
+2.2.1 - 2010-01-10
+	Removed the _get_module_wrapper_attributes method as it is no longer needed
+2.2.2 - 2010-04-26
+	Internationalized strings
+2.2.3 - 2010-12-14
+	Added export handler
+2.3.0 - 2011-02-22
+	Added complete import/export handlers
+2.3.1 - 2011-10-06 - Chris Jean
+	Fixed element_width selection
+2.3.2 - 2011-10-19 - Chris Jean
+	Removed TEMPLATEPATH reference
+2.3.3 - 2012-08-13 - Chris Jean
+	Fixed default sidebar value by setting it to "none".
+2.4.0 - 2013-04-12 - Chris Jean
+	Added "Image Alt Attribute" input to editor.
+	Added builder_image_module_filter_img_attributes filter to filter img tag attributes.
+	Added alt attribute control. By default, it uses the name of the Module. If the image's Media Library entry has the "Alternative Text" data set, this will be used. If the Module's "Image Alt Attribute" entry is not empty, this will be used above all the other options.
+2.4.1 - 2013-11-25 - Chris Jean
+	Fixed bad label tags in editor.

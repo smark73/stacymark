@@ -1,0 +1,53 @@
+0.0.1 - 2009-04-23
+	Initial beta version
+0.0.2 - 2009-06-22
+	Added input validation
+	Added default custom values
+1.0.0 - 2009-12-02
+	Release ready
+2.0.0 - 2009-12-08
+	Updated to work with version 2.0.0 of LayoutModule
+2.0.1 - 2009-12-08
+	Added widget-wrapper-[left,middle,right] classes
+2.1.0 - 2009-12-10
+	Completely restructured wrapper divs
+2.1.1 - 2009-01-04
+	Added filter builder_layout_engine_filter_module_width
+	Added filter builder_layout_engine_filter_module_widget_bar_width
+	Added filter builder_layout_engine_filter_module_[guid]_width
+2.2.0 - 2010-01-07
+	Updated to 3.0.0 API of class.module.php
+2.2.1 - 2010-01-07
+	Added js directory
+2.2.2 - 2010-01-10
+	Now uses class_prefix for class names
+	Added widget-wrapper classes around the widget areas
+	Added sidebar wrapper to keep format in line with other module sidebars
+2.3.0 - 2010-01-18
+	Updated structure to match layout-engine version 3.0.0
+2.3.1 - 2010-02-17
+	Added widget-wrapper-NUM classes
+2.3.2 - 2010-02-24
+	Fixed regression where custom names were no longer displayed
+2.3.3 - 2010-02-24
+	Fixed the naming of widgets on the front-end
+2.3.4 - 2010-04-26
+	Internationalized strings
+2.3.5 - 2010-09-20 - Chris Jean
+	Updated js/module.js
+	Added single, middle, left, and right classes
+2.4.0 - 2011-07-05 - Chris Jean
+	Simplified code since calling class is handling names now
+2.5.0 - 2011-12-20 - Chris Jean
+	Added $layout_id to _register_sidebars() and call to _register_sidebar()
+3.0.0 - 2012-10-05 - Chris Jean
+	Added support for the responsive rendering mode.
+	Cleaned up code formatting.
+	Improved width calculation code.
+3.1.0 - 2012-10-12 - Chris Jean
+	Added support for stylesheet generation.
+	Removed inline styles.
+3.2.0 - 2013-05-17 - Chris Jean
+	Added support for the builder_module_filter_column_source_order filter.
+3.2.1 - 2013-07-31 - Chris Jean
+	Updated Module description to better reflect actual Module features.

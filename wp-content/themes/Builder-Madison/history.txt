@@ -1,0 +1,12 @@
+0.0.1 - 2014-05-08 - Cody Smith
+	Initial Commit Version
+5.0.0 - 2014-05-12 - Cody Smith
+	Initial Release Version
+5.0.1 - 2014-05-12 - Cody Smith
+	Updated screenshot
+5.0.2 - 2014-05-13 - Cody Smith
+	Added a check for is_exchange_page function
+5.0.3 - 2014-07-02 - Cody Smith
+	removed display:inline-block from .it-featured-image a (caused rendering issues)
+5.0.4 - 2014-07-28 - Packaging Bot (lib/builder-core)
+	Fixed responsive video script error that prevented the script from working properly on some sites.

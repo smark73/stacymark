@@ -1,0 +1,16 @@
+1.0.1 - 2011-02-22
+	Updated:
+		css/editor.css
+			Added ".postbox table.widefat" rule
+		defaults.php to 1.0.1
+		editor.php to 1.0.1
+		functions.php to 1.0.2
+		init.php to 1.0.1
+	Removed:
+		export.php
+		tab-class.php
+		tabs/basic.php
+		tabs/import-export.php
+1.0.2 - 2011-03-16
+	Updated:
+		tab-basic.php to 1.0.1

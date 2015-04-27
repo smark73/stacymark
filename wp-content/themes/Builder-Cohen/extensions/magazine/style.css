@@ -1,0 +1,97 @@
+/*
+Name: Magazine Layout
+Description: Displays Featured Image, Post Title and Excerpt in a grid layout.
+
+*/
+
+.builder-module-content .magazine-post-loop-wrapper {
+	padding: 3em 2.25em;
+}
+.builder-module-content .magazine-post.entry-content {
+	padding: 0 .75em;
+}
+.builder-module-content .hentry .magazine-post.entry-content .entry-header {
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+.builder-module-content .hentry .magazine-post.entry-content .entry-content {
+	margin: 1em 0 0 0;
+	padding: 0;
+}
+.builder-module-content .magazine-post-wrap.hentry {
+	margin: 0 0 5em 0;
+	padding: 0;
+}
+.magazine-post-wrap {
+	display: inline-block;
+	width: 32.9%;
+	vertical-align: top;
+}
+.magazine-post {
+	padding: 0 10px;
+}
+.magazine-post img {
+	width: 100%;
+	max-width: 350px;
+	height: auto;
+	margin: 0 0 .5em 0;
+}
+.magazine-post .post-image {
+	position: relative;
+}
+.magazine-post .add_feature_image a {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-indent: -999em;
+}
+.magazine-post .add_feature_image a:hover {
+	color: #FFFFFF;
+	font-weight: bold;
+	text-decoration: none;
+}
+.magazine-post .add_feature_image:hover a:after {
+	content: ' →';
+}
+.magazine-post .entry-content p {
+	margin: 0 0 1em;
+}
+.magazine-post .entry-title {
+	font-family: 'Merriweather', Georgia, Times, 'Times New Roman', serif;
+	font-size: 1.5em;
+	font-weight: 300;
+	margin-bottom: 0;
+	line-height: 1.2;
+}
+.magazine-post .entry-meta {
+	margin-top: 1em;
+	font-size: 1.1em;
+	float: none;
+}
+.loop-footer {
+	clear: both;
+}
+/**************************************
+	Global IE Fixes
+**************************************/
+#ie6 .magazine-post-wrap,
+#ie7 .magazine-post-wrap {
+	display: block;
+	float: left;
+	height: 360px;
+}
+/**************************************
+	IE6 Fixes
+**************************************/
+#ie6 .magazine-post-wrap {
+	width: 31%;
+}
+/**************************************
+	IE7 Fixes
+**************************************/
+#ie7 .magazine-post-wrap {
+	width: 33%;
+}

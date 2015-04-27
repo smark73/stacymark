@@ -1,0 +1,48 @@
+/*
+Name: Madison Featured Posts
+Description: This extension is built for Madison, a Builder Child Theme. It displays 9 (by default) posts' featured image in a grid.
+*
+*/
+
+.hentry.madison-featured-post,
+.hentry.madison-featured-post:nth-child(n) {
+    list-style: none;
+    display: block;
+    float: left;
+    width: 30%;
+    margin: 0 5% 4em 0;
+    vertical-align: top;
+    clear: none;
+}
+.hentry.madison-featured-post:nth-child(3n) {
+	margin-right: 0;
+}
+.hentry.madison-featured-post:nth-child(3n+1) {
+    clear: both;
+}
+.hentry.madison-featured-post .it-featured-image {
+	margin: 0;
+	padding: 0;
+}
+.hentry.madison-featured-post .it-featured-image img {
+	-webkit-transition: all .1s ease-in;
+	-moz-transition: all .1s ease-in;
+	-o-transition: all .1s ease-in;
+	-ms-transition: all .1s ease-in;
+	transition: all .1s ease-in;
+	margin-bottom: .5em;
+}
+.hentry.madison-featured-post .it-featured-image img:hover {
+	opacity: .7;
+}
+.hentry.madison-featured-post .entry-title {
+	font-size: 1em;
+	text-align: center;
+	padding: 0 1em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 300;
+}
+.hentry.madison-featured-post .entry-title a {
+	color: #7B7B7B;
+}

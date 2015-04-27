@@ -1,0 +1,297 @@
+<?php
+
+/*
+Written by Chris Jean for iThemes.com
+Version 2.3.0
+
+Version History
+	See history.txt
+*/
+
+
+
+if ( ! class_exists( 'LayoutModuleImage' ) ) {
+	class LayoutModuleImage extends LayoutModule {
+		var $_name = '';
+		var $_var = 'image';
+		var $_description = '';
+		var $_editor_width = '800';
+		
+		
+		function LayoutModuleImage() {
+			$this->_name = _x( 'Image', 'module', 'LION' );
+			$this->_description = __( 'This module adds an image to the layout. This can be used to add static headers or just something to spice up your layout.', 'LION' );
+			
+			$this->LayoutModule();
+		}
+		
+		function export( $data ) {
+			if ( ! empty( $data['attachment'] ) && is_numeric( $data['attachment'] ) )
+				do_action( 'builder_import_export_add_attachment', $data['attachment'] );
+			
+			return $data;
+		}
+		
+		function import( $data, $attachments, $post_data ) {
+			if ( ! empty( $data['attachment'] ) && is_numeric( $data['attachment'] ) ) {
+				if ( isset( $attachments[$data['attachment']]['id'] ) )
+					$data['attachment'] = $attachments[$data['attachment']]['id'];
+				else
+					$data['attachment'] = '';
+			}
+			
+			return $data;
+		}
+		
+		function get_layout_option() {
+			return 'notused';
+		}
+		
+		function _get_defaults( $defaults ) {
+			$new_defaults = array(
+				'notused'            => 'image',
+				'type'               => 'placeholder',
+				'placeholder_style'  => 'dark',
+				'media_id'           => '',
+				'image_url'          => '',
+				'use_featured_image' => '',
+				'image'              => '',
+				'position'           => '',
+				'resize'             => 'no',
+				'crop'               => 'no',
+				'height'             => 'auto',
+				'url'                => 'home',
+				'new_window'         => '',
+				'sidebar'            => '',
+			);
+			
+			return ITUtility::merge_defaults( $new_defaults, $defaults );
+		}
+		
+		function _validate( $result ) {
+			$result['data']['notused'] = 'image';
+			
+			it_classes_load( 'it-file-utility.php' );
+			
+			if ( ITFileUtility::file_uploaded( 'image' ) ) {
+				$file = ITFileUtility::upload_file( 'image' );
+				
+				if ( is_wp_error( $file ) )
+					$result['errors'][] = sprintf( __( "Unable to save uploaded image. Ensure that the web server has permissions to write to the uploads folder.\n\nMessage: %s", 'LION' ), $file->get_error_message() );
+				else {
+					$result['data']['attachment'] = $file['id'];
+					$_POST['attachment'] = $file['id'];
+				}
+			}
+			else if ( empty( $_POST['attachment'] ) )
+				$result['errors'][] = __( 'You must upload an image.', 'LION' );
+			
+			
+			if ( empty( $_POST['height'] ) || preg_match( '/[^0-9]/', $_POST['height'] ) )
+				$result['errors'][] = __( 'You must enter an integer value for the Height.', 'LION' );
+			else if ( $_POST['height'] < 10 )
+				$result['errors'][] = __( 'The minimum Height is 10 pixels. Please increase the Height.', 'LION' );
+			
+			
+			return $result;
+		}
+		
+		function _before_table_edit( $form, $results = true ) {
+			
+?>
+	<div id="image-already-uploaded-message" style="margin-bottom:10px;display:none;">
+		<?php _e( 'An image has already been uploaded.', 'LION' ); ?><br />
+		<?php _e( '<a href="#" id="show-image-upload-row">Click here</a> to upload a new image.', 'LION' ); ?>
+	</div>
+<?php
+			
+		}
+		
+		function _start_table_edit( $form, $results = true ) {
+			$types = array(
+				'media'          => __( 'Select an image from the Media Library', 'LION' ),
+				'featured_image' => __( 'Show the content\'s Featured Image', 'LION' ),
+				'upload'         => __( 'Upload an image', 'LION' ),
+				'placeholder'    => __( 'Use a placeholder', 'LION' ),
+				'url'            => __( 'Use an image URL (a link)', 'LION' ),
+			);
+			
+			$placeholder_styles = array(
+				'dark'     => __( 'Dark background with light text', 'LION' ),
+				'light'    => __( 'Light background with dark text', 'LION' ),
+				'custom'   => __( 'Custom', 'LION' ),
+			);
+			
+			$use_featured_image_options = array(
+				'no'  => __( 'No, the Featured Image will not be used', 'LION' ),
+				'yes' => __( 'Yes, if the content has a Featured Image, it will replace the regular image', 'LION' ),
+			);
+			
+			$resize_options = array(
+				'no'  => __( 'No, the image will not be resized', 'LION' ),
+				'yes' => __( 'Yes, the image will be resized to fit the given space', 'LION' ),
+			);
+			
+			$height_options = array(
+				'auto'   => __( 'Automatic, the image\'s height will scale to keep the image\'s aspect ratio', 'LION' ),
+				'custom' => __( 'Custom, you can set the height options that you would like to use', 'LION' ),
+			);
+			
+			$position_options = array(
+				'top_left'      => __( 'Top-Left', 'LION' ),
+				'top_center'    => __( 'Top', 'LION' ),
+				'top_right'     => __( 'Top-Right', 'LION' ),
+				'middle_left'   => __( 'Middle-Left', 'LION' ),
+				'middle_center' => __( 'Middle-Center', 'LION' ),
+				'middle_right'  => __( 'Middle-Right', 'LION' ),
+				'bottom_left'   => __( 'Bottom-Left', 'LION' ),
+				'bottom_center' => __( 'Bottom-Center', 'LION' ),
+				'bottom_right'  => __( 'Bottom-Right', 'LION' ),
+			);
+			
+			$url_options = array(
+				'home'   => __( 'Home, the image will link to the home page of the site', 'LION' ),
+				'none'   => __( 'None, the image will simply be a design element', 'LION' ),
+				'custom' => __( 'Custom, you can input your own URL that the image should link to', 'LION' ),
+			);
+			
+			/*
+				'notused'            => 'image',
+				'type'               => 'placeholder',
+				'placeholder_style'  => 'dark',
+				'media_id'           => '',
+				'image_url'          => '',
+				'use_featured_image' => '',
+				'image'              => '',
+				'position'           => '',
+				'resize'             => 'no',
+				'height'             => 'auto',
+				'url'                => 'home',
+				'new_window'         => '',
+				'sidebar'            => '',
+			
+			$types
+			$placeholder_styles
+			$use_featured_image_options
+			$resize_options
+			$height_options
+			$position_options
+			$url_options
+			*/
+?>
+	<tr id="image-upload-row" style="display:none;">
+		<td><?php _e( 'Upload Image', 'LION' ); ?></td>
+		<td>
+			<?php $form->add_file_upload( 'image' ); ?>
+		</td>
+	</tr>
+	<tr><td><label for="type"><?php _e( 'Image Type', 'LION' ); ?></label></td>
+		<td>
+			<?php $form->add_drop_down( 'type', $types ); ?>
+			
+			<?php ITUtility::add_tooltip( __( 'The "Show the content\'s Featured Image" option is special in that the module will not be rendered if the current content does not have a Featured Image. If you\'d like a default image to appear when the content does not have a Featured Image, select one of the other options and then select "Yes" from the "Use Featured Image when Available" option that will appear.', 'LION' ), '', 'left' ); ?>
+		</td>
+	</tr>
+	<tr id="use_featured_image_wrapper"><td><label for="use_featured_image"><?php _e( 'Use the Content\'s Featured Image', 'LION' ); ?></label></td>
+		<td><?php $form->add_drop_down( 'use_featured_image', $use_featured_image_options ); ?></td>
+	</tr>
+	<tr><td valign="top"><label for="resize"><?php _e( 'Resize', 'LION' ); ?></label></td>
+		<td><?php $form->add_drop_down( 'resize', $resize_options ); ?></td>
+	</tr>
+	<tr><td valign="top"><label for="height"><?php _e( 'Height', 'LION' ); ?></label></td>
+		<td>
+			<?php $form->add_drop_down( 'height', $height_options ); ?>
+			
+			<div id="height-options">
+				<p><?php _e( 'Custom Height', 'LION' ); ?> <?php $form->add_text_box( 'height', array( 'style' => 'width:50px;' ) ); ?> px</p>
+			</div>
+		</td>
+	</tr>
+	<tr><td valign="top"><label for="position"><?php _e( 'Position', 'LION' ); ?></label></td>
+		<td><?php $form->add_drop_down( 'position', $position_options ); ?></td>
+	</tr>
+	<tr><td valign="top"><label for="url"><?php _e( 'Link URL', 'LION' ); ?></label></td>
+		<td>
+			<?php $form->add_drop_down( 'url', $url_options ); ?>
+			
+			<div id="url-options">
+				<p id="url-custom-wrapper"><?php _e( 'Custom URL', 'LION' ); ?> <?php $form->add_text_box( 'url_custom' ); ?></p>
+				<p><?php _e( 'Link opens in a new window', 'LION' ); ?> <?php $form->add_yes_no_drop_down( 'new_window' ); ?></p>
+			</div>
+		</td>
+	</tr>
+<?php
+			
+		}
+		
+		function _after_table_edit( $form, $results = true ) {
+			
+?>
+	<?php $form->add_hidden( 'attachment' ); ?>
+	<?php $form->add_hidden( 'notused' ); ?>
+	
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		init_module_editor();
+		
+		imgLoader = new Image(); // preload image
+		imgLoader.src = "../wp-includes/js/thickbox/loadingAnimation.gif";
+		
+		resize_thickbox_width("<?php echo $this->_editor_width; ?>");
+		
+		jQuery("form").submit(
+			function() {
+				jQuery("table").hide();
+				jQuery("div").hide();
+				resize_thickbox(300, 80);
+				jQuery("body").append("<div id='submit_loader' style='position:fixed;top:10px;left:0px;width:100%;text-align:center;'><div style='font-weight:bold;'><?php _e( 'Uploading, please wait.', 'LION' ); ?></div><br /><img src='"+imgLoader.src+"' /></div>");//add loader to the page
+				jQuery('#submit_loader').show();//show loader
+				return true;
+			}
+		);
+		/* ]]> */
+	</script>
+<?php
+			
+		}
+		
+		function _render( $fields ) {
+			$data = $fields['data'];
+			
+			if ( ! wp_attachment_is_image( $data['attachment'] ) )
+				return;
+			
+			$post = get_post( $data['attachment'] );
+			
+			$file = get_attached_file( $data['attachment'] );
+			
+			
+			$image_width = $this->_widths['element_width'];
+			
+			
+			it_classes_load( 'it-file-utility.php' );
+			$resized_image = ITFileUtility::resize_image( $file, $image_width, $data['height'], true );
+			
+			if ( ! is_array( $resized_image ) && is_wp_error( $resized_image ) )
+				echo "<!-- Resize Error: " . $resized_image->get_error_message() . " -->";
+			else
+				$image_url = $resized_image['url'];
+			
+			if ( ! empty( $data['url'] ) ) {
+				$attributes['href'] = $data['url'];
+				
+				if ( ! empty( $data['new_window'] ) )
+					$attributes['target'] = '_blank';
+				
+				ITUtility::print_open_tag( 'a', $attributes );
+			}
+			
+			echo "<img src=\"$image_url\" alt=\"" . __( 'Layout Image', 'LION' ) . "\" />";
+			
+			if ( ! empty( $data['url'] ) )
+				echo "</a>";
+		}
+	}
+	
+	new LayoutModuleImage();
+}

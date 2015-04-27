@@ -1,0 +1,5 @@
+1.0.0 - 2011-10-06 - Chris Jean
+	Release-ready
+1.0.1 - 2011-10-19 - Chris Jean
+	functions.php:
+		Removed reference to TEMPLATEPATH

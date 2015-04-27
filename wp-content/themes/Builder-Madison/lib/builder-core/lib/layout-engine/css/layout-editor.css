@@ -1,0 +1,76 @@
+.layout-editor-option {
+	float:left;
+	padding:10px;
+}
+
+.layout-editor-option-selected {
+	margin: 2px;
+	border: 3px solid #333;
+}
+
+.layout-editor-option-not-selected {
+	margin: 5px;
+}
+
+.layout_editor_preview {
+	margin-top: -1px;
+}
+
+#below_header_layout_editor_preview {
+	margin-top: -50px !important;
+}
+
+.form-table table td {
+	padding: 0px 0px 0px 10px;
+}
+
+.form-table h4 {
+	margin: 0px;
+	padding: 0px;
+}
+
+.layout-modules tr td {
+	vertical-align: top;
+	padding: 10px;
+}
+
+.module-links {
+	padding: 0px;
+	padding-left: 10px;
+}
+
+.layout-modules td:first-child {
+	width: 213px;
+}
+
+.preload-images {
+	display: none;
+}
+
+#customize_background_row td {
+	vertical-align: top;
+}
+
+#customize_background_container {
+	display: none;
+}
+
+.add-module-help {
+	display: none;
+}
+
+.extension-options {
+	display: none;
+}
+
+table.valign-top label {
+	margin-right: 1em;
+}
+
+#extension-details {
+	max-width: 500px;
+}
+
+.tablenav .actions {
+	overflow: visible;
+}

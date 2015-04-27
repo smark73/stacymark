@@ -1,0 +1,76 @@
+5.0.0 - 2013-10-16 - Cody Smith
+	Initial Release Version
+5.0.1 - 2013-10-28 - Packaging Bot (lib/builder-core)
+	Enhancement: Added a "Quick Release Updates" setting to the bottom of the licensing page. Enabling this option allows the site to receive automatic update notices for product quick releases (releases that do not have automatic update support by default).
+	Enhancement: Changed how the licensing page works on Multisite. Now it will appear at Settings > iThemes Licensing in the network admin Dashboard and at Settings > iThemes Licensing on sites when the current user is a network admin. This prevents exposing the licensing page to users that don't are not super users and thus should not be performing updates. As this update makes the functionality of the "Licensing Page Access" setting obsolete, the setting has been removed.
+	Enhancement: Using the ithemes-updater-force-minor-update query string variable will now force a data flush, allowing any available quick release updates to appear instantly.
+	Enhancement: Added "License" links to the Plugins and Themes pages for the Network Admin Dashboard of multisite installs.
+5.0.2 - 2013-11-04 - Packaging Bot (lib/builder-core)
+	Bug Fix: Corrected an issue that prevented Views from being loaded when using the Builder Setup page to load Layouts and Views from the theme.
+	Bug Fix: For themes that do not use builder-responsive but do have builder-full-width-modules enabled, a minimum width is now applied to the Layout. This width matches the Layout width and prevents some styling issues on screens that are smaller than the Layout's width.
+	Bug Fix: Fixed a warning that could occur when switching from a broken theme to a Builder theme.
+	Bug Fix: Fixed a warning that could occur after using the Builder Setup page to load Layouts and Views from the theme.
+5.0.3 - 2013-11-05 - Packaging Bot (lib/builder-core)
+	Enhancement: Added the builder_get_responsive_stylesheet_files filter to allow for modifying the file names used to load responsive stylesheets, including removing them if desired. Example:
+		function custom_filter_responsive_stylesheet_files( $files ) {
+			// Just remove the style-mobile.css stylesheet.
+			//unset( $files['style-mobile.css'] );
+
+			// Remove all the responsive stylesheets.
+			//$files = array();
+
+			// Change style-mobile.css to mobile.css.
+			//$files['mobile.css'] = $files['style-mobile.css'];
+			//unset( $files['style-mobile.css'] );
+
+			return $files;
+		}
+		add_filter( 'builder_get_responsive_stylesheet_files', 'custom_filter_responsive_stylesheet_files' );
+5.0.4 - 2013-11-21 - Packaging Bot (lib/builder-core)
+	Bug Fix: Fixed Extensions not being properly applied to specific category, tag, author, or custom post type Views.
+5.0.5 - 2013-11-25 - Packaging Bot (lib/builder-core)
+	Enhancement: Improved output of ITUtility::print_r() in WordPress 3.8.
+	Enhancement: ITUtility::print_r() now indicates the number of array elements in collapsed arrays and identifies boolean values explicitly.
+	Enhancement: Added the ability for ITForm::add_drop_down() to show divided lists.
+	Bug Fix: Fixed depth cutoff of ITUtility::backtrace().
+	Bug Fix: Fixed broken javascript in error message output. This bug prevented the error message from being collapsed by default, causing the screen to show the message at all times.
+5.0.6 - 2013-11-25 - Packaging Bot (lib/builder-core)
+	Enhancement: Improved editor styling when running WordPress 3.8.
+	Bug Fix: An Extension applied via a specific View (such as a category-specific View) will now override an Extension applied by a generic View (such as a category View that applies to all categories).
+	Bug Fix: Fixed how editing a specific View (such as a category-specific View) to a generic View (such as a category View that applies to all categories) would result in the original View remaining intact along with the new generic View.
+	Bug Fix: Fixed bad label tags in the Image Module editor.
+5.0.7 - 2013-12-02 - Packaging Bot (lib/builder-core)
+	Enhancement: Added ITUtility::screen_icon() to allow for easily preparing code for the WordPress 3.8 release. It only runs the screen_icon() function when WordPress is older than 3.8, thus avoiding the deprecation notice.
+	Bug Fix: Removed Javascript notices created by the tooltips.
+	Bug Fix: Removed Javascript notices created by ITDialog thickboxes.
+5.0.8 - 2013-12-05 - Cody Smith
+	Bug Fix: Featured image now resizes properly when height and/or width is defined.
+5.0.9 - 2013-12-12 - Cody Smith
+	Fixed incorrectly set date format
+5.0.10 - 2013-12-13 - Packaging Bot (lib/builder-core)
+	Enhancement: Recently updated plugins and themes no longer report that an update is available.
+	Enhancement: Added alternate line styling to the listings on the licensing page.
+	Enhancement: Products with iThemes in the name will now properly capitalize the name.
+	Enhancement: The updater and licensing system now handle iThemes server outages without causing long page delays or by reporting confusing error messages.
+5.0.11 - 2013-12-18 - Packaging Bot (lib/builder-core)
+	Enhancement: Updated code to not call screen_icon(), which is deprecated in WordPress 3.8.
+	Enhancement: Added the directory path of the active Extension to the render comments added when using ?builder_debug=1.
+	Enhancement: Updated the Dashboard menu icon to match the new 3.8 flat icon design.
+5.0.12 - 2013-12-18 - Packaging Bot (lib/builder-core)
+	Bug Fix: Removed unneeded check on package-info.ithemes.com which was causing performance issues on some sites.
+5.0.13 - 2013-12-19 - Packaging Bot (lib/builder-core)
+	Bug Fix: Licensing will now be universal across all sites of a multisite network. This means that you will only need to license on one site to have the license apply across the entire network.
+5.0.14 - 2014-01-23 - Packaging Bot (lib/builder-core)
+	Bug Fix: Prior versions would fix non-https URL's for local content when the site was accessed via SSL so that the URL would become an https URL; however, it would not reverse the process and change https URL's to http when accessed without SSL. This caused problems on sites that use self-signed certificates and would sometimes have local content URL's that referred to the https location. This update makes the https URL's convert to http when the site is accessed via SSL.
+5.0.15 - 2014-02-03 - Packaging Bot (lib/builder-core)
+	Bug Fix: Licensing on SSL-enabled sites now works properly.
+5.0.16 - 2014-02-11 - Packaging Bot (lib/builder-core)
+	Add support for iThemes Security
+5.0.17 - 2014-02-13 - Cody Smith
+	Updated theme screenshot and changed h3 tag to h1 on single post template
+5.0.18 - 2014-03-24 - Packaging Bot (lib/builder-core)
+	Fixed issue with admin menu icons not loading on sites set to use SSL while accessed via a non-SSL URL.
+5.0.19 - 2014-03-26 - Packaging Bot (lib/builder-core)
+	Fixed issue with admin menu icons not functioning properly on sites that have an ABSPATH or WP_CONTENT_DIR of "/".
+5.0.20 - 2014-07-28 - Packaging Bot (lib/builder-core)
+	Fixed responsive video script error that prevented the script from working properly on some sites.

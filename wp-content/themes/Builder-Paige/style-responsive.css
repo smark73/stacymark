@@ -1,0 +1,44 @@
+/*********************************************
+	Image Module (Full Window)
+*********************************************/
+
+.image-full-window-background-wrapper {
+	padding: 0;
+}
+
+
+/*********************************************
+	Comments
+*********************************************/
+
+.commentlist li.comment,
+.commentlist li.trackback,
+.commentlist li.pingback {
+	padding-right: 0;
+	padding-left: .75em;
+}
+.commentlist .comment-body {
+	margin-right: .5em;
+}
+.commentlist .children li.comment,
+.commentlist .children  li.trackback,
+.commentlist .children  li.pingback {
+	border-right: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	padding-right: 0;
+}
+
+
+/*********************************************
+	Search Form Styling
+*********************************************/
+
+#searchform input[type="text"] {
+	width: 100%;
+}
+#searchform input[type="submit"] {
+	position: relative;
+	width: 100%;
+	margin-top: .25em;
+}

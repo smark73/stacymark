@@ -1,0 +1,18 @@
+.page_bg{background:#fcfcfc url(images/page_bg_red.png) left top repeat-x;}
+a{color:#ac0041;font-style:normal;text-decoration:none}
+#content .more-link:hover {color: #ac0041 !important;}
+#bottom .box ul li a:hover{color:#ac0041;text-decoration:none}
+#bottom .box .comments a{color:#ac0041;font-weight:700}
+#content .postnav a{color:#ac0041;text-decoration:none}
+#sidebar ul li a:hover{color: #ac0041;}
+#sidebar ul#recentcomments li.recentcomments a.url{background:none;color:#ac0041;display:inline;text-decoration:none;text-shadow:none}
+#comments ol li .comment-author cite.fn{color:#ac0041;font-style:normal}
+#header a.logo,#header a.logo:link,#header a.logo:visited{color:#ac0041}
+.postmetadata .orange {color: #ac0041;}
+#navi ol.main_menu li a:hover,#content .single h2 a:hover,#sidebar ul.categories li a:hover,#sidebar .tags a:hover{color:#ac0041;text-decoration:none}
+#navi ol.main_menu li ul li a:hover,#content .post h2 a:hover,#content .single a,#comments a{color:#ac0041;text-decoration:none}
+.single .entry table tr th{ background:#f2f2f2;font-weight:700;color:#ac0041;}
+#footer {background: url("images/footer_bg_red.png") repeat-x scroll left top #171717;}
+#content h2.title strong{color:#ac0041;font-weight: 400;}
+#content .postnav a:hover{color:#ac0041;}
+#toTop {color: #AC0041;}

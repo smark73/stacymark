@@ -1,0 +1,54 @@
+/* Add the screen icon for Builder */
+#icon-ithemes-builder-theme {
+	background: url('../images/builder-icon-32.png') top left no-repeat;
+}
+
+/* Fix the icon for the admin menu */
+#adminmenu #toplevel_page_ithemes-builder-theme div.wp-menu-image img {
+	display: none;
+}
+#adminmenu #toplevel_page_ithemes-builder-theme div.wp-menu-image {
+	background: url('../images/builder-icon-16-inactive.png') center center no-repeat;
+}
+#adminmenu #toplevel_page_ithemes-builder-theme:hover div.wp-menu-image,
+#adminmenu #toplevel_page_ithemes-builder-theme.wp-has-current-submenu div.wp-menu-image {
+	background: url('../images/builder-icon-16-active.png') center center no-repeat;
+}
+
+/* Fix tabs for WP before 3.2 */
+.it-pre-wp-3-2 .nav-tab {
+	border-style: solid;
+	border-color: #ccc #ccc #f9f9f9;
+	border-width: 1px 1px 0;
+	color: #c1c1c1;
+	text-shadow: rgba(255,255,255,1) 0 1px 0;
+	font-size: 12px;
+	line-height: 16px;
+	display: inline-block;
+	padding: 4px 14px 6px;
+	text-decoration: none;
+	margin: 0 6px -1px 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-khtml-border-top-left-radius: 5px;
+	-khtml-border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.it-pre-wp-3-2 .nav-tab-active {
+	border-width: 1px;
+	color: #464646;
+	border-bottom-color: #FFF;
+}
+.it-pre-wp-3-2 h2 .nav-tab {
+	padding: 4px 20px 6px;
+	font: italic normal normal 24px/35px Georgia, "Times New Roman", "Bitstream Charter", Times, serif;
+}
+.it-pre-wp-3-2 h2.nav-tab-wrapper {
+	border-bottom: 1px solid #CCC;
+	padding-bottom: 0;
+}
+.it-pre-wp-3-2 h2.nav-tab-wrapper + div.updated {
+	margin-top: 15px;
+}

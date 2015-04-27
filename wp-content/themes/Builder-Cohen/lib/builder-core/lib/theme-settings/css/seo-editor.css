@@ -1,0 +1,133 @@
+th {
+	vertical-align: top;
+	padding: 1em 0;
+	text-align: left;
+}
+
+.form-table {
+	margin: 0;
+}
+.form-table td,
+.form-table th {
+	padding: 0;
+	margin: 10px;
+}
+.form-table td * {
+	margin-top: 0;
+	padding-top: 0;
+}
+.form-table th {
+	font-weight: bold;
+}
+
+.option-description {
+	display: block;
+	margin-left: 20px;
+	font-style: italic;
+}
+.option-list {
+	display: block;
+	margin-left: 20px;
+}
+
+.robots-attribute-descriptions th {
+	min-width: 150px;
+}
+#titles-options th {
+	min-width: 200px;
+}
+
+.overrides {
+	margin: 1em;
+	padding: 1em;
+}
+.view {
+	clear: both;
+	padding: 1em;
+}
+.view span {
+	padding-top: 4px;
+	width: 200px;
+	float: left;
+	margin-right: 1em;
+}
+.view div span {
+	clear: both;
+	float: none;
+	margin-left: 0;
+}
+.level-1 {
+	background: #F3F3F3;
+}
+.level-1 .view span {
+	width: 175px;
+}
+.level-2 {
+	background: #FFF;
+}
+.level-2 .view span {
+	width: 150px;
+}
+.level-3 {
+	background: #F3F3F3;
+}
+.level-3 .view span {
+	width: 125px;
+}
+.view div {
+	float: left;
+}
+
+.title-views-options input[type="checkbox"] {
+	margin-left: 5px;
+}
+.title-views-options input[type="text"] {
+	width: 300px;
+}
+#separator_format,
+#simple_title_separator_custom {
+	width: 100px;
+}
+
+.left-indent-options {
+	margin-left: 1.5em;
+}
+
+.inside h3 {
+	background: none;
+	text-shadow: none;
+	-moz-border-radius: none;
+	font-size: 1.17em;
+	font-weight: bold;
+	margin: 1em 0;
+	padding: 0;
+	color: #333 !important;
+}
+.inside h3:hover {
+	cursor: default;
+	color: #333 !important;
+}
+
+#home_keywords,
+#other_views_description {
+	width: 500px;
+}
+
+div.postbox div.inside {
+	margin: 0 1em;
+	padding: 1px;
+	position: relative;
+	overflow: auto;
+}
+.hndl:hover {
+	cursor: default !important;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}

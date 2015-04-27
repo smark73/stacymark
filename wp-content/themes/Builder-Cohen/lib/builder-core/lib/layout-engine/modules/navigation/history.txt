@@ -1,0 +1,42 @@
+0.0.1 - 2009-04-23
+	Initial beta version
+0.0.2 - 2009-07-27
+	Increased page depth to unlimited (0)
+1.0.0 - 2009-12-02
+	Release ready
+2.0.0 - 2009-12-08
+	Updated to work with version 2.0.0 of LayoutModule
+2.0.1 - 2009-12-10
+	Added classes argument to _get_module_wrapper_attributes and passed it along to parent _get_module_wrapper_attributes call
+2.1.0 - 2010-01-07
+	Updated to API 3.0.0 of class.module.php
+2.1.1 - 2010-01-10
+	Updated _get_module_wrapper_attributes method into new _modify_module_inner_wrapper_fields method
+2.1.2 - 2010-01-21
+	Changed is_home() to is_front_page()
+2.2.0 - 2010-03-03
+	Added images/type_wp_legacy.gif
+	Added support for WordPress Pages and WP 3.0 custom menus
+2.2.1 - 2010-04-26
+	Internationalized strings
+2.2.2 - 2010-08-17
+	Fixed issue where a ul tag wrapped around custom menus needlessly
+2.2.3 - 2010-09-02
+	Created standard wrapper tag and class structure around all navigation types
+2.2.4 - 2010-09-10
+	Updated Builder Settings Pages listing to respect WLM page restrictions
+2.2.5 - 2010-09-16
+	Fixed issue where settings pages would list all pages if only "Home" is selected
+2.2.6 - 2010-12-14
+	Added export handler
+	Added images/type_[1-10].gif
+	Replaced $wp_theme_options global with calls to builder_get_theme_setting
+2.3.0 - 2011-02-22
+	Added complete import/export handlers
+2.4.0 - 2011-07-05 - Chris Jean
+	Added help information
+	Reformated drop-down to segment options
+2.5.0 - 2012-08-13 - Chris Jean
+	Added the _get_custom_preview_image_name() function to handle custom menu settings.
+2.5.1 - 2013-09-04 - Chris Jean
+	Fixed bug where the Module import data is sometimes sent in as an array rather than an object.

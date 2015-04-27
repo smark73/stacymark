@@ -1,0 +1,11 @@
+#start_here_frame_container {
+	margin-top: 15px;
+}
+
+iframe#start_here_frame {
+	background: transparent;
+	width: 95%;
+	height: 1600px;
+	margin: 0;
+	border: 0;
+}
