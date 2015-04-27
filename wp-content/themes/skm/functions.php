@@ -58,13 +58,16 @@ function child_theme_setup(){
     add_theme_support( 'genesis-footer-widgets', 3 );
 
     
+    /** Remove favicon */
+    remove_action('genesis_meta', 'genesis_load_favicon');
+    
     // CUSTOMIZE OUR HEADER
     // remove site title, site description
     // insert thumbnails
     remove_action( 'genesis_site_title', 'genesis_seo_site_title' );
     remove_action( 'genesis_site_description', 'genesis_seo_site_description');
     
-    
+
     //* THUMBNAIL Nav
     add_action( 'genesis_header', 'skm_thumbs_nav' );
     function skm_thumbs_nav() {
