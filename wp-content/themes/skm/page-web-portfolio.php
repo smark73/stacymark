@@ -40,7 +40,7 @@ function web_portfolio_loop(){
                 <p>Paladin Radio asked me for an update to their website which reflected their business in a professional way and would allow for easy content management.  The end result is a custom themed WordPress site which is mobile responsive and captures the awesomeness that is Paladin.</p>
             </div>
             <div class="two-thirds">
-                <?php echo do_shortcode("[metaslider id=93]"); ?>
+                <?php genesis_widget_area( 'paladin-slider' );//echo do_shortcode("[metaslider id=93]"); ?>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -52,7 +52,7 @@ function web_portfolio_loop(){
                 <p>Twin Peaks Digital asked me to refresh their identity with a brighter, more modern look.  I supplied mood boards in which colors were chosen and updated their logo design.  Then a new site was created with flat-design and mobile responsiveness as the guide.  I have also worked aggressively on the SEO of this site, to maintain a high position in Google for specific search terms that are important to the business.</p>
             </div>
             <div class="two-thirds">
-                <?php echo do_shortcode("[metaslider id=97]"); ?>
+                <?php genesis_widget_area( 'tpd-slider' );//echo do_shortcode("[metaslider id=97]"); ?>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -64,7 +64,7 @@ function web_portfolio_loop(){
                 <p>93-9 The Mountain is Northern Arizona's premiere rock station.  My work on this site has been ongoing and I have developed a very customized WordPress theme for the Great Circle Media group of websites of which this station is a part.  Since this is a radio station, BOLD and IN YOUR FACE is the style.  Every spot on the web page has potential to inject banner ads or page take over graphics.</p>
             </div>
             <div class="two-thirds">
-                <?php echo do_shortcode("[metaslider id=101]"); ?>
+                <?php genesis_widget_area( 'kmgn-slider' ); //echo do_shortcode("[metaslider id=101]"); ?>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -76,7 +76,7 @@ function web_portfolio_loop(){
                 <p>92.9 KAFF is Northern Arizona's number one modern country radio station.  My work on this site has been ongoing and I have developed a very customized WordPress theme for the Great Circle Media group of websites of which this station is a part.  Since this is a radio station, BOLD and IN YOUR FACE is the style.  Every spot on the web page has potential to inject banner ads or page take over graphics.</p>
             </div>
             <div class="two-thirds">
-                <?php echo do_shortcode("[metaslider id=104]"); ?>
+                <?php genesis_widget_area( 'kaff-slider' );//echo do_shortcode("[metaslider id=104]"); ?>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -88,7 +88,7 @@ function web_portfolio_loop(){
                 <p>KAFF News needed an easy to use CMS for the news team to post stories and interact with the audience, so I customized a WordPress theme for them.  High level SEO work has been done to optimize the news feeds and meet the specific requirements that Google sets for news sources.</p>
             </div>
             <div class="two-thirds">
-                <?php echo do_shortcode("[metaslider id=107]"); ?>
+                <?php genesis_widget_area( 'news-slider' );//echo do_shortcode("[metaslider id=107]"); ?>
             </div>
             <div class="clearfix"></div>
         </div>

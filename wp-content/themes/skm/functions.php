@@ -66,6 +66,37 @@ function child_theme_setup(){
     }
     //--------END FAVICON------------
     
+    
+    //---- SLIDER WIDGETS ----------------
+    genesis_register_sidebar( array(
+        'id' => 'paladin-slider',
+        'name' => 'Paladin Slider',
+        'description' => 'Widget Area to hold a Slider ',
+    ));
+    genesis_register_sidebar( array(
+        'id' => 'tpd-slider',
+        'name' => 'Twin Peaks Slider',
+        'description' => 'Widget Area to hold a Slider ',
+    ));
+    genesis_register_sidebar( array(
+        'id' => 'kmgn-slider',
+        'name' => 'KMGN Slider',
+        'description' => 'Widget Area to hold a Slider ',
+    ));
+    genesis_register_sidebar( array(
+        'id' => 'kaff-slider',
+        'name' => 'KAFF Slider',
+        'description' => 'Widget Area to hold a Slider ',
+    ));
+    genesis_register_sidebar( array(
+        'id' => 'news-slider',
+        'name' => 'News Slider',
+        'description' => 'Widget Area to hold a Slider ',
+    ));
+            
+    
+   //-----------------------------------------
+    
     // CUSTOMIZE OUR HEADER
     // remove site title, site description
     // insert thumbnails
