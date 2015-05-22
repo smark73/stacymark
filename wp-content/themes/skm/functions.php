@@ -58,8 +58,13 @@ function child_theme_setup(){
     add_theme_support( 'genesis-footer-widgets', 3 );
 
     
-    /** Remove favicon */
-    remove_action('genesis_meta', 'genesis_load_favicon');
+    //---------- FAVICON-------
+    add_filter( 'genesis_pre_load_favicon', 'child_favicon_filter' );
+    function child_favicon_filter( $favicon_url ) {
+            $our_favicon = get_stylesheet_directory_uri() . "/images/favicon.ico";
+            return $our_favicon;
+    }
+    //--------END FAVICON------------
     
     // CUSTOMIZE OUR HEADER
     // remove site title, site description
@@ -71,6 +76,8 @@ function child_theme_setup(){
     //* THUMBNAIL Nav
     add_action( 'genesis_header', 'skm_thumbs_nav' );
     function skm_thumbs_nav() {
+        //don't show thumbs on web-portfolio page
+        if(!is_page('web-portfolio')){
         ?>
         <div class="skm-title">
             <a href="/" title="Stacy Mark - Paintings">
@@ -90,7 +97,16 @@ function child_theme_setup(){
             }
             echo '</ul><br class="clearfix"/>';
             wp_reset_query();
-        
+        }
+    }
+    
+    // remove image dimensions
+    add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
+    add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
+
+    function remove_thumbnail_dimensions( $html ) {
+        $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+        return $html;
     }
     
     
@@ -100,8 +116,7 @@ function child_theme_setup(){
     function skm_custom_footer() {
         $saved_aw_credit = ' &middot; An <a href="http://ambitionsweb.com" target="_blank" title="Ambitions Website Design">AmbitionsWeb</a> Project';
         ?>
-        <p class="copyright">
-            &copy; Copyright 2015 <a href="http://stacymark.com/">Stacy Mark</a> &middot; All Rights Reserved</p>
+            <p class="copyright">&copy; Copyright 2015 <a href="http://stacymark.com/">Stacy Mark</a> &middot; All Rights Reserved</p>
         <?php
     }
     
@@ -120,6 +135,8 @@ function child_theme_setup(){
         //return $page_templates;
     //}
     //add_filter( 'theme_page_templates', 'be_remove_genesis_page_templates' );
+    
+    
     
 }
 

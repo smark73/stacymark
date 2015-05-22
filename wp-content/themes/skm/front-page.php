@@ -27,11 +27,11 @@ function skm_home_loop() {
         while ( $main_ptg->have_posts() ) {
             $main_ptg->the_post();
             global $post;
-            echo '<div class="clearfix ptg-display">';
-            echo '<a href="' . get_permalink() . '">' . get_the_post_thumbnail( $post->ID, 'full' ) . '</a>';
+            echo '<div class="clearfix">';
+            echo '<div class="ptg-display">';
+            echo '<a href="' . get_permalink() . '">' . get_the_post_thumbnail( $post->ID, 'full ptg-main' ) . '</a>';
             get_template_part('templates/content', get_post_format());
             do_action('genesis_post_content');
-            echo '</div>';
         }
     }
     wp_reset_query();
