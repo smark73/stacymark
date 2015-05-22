@@ -127,7 +127,7 @@ input[type="search"] {
 .ptg-display p{display:block;}
 .ptg-main, .wp-post-image{max-height:500px;height:auto;width:auto;}
 
-.web-portfolio-hdr{margin:1% auto;padding:1%;background:#d0cece;}
+.web-portfolio-hdr{margin:1% auto;padding:1%;background:#999293;}
 .hdr-web{
     font-family: 'Rock Salt', cursive;
     font-size:1.3em;
@@ -135,8 +135,8 @@ input[type="search"] {
     text-shadow:1px 1px 1px rgba(0,0,0,0.2);
     color:#f5f5f5;
 }
-.webport-wrap{background:#999293}
-.webport{background:#fff;padding:2% 2% 4%;width:100%;margin:4% auto 200px;}
+.webport-wrap{background:#d0cece;}
+.webport{background:#fff;padding:2% 2% 4%;width:100%;margin:4% auto 10%;}
 .webport-img{max-height:500px;width:auto;}
 
 
@@ -1567,5 +1567,7 @@ li.comment {
 	.sidebar .widget.enews-widget {
 		padding: 40px;
 	}
+        
+            .webport{margin-bottom:100px;}
 
 }
