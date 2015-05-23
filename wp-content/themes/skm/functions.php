@@ -93,7 +93,11 @@ function child_theme_setup(){
         'name' => 'News Slider',
         'description' => 'Widget Area to hold a Slider ',
     ));
-            
+    genesis_register_sidebar( array(
+        'id' => 'more-slider',
+        'name' => 'More Slider',
+        'description' => 'Widget Area to hold a Slider ',
+    ));            
     
    //-----------------------------------------
     

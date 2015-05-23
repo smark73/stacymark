@@ -127,17 +127,18 @@ input[type="search"] {
 .ptg-display p{display:block;}
 .ptg-main, .wp-post-image{max-height:500px;height:auto;width:auto;}
 
-.web-portfolio-hdr{margin:1% auto;padding:1%;background:#999293;}
+.web-portfolio-hdr{margin:1% auto;padding:2%;background:#999293;}
 .hdr-web{
     font-family: 'Rock Salt', cursive;
     font-size:1.3em;
     font-weight:normal;
     text-shadow:1px 1px 1px rgba(0,0,0,0.2);
-    color:#f5f5f5;
+    color:#d0cacb;
 }
 .webport-wrap{background:#d0cece;}
 .webport{background:#fff;padding:2% 2% 4%;width:100%;margin:4% auto 10%;}
 .webport-img{max-height:500px;width:auto;}
+.webtech{font-size:0.8em;color:#666;}
 
 
 
