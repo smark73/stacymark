@@ -149,9 +149,8 @@ function child_theme_setup(){
     remove_action( 'genesis_footer', 'genesis_do_footer' );
     add_action( 'genesis_footer', 'skm_custom_footer' );
     function skm_custom_footer() {
-        $saved_aw_credit = ' &middot; An <a href="http://ambitionsweb.com" target="_blank" title="Ambitions Website Design">AmbitionsWeb</a> Project';
         ?>
-            <p class="copyright">&copy; Copyright 2015 <a href="http://stacymark.com/">Stacy Mark</a> &middot; All Rights Reserved</p>
+            <p class="copyright">&copy; Copyright 2015 <a href="http://stacymark.com/">Stacy Mark</a> &middot; All Rights Reserved  |  An <a href="http://ambitionsweb.com" target="_blank" title="Ambitions Website Design">AmbitionsWeb</a> Project</p>
         <?php
     }
     
