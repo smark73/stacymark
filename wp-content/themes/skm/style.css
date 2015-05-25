@@ -127,18 +127,37 @@ input[type="search"] {
 .ptg-display p{display:block;}
 .ptg-main, .wp-post-image{max-height:500px;height:auto;width:auto;}
 
-.web-portfolio-hdr{margin:1% auto;padding:2%;background:#999293;}
-.hdr-web{
-    font-family: 'Rock Salt', cursive;
+.web-portfolio{background:#999293;}
+.web-portfolio-title{
+    background:#262626;
     font-size:1.3em;
-    font-weight:normal;
-    text-shadow:1px 1px 1px rgba(0,0,0,0.2);
     color:#d0cacb;
+    margin:auto;
+    text-align:center;
 }
-.webport-wrap{background:#d0cece;}
+.web-portfolio-title a{
+    color:#d0cacb;
+    margin:auto;
+    padding:20px;
+}
+.web-portfolio-title a:hover{color:#ffffff;}
+.web-portfolio-hdr{margin:1% auto 0;padding:2% 5% 0;width:90%;}
+.web-portfolio-left{ text-align:left;padding:1% 0 1% 4%;color:#fff;}
+.web-portfolio-right{border-left:2px solid rgba(0,0,0,0.1);text-align:left;padding-left:2%;}
+.web-portfolio-right-tech{display:block}
+.web-tech-hdr{color:#f2f2f2;}
+.about-stacy {font-size:1.1em;color:#f2f2f2;font-weight:500;text-shadow:1px 1px 1px rgba(0,0,0,.2);}
+.about-hl{font-weight:700;text-shadow:1px 1px 1px rgba(0,0,0,.4);color:#c4e5ff;}
+
+.hdr-web{
+    color:#2195f2;
+}
+
+.webport-wrap{margin-top:-6%;background:rgba(255,255,255,0.2)}
 .webport{background:#fff;padding:2% 2% 4%;width:100%;margin:4% auto 10%;}
 .webport-img{max-height:500px;width:auto;}
 .webtech{font-size:0.8em;color:#666;}
+.vert-sep{font-size:0.8em;padding:0 5px;}
 
 
 

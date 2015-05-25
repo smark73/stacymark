@@ -20,10 +20,52 @@ add_action( 'genesis_loop', 'web_portfolio_loop' );
 
 function web_portfolio_hdr() {
     ?>
-        <div class="skm-title web-portfolio-hdr">
+        <div class="web-portfolio-title">
             <a href="/web-portfolio" title="Stacy Mark - Web Projects">
-                <span class="hdr-name" style="color:#f5f5f5;">STACY MARK  <span style="font-size:0.8em;padding:0 5px">|</span>  </span><span class="hdr-web">Latest Web Projects</span>
+                STACY MARK  <span class="vert-sep">|</span> <span class="hdr-web">Latest Web Projects</span>
             </a>
+        </div>
+
+        <div class="skm-title web-portfolio-hdr">
+
+            <div class="one-third first web-portfolio-left">
+                <h2>About Stacy</h2>
+                <p class="about-stacy">I am a Designer and Front-End Developer with an eye for detail and the work ethic to get it done right!  My career in web design has touched all aspects of the process.  For more than 10 years I have combined my skills to handle multiple tasks such as &CenterDot; <span class="about-hl">layout and UI design</span> &CenterDot;  <span class="about-hl">animations and interaction design</span> &CenterDot; <span class="about-hl">website and app development</span> &CenterDot; <span class="about-hl">custom WordPress themes and plugins</span>
+            </div>
+            
+            <div class="two-thirds web-portfolio-right">
+                
+                <div class="web-portfolio-right-tech">
+                    <h4 class="web-tech-hdr">Design and development portfolio of recent projects using the following:</h4>
+                    <br>
+                    <div class="one-half first">
+                        <h4>Design Technology</h4>
+                        <ul>
+                            <li>HTML5 and CSS3</li>
+                            <li>JavaScript and jQuery</li>
+                            <li>Bootstrap</li>
+                            <li>CSS Preprocessors (LESS)</li>
+                            <li>Photoshop, Illustrator, and Flash</li>
+                        </ul>
+                    </div>
+                
+                    <div class="one-half">
+                        <h4>Development Technology</h4>
+                        <ul>
+                            <li>PHP and MySQL</li>
+                            <li>Task runners (Grunt)</li>
+                            <li>WordPress</li>
+                            <li>Symfony2</li>
+                            <li>Git version control</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            <div class='clearfix'></div>
+            
         </div>
     <?php
 }

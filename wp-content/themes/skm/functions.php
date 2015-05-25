@@ -154,6 +154,16 @@ function child_theme_setup(){
         <?php
     }
     
+    //*------CUSTOM BODY CLASS ON WEB--------------
+    add_filter('body_class', 'web_body_class');
+    function web_body_class( $classes ){
+        if (is_page( 'web-portfolio' )){
+            $classes[] = 'web-portfolio';
+        } 
+        return $classes;
+    }
+    
+    
     /**
      * Remove Genesis Page Templates
      *
