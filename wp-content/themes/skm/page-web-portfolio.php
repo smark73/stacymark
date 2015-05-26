@@ -30,7 +30,7 @@ function web_portfolio_hdr() {
 
             <div class="one-third first web-portfolio-left">
                 <h2>About Stacy</h2>
-                <p class="about-stacy">I am a Designer and Front-End Developer with an eye for detail and the work ethic to get it done right!  My career in web design has touched all aspects of the process.  For more than 10 years I have combined my skills to handle multiple tasks such as &CenterDot; <span class="about-hl">layout and UI design</span> &CenterDot;  <span class="about-hl">animations and interaction design</span> &CenterDot; <span class="about-hl">website and app development</span> &CenterDot; <span class="about-hl">custom WordPress themes and plugins</span>
+                <p class="about-stacy">I am a Designer and Front-End Developer with an eye for detail and the work ethic to get it done right!  My career in web design has touched all aspects of the process.  For more than 10 years I have combined my skills to handle multiple tasks such as &CenterDot; <span class="about-hl">layout and UI design</span> &CenterDot;  <span class="about-hl">animations and interaction design</span> &CenterDot; <span class="about-hl">website and app development</span> &CenterDot; <span class="about-hl">custom WordPress themes and plugins</span> &CenterDot; <span class="about-hl">SEO and Analytics</span>
             </div>
             
             <div class="two-thirds web-portfolio-right">
