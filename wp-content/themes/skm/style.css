@@ -159,8 +159,67 @@ input[type="search"] {
 .webtech{font-size:0.8em;color:#666;}
 .vert-sep{font-size:0.8em;padding:0 5px;}
 
+.landing-page{background:#ffffff;display:block;}
+.landing-page .site-inner{margin-top:0;padding-top:0;background:#ffffff;}
+.landing-page .site-footer{padding:0;margin:0 auto;width:100%;}
+.lp-hdr{
+    background:#404040;
+    text-align:center;
+    width:100%;
+    margin:auto 0 auto 0;
+    padding:3% 0;
+    border-bottom:15px solid #ffba00;
+    display:block;
+}
+.lp-hdr .first{text-align:right;}
+.lp-hdr .second{text-align:left;}
+.lp-hdr img{margin:0 auto -10px auto;width:auto;height:auto;}
+.lp-hdr span:nth-child(1) {font-size:0.5em;color:#ffc71c;font-weight:600;font-style: italic;margin:0 10px;}
+.lp-hdr span.autoyear{font-size:1.5em;color:#ffffff;font-weight:700;}
+.lp-hdr span.autoname{font-size:1.5em;color:#cacaca;font-weight:700;}
+.top-phone{float:right;color:#48afff;font-weight:700;margin:1%;}
+.underline{text-decoration: underline;}
+.reservenow{clear:both;margin:auto;text-align:center;color:#ffc71c;font-weight:700;font-size:1.4em;}
+.info-safe{font-size:0.8em;color:rgba(255,255,255,0.7);clear:both;margin:auto;text-align: center;}
+.lp-mid-wrap{margin:0 auto 20px;padding:0;}
+.lp-left{ margin:auto;padding:0;}
+.lp-right{ margin:auto;padding:1%;}
+.lp-foot-wrap{background:#e2e2e2;width:100%;margin:0 auto;padding:0;min-height:200px;margin-top:-7%;}
+.lp-foot-a{margin:-2% auto 0;padding:0 6%;}
+.lp-foot-b{background:#0066cc;height:100px;margin:auto;text-align:center;color:rgba(255,255,255,0.7);font-size:0.8em;padding:1%;}
 
+.autoimage{width:auto;height:auto;max-width:100%;padding:0;margin-top:2%}
 
+.cta-wrap{
+    clear:both;
+    max-width:431px;
+    min-height:400px;
+    margin:auto;
+    padding:0;
+    background:#0066cc;
+}
+.cta{
+    min-height:200px;
+    margin:auto;
+    text-align:center;
+}
+.cta-top-arrow{max-width:431px;max-height:44px;}
+.cta-btm-arrow{margin:auto;padding:0;max-width:431px;max-height:40px;}
+.cta p:nth-child(1){font-size:1.2em;color:#ffba00;font-weight:600;font-style: italic;margin:10px 0 0 30px;text-align:left;}
+.cta h1{width:50%;margin:auto;}
+.cta .savings{font-size:2.2em;float:left;color:#fff;font-weight:700;}
+.cta .offmsrp{font-size:.8em;float:right;color:#48afff;width:50px;padding-top:14px;}
+.cta input[type="text"]{width:80%;margin:10px auto;}
+#save-25{background:#ffba00;color:#d85100;font-size:1.2em;font-weight:700;margin:10px auto 20px;}
+
+.dealer-info{ margin:0 auto;text-align:center;padding:2%;text-align:center;color:#666;}
+.dealer-info img{width:auto;height:auto;}
+.dealer-contact{font-size:1.4em;}
+.lp-details{margin:0 auto;padding:4%;color:#676767}
+
+.sales, .service{font-weight:500;color:rgba(0,0,0,0.7);font-size:1.2em;margin:3px 10px;}
+.sales a, .service a{font-weight:700;color:#0066cc;text-decoration:none;}
+.sales a:hover, .service a:hover{color:#0066cc;}
 /* ## Typographical Elements
 --------------------------------------------- */
 html{background:#232322;}
@@ -1538,7 +1597,10 @@ li.comment {
 	.footer-widgets-1 {
 		margin-right: 0;
 	}
-
+.lp-hdr img{margin:0 auto 5px auto;width:auto;height:auto;}
+.lp-hdr .first{text-align:center;}
+.lp-hdr .second{text-align:center;}
+    .cta h1{width:50%;margin:auto;}
 }
 
 @media only screen and (max-width: 800px) {
@@ -1589,5 +1651,31 @@ li.comment {
 	}
         
             .webport{margin-bottom:100px;}
+            
 
+
+}
+
+@media only screen and (max-width: 970px) {
+    .lp-right{text-align:right;}
+    .autoimage{margin-top:10%;float:right;margin-right:-40px;}
+    .lp-hdr span.autoyear{font-size:1em;}
+    .lp-hdr span.autoname{font-size:1em;}
+    .cta h1{width:50%;margin:auto;}
+    .cta .savings{font-size:1.8em;float:left;color:#fff;font-weight:700;}
+    .cta .offmsrp{font-size:.6em;float:right;color:#48afff;width:50px;padding-top:14px;}
+}
+@media only screen and (max-width: 800px) {
+    .lp-right{text-align:center}
+    .autoimage{margin-top:4%;margin:auto;}
+    .lp-foot-wrap{margin-top:-2%;}
+    .sales a, .service a{fontd-size:3em;}
+    .lp-hdr span.autoyear{font-size:1em;}
+    .lp-hdr span.autoname{font-size:1em;}
+    .cta h1{width:50%;margin:auto;}
+    .cta .savings{font-size:1.8em;float:left;color:#fff;font-weight:700;}
+    .cta .offmsrp{font-size:.6em;float:right;color:#48afff;width:50px;padding-top:14px;}
+}
+@media only screen and (max-width: 500px) {
+    .cta h1{min-width:200px;margin:auto;}
 }

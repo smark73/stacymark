@@ -112,26 +112,28 @@ function child_theme_setup(){
     add_action( 'genesis_header', 'skm_thumbs_nav' );
     function skm_thumbs_nav() {
         //don't show thumbs on web-portfolio page
-        if(!is_page('web-portfolio')){
-        ?>
-        <div class="skm-title">
-            <a href="/" title="Stacy Mark - Paintings">
-                <span class="hdr-name">STACY MARK  <span style="font-size:0.8em;padding:0 5px">|</span>  </span><span class="hdr-paintings">Paintings</span>
-            </a>
-        </div><!--skm-title-->
-            <ul class="ptg-thumbs">
-            <?php
-            $thumbs = new WP_Query('category_name=Painting');
-            $x = 0;
-            while ( $thumbs->have_posts() ) {
-                $thumbs->the_post();
-                global $post;
-                echo '<li class="ptg-thumb">';
-                echo '<a href="' . get_permalink() . '">' . get_the_post_thumbnail( $post->ID, 'thumbnail' ) . '</a>';
-                echo '</li>';
+        if( !is_page('web-portfolio') ){
+            if (!is_page('landing-page')){
+            ?>
+            <div class="skm-title">
+                <a href="/" title="Stacy Mark - Paintings">
+                    <span class="hdr-name">STACY MARK  <span style="font-size:0.8em;padding:0 5px">|</span>  </span><span class="hdr-paintings">Paintings</span>
+                </a>
+            </div><!--skm-title-->
+                <ul class="ptg-thumbs">
+                <?php
+                $thumbs = new WP_Query('category_name=Painting');
+                $x = 0;
+                while ( $thumbs->have_posts() ) {
+                    $thumbs->the_post();
+                    global $post;
+                    echo '<li class="ptg-thumb">';
+                    echo '<a href="' . get_permalink() . '">' . get_the_post_thumbnail( $post->ID, 'thumbnail' ) . '</a>';
+                    echo '</li>';
+                }
+                echo '</ul><br class="clearfix"/>';
+                wp_reset_query();
             }
-            echo '</ul><br class="clearfix"/>';
-            wp_reset_query();
         }
     }
     
@@ -149,9 +151,11 @@ function child_theme_setup(){
     remove_action( 'genesis_footer', 'genesis_do_footer' );
     add_action( 'genesis_footer', 'skm_custom_footer' );
     function skm_custom_footer() {
+        if (!is_page('landing-page')){
         ?>
             <p class="copyright">&copy; Copyright 2015 <a href="http://stacymark.com/">Stacy Mark</a> &middot; All Rights Reserved  |  An <a href="http://ambitionsweb.com" target="_blank" title="Ambitions Website Design">AmbitionsWeb</a> Project</p>
         <?php
+        }
     }
     
     //*------CUSTOM BODY CLASS ON WEB--------------
@@ -159,7 +163,10 @@ function child_theme_setup(){
     function web_body_class( $classes ){
         if (is_page( 'web-portfolio' )){
             $classes[] = 'web-portfolio';
-        } 
+        }
+        if (is_page( 'landing-page' )){
+            $classes[] = 'landing-page';
+        }
         return $classes;
     }
     
