@@ -19,54 +19,50 @@ add_action( 'genesis_loop', 'page_loop' );
 
 
 // ADD to HEAD
-add_action( 'genesis_meta', 'init_stuff' );
-function init_stuff() {
-    $src_iso = get_stylesheet_directory_uri() . '/isotope/dist/isotope.pkgd.min.js';
-    wp_register_script('isotope', $src_iso);
-    wp_enqueue_script('isotope', $src_iso, false);
-}
+//add_action( 'genesis_meta', 'init_photoswipe' );
+//function init_photoswipe() {
+//    
+//        wp_enqueue_style('jquery-mobile-css', 'http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css');
+//        
+//        //store photoswipe styles loc
+//        $src_pswp_css = get_stylesheet_directory_uri() . '/PhotoSwipe/dist/photoswipe.css';
+//        $src_pswp_skin = get_stylesheet_directory_uri() . '/PhotoSwipe/dist/default-skin/default-skin.css';
+//        
+//        wp_register_style('photoswipe-css', $src_pswp_css);
+//        wp_register_style('photoswipe-skin', $src_pswp_skin);
+//        
+//        wp_enqueue_style('photoswipe-css', $src_pswp_css);
+//        wp_enqueue_style('photoswipe-skin', $src_pswp_skin);
+//        
+//        //store photoswipe script loc
+//        $src_pswp_js = get_stylesheet_directory_uri() . '/PhotoSwipe/dist/photoswipe.min.js';
+//        $src_pswp_ui_js = get_stylesheet_directory_uri() . '/PhotoSwipe/dist/photoswipe-ui-default.min.js';
+//        
+//        wp_register_script('jquery-mobile', 'http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js');
+//        wp_register_script('klass', 'https://cdnjs.cloudflare.com/ajax/libs/klass/1.4.0/klass.min.js');
+//        wp_register_script('photoswipe', $src_pswp_js);
+//        wp_register_script('photoswipe-ui', $src_pswp_ui_js);
+//        
+//        wp_enqueue_script('jquery-mobile', 'http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js', false);
+//        wp_enqueue_script('klass', 'http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js', false);
+//        wp_enqueue_script('photoswipe', $src_pswp_js, true);
+//        wp_enqueue_script('photoswipe-ui', $src_pswp_ui_js, true);
+//
+//}
 
-// custom page header
-add_action( 'genesis_before_header', 'skm_cust_pg_hdr' );
-function skm_cust_pg_hdr() {
-    ?>
-        <div class="skm-title">
-            <a href="/" title="Abstract Landscape Paintings" class="ptg-type-link">
-                <span class="hdr-name">Abstract Landscapes</span>
-            </a>
-            <a href="/" title="Surreal Paintings" class="ptg-type-link">
-                <span class="hdr-name">Surreal</span>
-            </a>
-        </div>
-    <?php
-}
-
-function page_loop(){
-    ?>
+//* THUMBNAIL Nav
+add_action( 'genesis_before_header', 'skm_thumbs_nav' );
+function skm_thumbs_nav() {
+        ?>
         <div class="skm-gallery">
-            <div class="grid">
-                <div class="grid-item grid-item--width2 grid-item-desc" style="background:rgba(255,255,255,.3);">
-                    <div class="skm-title">
-                        <a href="/" title="Stacy Mark - Paintings">
-                            <span class="hdr-name">STACY MARK  <span style="font-size:0.8em;padding:0 5px">|</span>  </span><span class="hdr-paintings">Paintings</span>
-                        </a>
-                    </div>
-                    <p id="bio-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vulputate commodo accumsan. Duis fermentum metus in diam luctus rutrum. Donec dictum, lorem ac placerat posuere, turpis magna finibus lorem, non m
-                    </p>
-                </div>
-
+            <div class="thumb-wrapper">
+                <ul class="ptg-thumbs">
                 <?php
-                $thumbs = new WP_Query(array(
-                    'category_name' => 'Painting',
-                    'orderby' => 'rand',
-                    ));
+                $thumbs = new WP_Query('category_name=Painting');
+                //$x = 0;
 
-                // init vars to create 1 larger random image
-                $el='';
-                //$rand_num1 = rand(1,6);
-                
                 while ( $thumbs->have_posts() ) {
+                    
                     $thumbs->the_post();
                     global $post;
                     //wp_get_attachment_image_src($attachment_id) returns an array with
@@ -78,61 +74,24 @@ function page_loop(){
                     $full_img = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
                     $lg_img = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
 
-                    //echo $lg_img[1] . "x" . $lg_img[2];
-
-                    // check image width & height
-                    //if( $lg_img[1] >= $lg_img[2] ){
-                        //wider than tall
-                        //give class based on width
-                        //$big_grid_class_x = 'grid-item--width2';
-                        //var_dump($big_grid_class_x);
-                    //} else {
-                        //taller than wide
-                        //give class based on height
-                        //$big_grid_class_x = 'grid-item--height2';
-                        //var_dump($big_grid_class_x);
-                    //}
-
-                    // first one, plus others we add to array, are given the grid-item--width2/height2 class
-//                    $el+=1;
-//                    $array_of_bigs = array(1);
-//
-//                    if( in_array( $el, $array_of_bigs) ){
-//                        $big_grid_class = $big_grid_class_x;
-//                        $wp_img_size = 'large';
-//                    } else {
-//                        $big_grid_class= 'normal-size';
-//                        $wp_img_size = 'medium';
-//                    }
-//                    
-                    // create 1 larger random image
-                    $el+=1;
-                    $big_grid_class_x = 'grid-item--width2';
-
-                    if( $el == 1 ){
-                        $big_grid_class = $big_grid_class_x;
-                        $wp_img_size = 'large';
-                    } else {
-                        $big_grid_class= 'normal-size';
-                        $wp_img_size = 'medium';
-                    }
-                    
-                    //generate random background color for each grid-item
-                    $rand_num2 = rand(2,6)/10;
-
-                    //echo '<div class="grid-item ' . $big_grid_class .'" style="background:rgba(255,255,255,' . $rand_num . ');">';
-                    //echo '<a href="' . $full_img[0] . '"data-size="' . $full_img[1] . 'x' . $full_img[2] . '" data-med="' . $lg_img[0] .'" data-med-size="' . $lg_img[1] . 'x' . $lg_img[2] . '" data-author="Stacy Mark" class="">' . get_the_post_thumbnail( $post->ID, $wp_img_size ) . '</a>';
-                    echo '<div class="grid-item ' . $big_grid_class .'" style="background:rgba(255,255,255,' . $rand_num2 . ');">';
-                    echo '<a href="' . $full_img[0] . '"data-size="' . $full_img[1] . 'x' . $full_img[2] . '" data-med="' . $lg_img[0] .'" data-med-size="' . $lg_img[1] . 'x' . $lg_img[2] . '" data-author="Stacy Mark">' . get_the_post_thumbnail( $post->ID, $wp_img_size ) . '</a>';
-                    //echo the_title('<figure class="ptg-caption">', '</p>');
-                    echo '</div>';
-
+                    echo '<li class="ptg-thumb">';
+                    echo '<a href="' . $full_img[0] . '"data-size="' . $full_img[1] . 'x' . $full_img[2] . '" data-med="' . $lg_img[0] .'" data-med-size="' . $lg_img[1] . 'x' . $lg_img[2] . '" data-author="Stacy Mark" class="ptg-thumb-img">' . get_the_post_thumbnail( $post->ID, 'medium' ) . '</a>';
+                    echo '</li>';
 
                 }
                 ?>
 
+                </ul>
+            <div class="clearfix"></div>
             </div>
         </div>
+
+        <?php
+            wp_reset_query();
+}
+
+function page_loop(){
+    ?>
 
     <div id="gallery" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="pswp__bg"></div>
@@ -483,34 +442,12 @@ function page_loop(){
 
 	</script>
 
-
-        <?php
-            wp_reset_query();
+	
+    <?php
+    
     
 }
 
-    //add_action('genesis_after_footer', 'add_scripts_to_body_btm');
-    function add_scripts_to_body_btm() {
-    ?>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                //init isotope and assign to var
-                var $grid = $('.grid').isotope({
-                    itemSelector: '.grid-item',
-                    layoutMode: 'masonry',
-                    masonry: {
-                        columnWidth: '.grid-sizer'
-                    }
-                });
-                //layout grid after each image loads
-                $grid.imagesLoaded().progress( function(){
-                    $grid.isotope('layout');
-                });
-            });
-        </script>
-    <?php
-    }
-    
-
 // genesis child theme
 genesis();
+

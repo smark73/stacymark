@@ -123,9 +123,131 @@ input[type="search"] {
 /* # Defaults
 ---------------------------------------------------------------------------------------------------- */
 
+/* SITE HEADER */
+.hdr-name{
+    font-family: 'Montserrat', cursive;
+    font-size:1em;
+    font-weight:normal;
+    text-shadow:1px 1px 1px rgba(0,0,0,0.15);
+    color:#574f3b;
+}
+.hdr-paintings{
+    font-family: 'Rock Salt', cursive;
+    font-size:1.3em;
+    font-weight:normal;
+    /*text-shadow:1px 1px 1px rgba(0,0,0,0.1);*/
+    color:rgba(153,146,116,0.5); /* #999274 */
+}
+.skm-title{
+    text-align:center;
+    margin:1% auto 0;
+    font-size:0.8em;
+    /*border-bottom:1px solid rgba(153,146,116,0.1);*/
+}
+
+/* PAINTINGS */
+.skm-gallery{margin:auto;width:100%;text-align:center;min-width:600px;}
 .ptg-display{width:100%;height:100%;}
 .ptg-display p{display:block;}
 .ptg-main, .wp-post-image{max-height:500px;height:auto;width:auto;}
+
+.ptg-caption{
+    width:90%;
+    font-size:10px;
+    font-weight:500;
+    color:#898682;
+    margin:20px auto 0;
+    padding:10px 0 0;
+    /*background:rgba(255,255,255,0.1);*/
+    border-top:1px solid rgba(153,146,116,0.1);
+}
+
+ul.ptg-thumbs{
+    text-align:center;
+    padding-top:7px;
+    display:block;
+    border:1px solid transparent;
+}
+li.ptg-thumb{
+    display:inline-block;
+    margin:0 7px;
+}
+.ptg-thumb-img{
+    max-width:180px;
+    height:auto;
+    overflow:hidden;
+}
+.thumb-wrapper{
+/*    max-width:800px;
+    height:150px;
+    overflow:hidden;*/
+    margin:auto;
+    position:relative;
+}
+.ptg-type-link{
+    margin: auto 20px;
+}
+#bio-desc{
+    padding:40px;
+    text-align:left;
+}
+
+
+/* ISOTOPE GRID STUFF */
+/*force scrollbar */
+html {overflow-y: scroll;}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-sizer,
+.grid-item {
+    width: 300px;
+}
+.grid-item{
+    float:left;
+    text-align: center;
+    vertical-align: middle;
+    padding:30px;
+    height:300px;
+}
+.grid-item a{
+    /* VERT ALIGN IMG - prevent blur from using translateY in child element*/
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.grid-item img,
+.grid-item--width2 img {
+    margin:auto;
+    max-width:80%;
+    height:auto;
+    max-height:80%;
+    /*VERT ALIGN IMG */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    /*    -webkit-box-shadow: -2px 2px 3px -1px rgba(0,0,0,0.2);
+    -moz-box-shadow: -2px 2px 3px -1px rgba(0,0,0,0.2);
+    box-shadow: -2px 2px 3px -1px rgba(0,0,0,0.2);*/
+}
+.grid-item--width2 {
+    /*see media queries*/
+    width: 600px;
+    height:400px;
+}
+
+.normal-size{
+    /*non-first images*/
+    /*max-height:240px;*/
+}
+
+
+/* WEB PORTFOLIO */
 
 .web-portfolio{background:#999293;}
 .web-portfolio-title{
@@ -220,6 +342,8 @@ input[type="search"] {
 .sales, .service{font-weight:500;color:rgba(0,0,0,0.7);font-size:1.2em;margin:3px 10px;}
 .sales a, .service a{font-weight:700;color:#0066cc;text-decoration:none;}
 .sales a:hover, .service a:hover{color:#0066cc;}
+
+
 /* ## Typographical Elements
 --------------------------------------------- */
 html{background:#232322;}
@@ -231,14 +355,14 @@ body {
         font-weight: 300;
         line-height: 1.625;
         margin: 0;
-        background: #7b6f55; /* Old browsers */
-        background: -moz-linear-gradient(top,  #ffffff 0%, #7b6f55 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#7b6f55)); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top,  #ffffff 0%,#7b6f55 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top,  #ffffff 0%,#7b6f55 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(top,  #ffffff 0%,#7b6f55 100%); /* IE10+ */
-        background: linear-gradient(to bottom,  #ffffff 0%,#7b6f55 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#7b6f55',GradientType=0 ); /* IE6-9 */
+        background: #7b6f55;
+        background: -moz-linear-gradient(top,  #ffffff 0%, #7b6f55 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#7b6f55));
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#7b6f55 100%);
+        background: -o-linear-gradient(top,  #ffffff 0%,#7b6f55 100%);
+        background: -ms-linear-gradient(top,  #ffffff 0%,#7b6f55 100%);
+        background: linear-gradient(to bottom,  #ffffff 0%,#7b6f55 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#7b6f55',GradientType=0 );
 }
 
 a,
@@ -982,26 +1106,6 @@ img.alignright,
 /* ## Title Area
 --------------------------------------------- */
 
-.hdr-name{
-    font-family: 'Montserrat', cursive;
-    font-size:1em;
-    font-weight:normal;
-    text-shadow:1px 1px 1px rgba(0,0,0,0.2);
-    color:#574f3b;
-}
-.hdr-paintings{
-    font-family: 'Rock Salt', cursive;
-    font-size:1.3em;
-    font-weight:normal;
-    text-shadow:1px 1px 1px rgba(0,0,0,0.2);
-    color:#999274;
-}
-.skm-title{
-    text-align:center;
-    margin:0px auto 20px;
-    font-size:0.8em;
-}
-
 
 .title-area {
 	float: left;
@@ -1060,17 +1164,6 @@ img.alignright,
 
 /* # Site Navigation
 ---------------------------------------------------------------------------------------------------- */
-
-ul.ptg-thumbs{
-    text-align:center;
-    padding-top:7px;
-    display:block;
-    border:1px solid transparent;
-}
-li.ptg-thumb{
-    display:inline-block;
-    margin:0 7px;
-}
 
 .genesis-nav-menu {
 	clear: both;
@@ -1531,7 +1624,11 @@ li.comment {
 	.footer-widgets-1 {
 		margin-right: 30px;
 	}
-
+        
+            .grid-item--width2 {
+                width: 300px;
+                height:300px;
+            }
 }
 
 @media only screen and (max-width: 960px) {
@@ -1597,16 +1694,20 @@ li.comment {
 	.footer-widgets-1 {
 		margin-right: 0;
 	}
-.lp-hdr img{margin:0 auto 5px auto;width:auto;height:auto;}
-.lp-hdr .first{text-align:center;}
-.lp-hdr .second{text-align:center;}
-    .cta h1{width:50%;margin:auto;}
+        .lp-hdr img{margin:0 auto 5px auto;width:auto;height:auto;}
+        .lp-hdr .first{text-align:center;}
+        .lp-hdr .second{text-align:center;}
+        .cta h1{width:50%;margin:auto;}
+    
+        .grid-item--width2 {
+            width: 300px;
+            height:300px;
+        }
 }
 
 @media only screen and (max-width: 800px) {
 
 	body {
-		background-color: #fff;
 		font-size: 16px;
 	}
 
@@ -1651,9 +1752,11 @@ li.comment {
 	}
         
             .webport{margin-bottom:100px;}
-            
-
-
+            .grid-item--width2 {
+                width: 300px;
+                height:300px;
+            }
+            .grid-item-desc{ font-size:0.7em;}
 }
 
 @media only screen and (max-width: 970px) {
@@ -1664,6 +1767,11 @@ li.comment {
     .cta h1{width:50%;margin:auto;}
     .cta .savings{font-size:1.8em;float:left;color:#fff;font-weight:700;}
     .cta .offmsrp{font-size:.6em;float:right;color:#48afff;width:50px;padding-top:14px;}
+    .grid-item--width2 {
+        width: 300px;
+        height:300px;
+    }
+    .grid-item-desc{ font-size:0.7em;}
 }
 @media only screen and (max-width: 800px) {
     .lp-right{text-align:center}
@@ -1675,7 +1783,26 @@ li.comment {
     .cta h1{width:50%;margin:auto;}
     .cta .savings{font-size:1.8em;float:left;color:#fff;font-weight:700;}
     .cta .offmsrp{font-size:.6em;float:right;color:#48afff;width:50px;padding-top:14px;}
+    
+    .grid-item--width2 {
+        width: 300px;
+        height:300px;
+    }
+    .grid-item-desc{ font-size:0.7em;}
 }
 @media only screen and (max-width: 500px) {
     .cta h1{min-width:200px;margin:auto;}
 }
+
+
+ /*MEDIA QUERY DEBUG ASSISTANCE*/
+ 
+/*@media only screen and (min-width: 1201px) { body{border-top:2px solid red } }
+@media only screen and (max-width: 1200px) { body{border-top:2px solid blue } }
+@media only screen and (max-width: 960px) { body{border-top:2px solid yellow } }
+@media only screen and (max-width: 800px) { body{border-top:2px solid green } }
+@media only screen and (max-width: 400px) { body{border-top:2px solid orange } }*/
+
+/* RESPONSIVE NAV HELPERS */
+/*@media only screen and (min-width: 768px) { body{border-top:2px solid orange } }*/ 
+/*@media only screen and (max-width: 767px) { body{border-top:2px solid blue } }*/
