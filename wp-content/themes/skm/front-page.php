@@ -144,10 +144,10 @@ function page_loop(){
             </div>
         </div>
 
-    <div id="gallery" class="pswp" tabindex="-1" role="dialog" aria-hidden="true" data-enhance=”false” data-role=”none”>
+    <div id="gallery" class="pswp" tabindex="-1" role="dialog" aria-hidden="true" data-enhance="false" data-role="none">
         <div class="pswp__bg"></div>
 
-        <div class="pswp__scroll-wrap" data-enhance=”false” data-role=”none”>
+        <div class="pswp__scroll-wrap" data-enhance="false" data-role="none">
 
             <div class="pswp__container">
                 <div class="pswp__item"></div>
@@ -155,18 +155,18 @@ function page_loop(){
                 <div class="pswp__item"></div>
             </div>
 
-            <div class="pswp__ui pswp__ui--hidden" data-enhance=”false” data-role=”none”>
+            <div class="pswp__ui pswp__ui--hidden" data-enhance="false" data-role="none">
 
-                <div class="pswp__top-bar" data-enhance=”false” data-role=”none”>
+                <div class="pswp__top-bar" data-enhance="false" data-role="none">
 
                     <div class="pswp__counter"></div>
 
-                    <button class="pswp__button pswp__button--close" title="Close (Esc)" data-enhance=”false” data-role=”none”></button>
-                    <button class="pswp__button pswp__button--share" title="Share" data-enhance=”false” data-role=”none”></button>
-                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen" data-enhance=”false” data-role=”none”></button>
-                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out" data-enhance=”false” data-role=”none”></button>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)" data-enhance="false" data-role="none"></button>
+                    <button class="pswp__button pswp__button--share" title="Share" data-enhance="false" data-role="none"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen" data-enhance="false" data-role="none"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out" data-enhance="false" data-role="none"></button>
 
-                    <div class="pswp__preloader" data-enhance=”false” data-role=”none”>
+                    <div class="pswp__preloader" data-enhance="false" data-role="none">
                             <div class="pswp__preloader__icn">
                               <div class="pswp__preloader__cut">
                                 <div class="pswp__preloader__donut"></div>
@@ -177,8 +177,8 @@ function page_loop(){
 
                 <!-- <div class="pswp__loading-indicator"><div class="pswp__loading-indicator__line"></div></div> -->
 
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap" data-enhance=”false” data-role=”none”>
-                    <div class="pswp__share-tooltip" data-enhance=”false” data-role=”none”>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap" data-enhance="false" data-role="none">
+                    <div class="pswp__share-tooltip" data-enhance="false" data-role="none">
                             <!-- <a href="#" class="pswp__share--facebook"></a>
                             <a href="#" class="pswp__share--twitter"></a>
                             <a href="#" class="pswp__share--pinterest"></a>
@@ -186,8 +186,8 @@ function page_loop(){
                     </div>
                 </div>
 
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)" data-enhance=”false” data-role=”none”></button>
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)" data-enhance=”false” data-role=”none”></button>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)" data-enhance="false" data-role="none"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)" data-enhance="false" data-role="none"></button>
             <div class="pswp__caption">
               <div class="pswp__caption__center">
               </div>
