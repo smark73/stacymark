@@ -124,7 +124,8 @@ input[type="search"] {
 ---------------------------------------------------------------------------------------------------- */
 
 /* SITE HEADER */
-.hdr-name{
+.hdr-name,
+.ptgs-hdr a {
     font-family: 'Montserrat', cursive;
     font-size:1em;
     font-weight:normal;
@@ -133,10 +134,10 @@ input[type="search"] {
 }
 .hdr-paintings{
     font-family: 'Rock Salt', cursive;
-    font-size:1.3em;
+    font-size:1em;
     font-weight:normal;
     /*text-shadow:1px 1px 1px rgba(0,0,0,0.1);*/
-    color:rgba(153,146,116,0.5); /* #999274 */
+    color:rgba(153,146,116,0.6); /* #999274 */
 }
 .skm-title{
     text-align:center;
@@ -144,8 +145,25 @@ input[type="search"] {
     font-size:0.8em;
     /*border-bottom:1px solid rgba(153,146,116,0.1);*/
 }
+.ptg-filter-btn{
+    margin: auto 20px;
+    display:inline-block;
+    cursor: pointer;
+}
+p.bio-desc{
+    padding:40px;
+    text-align:left;
+    color:#7c7870;
+    font-size:1em;
+}
 
 /* PAINTINGS */
+.ptgs-hdr{
+    text-align:center;
+    margin:1% auto 0;
+    font-size:0.8em;
+}
+
 .skm-gallery{margin:auto;width:100%;text-align:center;min-width:600px;}
 .ptg-display{width:100%;height:100%;}
 .ptg-display p{display:block;}
@@ -184,13 +202,8 @@ li.ptg-thumb{
     margin:auto;
     position:relative;
 }
-.ptg-type-link{
-    margin: auto 20px;
-}
-#bio-desc{
-    padding:40px;
-    text-align:left;
-}
+
+
 
 
 /* ISOTOPE GRID STUFF */
@@ -1629,6 +1642,10 @@ li.comment {
                 width: 300px;
                 height:300px;
             }
+            p.bio-desc{
+                padding:0 20px 20px;
+                font-size:0.8em;
+            }
 }
 
 @media only screen and (max-width: 960px) {
@@ -1703,6 +1720,10 @@ li.comment {
             width: 300px;
             height:300px;
         }
+        p.bio-desc{
+            padding:20px;
+            font-size:1em;
+        }
 }
 
 @media only screen and (max-width: 800px) {
@@ -1757,38 +1778,42 @@ li.comment {
                 height:300px;
             }
             .grid-item-desc{ font-size:0.7em;}
+            p.bio-desc{
+                padding:20px;
+                font-size:1em;
+            }
 }
 
 @media only screen and (max-width: 970px) {
-    .lp-right{text-align:right;}
-    .autoimage{margin-top:10%;float:right;margin-right:-40px;}
-    .lp-hdr span.autoyear{font-size:1em;}
-    .lp-hdr span.autoname{font-size:1em;}
-    .cta h1{width:50%;margin:auto;}
-    .cta .savings{font-size:1.8em;float:left;color:#fff;font-weight:700;}
-    .cta .offmsrp{font-size:.6em;float:right;color:#48afff;width:50px;padding-top:14px;}
-    .grid-item--width2 {
-        width: 300px;
-        height:300px;
-    }
-    .grid-item-desc{ font-size:0.7em;}
+        .lp-right{text-align:right;}
+        .autoimage{margin-top:10%;float:right;margin-right:-40px;}
+        .lp-hdr span.autoyear{font-size:1em;}
+        .lp-hdr span.autoname{font-size:1em;}
+        .cta h1{width:50%;margin:auto;}
+        .cta .savings{font-size:1.8em;float:left;color:#fff;font-weight:700;}
+        .cta .offmsrp{font-size:.6em;float:right;color:#48afff;width:50px;padding-top:14px;}
+        .grid-item--width2 {
+            width: 300px;
+            height:300px;
+        }
+        .grid-item-desc{ font-size:0.7em;}
 }
 @media only screen and (max-width: 800px) {
-    .lp-right{text-align:center}
-    .autoimage{margin-top:4%;margin:auto;}
-    .lp-foot-wrap{margin-top:-2%;}
-    .sales a, .service a{fontd-size:3em;}
-    .lp-hdr span.autoyear{font-size:1em;}
-    .lp-hdr span.autoname{font-size:1em;}
-    .cta h1{width:50%;margin:auto;}
-    .cta .savings{font-size:1.8em;float:left;color:#fff;font-weight:700;}
-    .cta .offmsrp{font-size:.6em;float:right;color:#48afff;width:50px;padding-top:14px;}
-    
-    .grid-item--width2 {
-        width: 300px;
-        height:300px;
-    }
-    .grid-item-desc{ font-size:0.7em;}
+        .lp-right{text-align:center}
+        .autoimage{margin-top:4%;margin:auto;}
+        .lp-foot-wrap{margin-top:-2%;}
+        .sales a, .service a{fontd-size:3em;}
+        .lp-hdr span.autoyear{font-size:1em;}
+        .lp-hdr span.autoname{font-size:1em;}
+        .cta h1{width:50%;margin:auto;}
+        .cta .savings{font-size:1.8em;float:left;color:#fff;font-weight:700;}
+        .cta .offmsrp{font-size:.6em;float:right;color:#48afff;width:50px;padding-top:14px;}
+
+        .grid-item--width2 {
+            width: 300px;
+            height:300px;
+        }
+        .grid-item-desc{ font-size:0.7em;}
 }
 @media only screen and (max-width: 500px) {
     .cta h1{min-width:200px;margin:auto;}

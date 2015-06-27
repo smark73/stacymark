@@ -77,16 +77,22 @@ function child_theme_setup(){
         //store photoswipe script loc
         $src_pswp_js = get_stylesheet_directory_uri() . '/PhotoSwipe/dist/photoswipe.min.js';
         $src_pswp_ui_js = get_stylesheet_directory_uri() . '/PhotoSwipe/dist/photoswipe-ui-default.min.js';
+        //store isotope location
+        //$src_iso = get_stylesheet_directory_uri() . '/isotope/dist/isotope.pkgd.min.js';
         
-        wp_register_script('jquery-mobile', 'http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js');
-        wp_register_script('klass', 'https://cdnjs.cloudflare.com/ajax/libs/klass/1.4.0/klass.min.js');
+        wp_register_script('jquery', '//code.jquery.com/jquery-2.1.4.min.js');
+        //wp_register_script('jquery-mobile', '//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js');
+        wp_register_script('klass', '//cdnjs.cloudflare.com/ajax/libs/klass/1.4.0/klass.min.js');
         wp_register_script('photoswipe', $src_pswp_js);
         wp_register_script('photoswipe-ui', $src_pswp_ui_js);
-        
-        wp_enqueue_script('jquery-mobile', 'http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js', false);
-        wp_enqueue_script('klass', 'http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js', false);
-        wp_enqueue_script('photoswipe', $src_pswp_js, true);
-        wp_enqueue_script('photoswipe-ui', $src_pswp_ui_js, true);
+        wp_register_script('isotope', '//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.min.js');
+                
+        wp_enqueue_script('jquery', '//code.jquery.com/jquery-2.1.4.min.js', true);
+        //wp_enqueue_script('jquery-mobile', '//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js', true);
+        wp_enqueue_script('klass', '//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js', true);
+        wp_enqueue_script('photoswipe', $src_pswp_js, false);
+        wp_enqueue_script('photoswipe-ui', $src_pswp_ui_js, false);
+        wp_enqueue_script('isotope', '//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.min.js', true);
     }
     
     //add_action('genesis_after_footer', 'add_scripts_to_body_btm');
@@ -208,7 +214,7 @@ function child_theme_setup(){
     function skm_custom_footer() {
         if (!is_page('landing-page')){
         ?>
-            <p class="copyright">&copy; Copyright 2015 <a href="http://stacymark.com/">Stacy Mark</a> &middot; All Rights Reserved  |  An <a href="http://ambitionsweb.com" target="_blank" title="Ambitions Website Design">AmbitionsWeb</a> Project</p>
+            <p class="copyright" data-enhance=”false” data-role=”none”>&copy; Copyright 2015 <a href="http://stacymark.com/" data-enhance=”false” data-role=”none”>Stacy Mark</a> &middot; All Rights Reserved  |  An <a href="http://ambitionsweb.com" target="_blank" title="Ambitions Website Design">AmbitionsWeb</a> Project</p>
         <?php
         }
     }
