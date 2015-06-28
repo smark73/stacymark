@@ -147,7 +147,7 @@ input[type="search"] {
 }
 .ptg-filter-btn{
     margin: auto 20px;
-    display:inline-block;
+    display:inline-block; /* display:block on small screens*/
     cursor: pointer;
 }
 p.bio-desc{
@@ -164,7 +164,11 @@ p.bio-desc{
     font-size:0.8em;
 }
 
-.skm-gallery{margin:auto;width:100%;text-align:center;min-width:600px;}
+.skm-gallery{
+    margin:auto;
+    width:100%;
+    text-align:center;
+}
 .ptg-display{width:100%;height:100%;}
 .ptg-display p{display:block;}
 .ptg-main, .wp-post-image{max-height:500px;height:auto;width:auto;}
@@ -1653,6 +1657,17 @@ li.comment {
             }
 }
 
+@media only screen and (max-width: 970px) {
+        .lp-right{text-align:right;}
+        .autoimage{margin-top:10%;float:right;margin-right:-40px;}
+        .lp-hdr span.autoyear{font-size:1em;}
+        .lp-hdr span.autoname{font-size:1em;}
+        .cta h1{width:50%;margin:auto;}
+        .cta .savings{font-size:1.8em;float:left;color:#fff;font-weight:700;}
+        .cta .offmsrp{font-size:.6em;float:right;color:#48afff;width:50px;padding-top:14px;}
+        
+}
+
 @media only screen and (max-width: 960px) {
 
 	.site-inner,
@@ -1716,19 +1731,20 @@ li.comment {
 	.footer-widgets-1 {
 		margin-right: 0;
 	}
-        .lp-hdr img{margin:0 auto 5px auto;width:auto;height:auto;}
-        .lp-hdr .first{text-align:center;}
-        .lp-hdr .second{text-align:center;}
-        .cta h1{width:50%;margin:auto;}
-    
-        .grid-item--width2 {
-            width: 300px;
-            height:300px;
-        }
-        p.bio-desc{
-            padding:20px;
-            font-size:1em;
-        }
+        
+            .lp-hdr img{margin:0 auto 5px auto;width:auto;height:auto;}
+            .lp-hdr .first{text-align:center;}
+            .lp-hdr .second{text-align:center;}
+            .cta h1{width:50%;margin:auto;}
+
+            .grid-item--width2 {
+                width: 300px;
+                height:300px;
+            }
+            p.bio-desc{
+                padding:20px;
+                font-size:0.8em;
+            }
 }
 
 @media only screen and (max-width: 800px) {
@@ -1776,52 +1792,37 @@ li.comment {
 	.sidebar .widget.enews-widget {
 		padding: 40px;
 	}
+
+            .lp-right{text-align:center}
+            .autoimage{margin-top:4%;margin:auto;}
+            .lp-foot-wrap{margin-top:-2%;}
+            .sales a, .service a{fontd-size:3em;}
+            .lp-hdr span.autoyear{font-size:1em;}
+            .lp-hdr span.autoname{font-size:1em;}
+            .cta h1{width:50%;margin:auto;}
+            .cta .savings{font-size:1.8em;float:left;color:#fff;font-weight:700;}
+            .cta .offmsrp{font-size:.6em;float:right;color:#48afff;width:50px;padding-top:14px;}
         
             .webport{margin-bottom:100px;}
             .grid-item--width2 {
                 width: 300px;
                 height:300px;
             }
-            .grid-item-desc{ font-size:0.7em;}
+
             p.bio-desc{
                 padding:20px;
-                font-size:1em;
+                font-size:0.8em;
             }
+
+
+
 }
 
-@media only screen and (max-width: 970px) {
-        .lp-right{text-align:right;}
-        .autoimage{margin-top:10%;float:right;margin-right:-40px;}
-        .lp-hdr span.autoyear{font-size:1em;}
-        .lp-hdr span.autoname{font-size:1em;}
-        .cta h1{width:50%;margin:auto;}
-        .cta .savings{font-size:1.8em;float:left;color:#fff;font-weight:700;}
-        .cta .offmsrp{font-size:.6em;float:right;color:#48afff;width:50px;padding-top:14px;}
-        .grid-item--width2 {
-            width: 300px;
-            height:300px;
-        }
-        .grid-item-desc{ font-size:0.7em;}
-}
-@media only screen and (max-width: 800px) {
-        .lp-right{text-align:center}
-        .autoimage{margin-top:4%;margin:auto;}
-        .lp-foot-wrap{margin-top:-2%;}
-        .sales a, .service a{fontd-size:3em;}
-        .lp-hdr span.autoyear{font-size:1em;}
-        .lp-hdr span.autoname{font-size:1em;}
-        .cta h1{width:50%;margin:auto;}
-        .cta .savings{font-size:1.8em;float:left;color:#fff;font-weight:700;}
-        .cta .offmsrp{font-size:.6em;float:right;color:#48afff;width:50px;padding-top:14px;}
 
-        .grid-item--width2 {
-            width: 300px;
-            height:300px;
-        }
-        .grid-item-desc{ font-size:0.7em;}
-}
 @media only screen and (max-width: 500px) {
-    .cta h1{min-width:200px;margin:auto;}
+        .cta h1{min-width:200px;margin:auto;}
+        .ptg-filter-btn{display:block;}
+
 }
 
 

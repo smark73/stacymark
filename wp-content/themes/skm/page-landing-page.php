@@ -29,8 +29,8 @@ function lp_hdr() {
 
         <div class="lp-hdr">
             <div class="one-third first">
-                <a href="/landing-page" title="Planet Hyundai Sahara">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/planet-hyundai-sahara.png" alt="Planet Hyundai Sahara (702) 614-2120" title="Planet Hyundai Sahara (702) 614-2120">
+                <a href="/landing-page" title="Business Logo">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hyundai-dealer-logo.png" alt="Logo" title="Logo">
                 </a>
             </div>
             <div class="two-thirds second">
@@ -89,17 +89,17 @@ function lp_footer() {
                 <p>
                     25% Off MSRP includes HMA Rebate and Dealer Discounts. Available to all consumers on all 2015 model years Sonatas.
                 </p>
-                <h4>Available right now at Planet Hyundai Sahara!</h4>
+                <h4>Available right now at Your Hyundai Dealer!</h4>
                 <div class="clearfix"></div>
             </div>
             
             <div class="dealer-info one-half">
-                <a href="/landing-page" title="Planet Hyundai Sahara">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/planet-hyundai-sahara.png" alt="Planet Hyundai Sahara (702) 614-2120" title="Planet Hyundai Sahara (702) 614-2120">
+                <a href="/landing-page" title="Business Name">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hyundai-dealer-logo.png" alt="Business Name" title="Business Name">
                 </a>
                 <br/>
-                <p class="sales"><span>Sales:</span> <a href="tel:1-702-614-2120">(702) 614-2120</a></p>
-                <p class="service"><span>Service:</span> <a href="tel:1-702-940-3190">(702) 940-3190</a></p>
+                <p class="sales"><span>Sales:</span> <a href="tel:1-123-456-7890">(123) 456-7890</a></p>
+                <p class="service"><span>Service:</span> <a href="tel:1-123-456-7890">(123) 456-7890</a></p>
                 <div class="clearfix"></div>
             </div>
             
@@ -107,7 +107,7 @@ function lp_footer() {
         </div>
         
         <div class="lp-foot-b">
-            <p>Copyright © 2015 Planet Hyundai - All Rights Reserved </p>
+            <p>Copyright © 2015 Business Name - All Rights Reserved </p>
         </div>
         <div class="clearfix"></div>
         
