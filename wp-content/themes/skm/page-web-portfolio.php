@@ -24,6 +24,18 @@ function web_portfolio_hdr() {
             <a href="/web-portfolio" title="Stacy Mark - Web Projects">
                 STACY MARK  <span class="vert-sep">|</span> <span class="hdr-web">Latest Web Projects</span>
             </a>
+            <span class="vert-sep">|</span> 
+            <a class="web-contact-toggle">
+                Contact
+            </a>
+            <div class="web-contact web-contact-hide hidden">
+                (928) 225-9830
+                stacy@stacymark.com
+                <div class="web-contact-form">
+                    <?php echo do_shortcode( '[gravityform id="1" title="false" description="false"]' );?>
+                </div>
+            </div>
+            <div class="clearfix"></div>
         </div>
 
         <div class="skm-title web-portfolio-hdr">
@@ -36,7 +48,7 @@ function web_portfolio_hdr() {
             <div class="two-thirds web-portfolio-right">
                 
                 <div class="web-portfolio-right-tech">
-                    <h4 class="web-tech-hdr">Design and development portfolio of recent projects using the following:</h4>
+                    <h4 class="web-tech-hdr">Design and development portfolio of recent projects:</h4>
                     <br>
                     <div class="one-half first">
                         <h4>Design Technology</h4>
@@ -154,6 +166,46 @@ function web_portfolio_loop(){
         
     </div>
     <?php
+}
+
+
+// footer scripts
+add_action('genesis_after_footer', 'add_scripts_to_btm');
+function add_scripts_to_btm() {
+    ?>
+    <script type="text/javascript">
+        // START toggle web-contact in navbar
+        jQuery(function($){
+            //store our targets in vars
+            var $webContactToggle = jQuery(document).find('.web-contact-toggle');
+            var $webContact = jQuery(document).find('.web-contact');
+            var $webContactForm = jQuery(document).find('.web-contact-form');
+
+            //init search-form styles and classes
+            $webContactForm.addClass('hidden');
+            $webContactForm.css({opacity:0});
+            //$webContact.hide();
+
+            //toggle function
+            $webContactToggle.click(function(){
+                //web-contact-nav is hidden until first click (otherwise shows on slow page loads)
+                $webContact.removeClass('hidden');
+                //$webContact.show();
+                //
+                $webContact.toggleClass('web-contact-hide web-contact-show');
+                
+                if(($webContactForm).hasClass('hidden')){
+                    var webContactWait;
+                    clearTimeout(webContactWait);
+                    webContactWait = setTimeout(function(){$webContactForm.toggleClass('hidden visible').animate({opacity:1});} , 100);
+                } else {
+                    $webContactForm.animate({opacity:0}).toggleClass('hidden visible');
+                }
+            });
+        });
+        // END
+    </script>
+    <?php    
 }
 
 // genesis child theme

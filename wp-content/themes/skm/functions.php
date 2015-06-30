@@ -171,32 +171,32 @@ function child_theme_setup(){
     
     //* THUMBNAIL Nav
     //add_action( 'genesis_header', 'skm_thumbs_nav' );
-//    function skm_thumbs_nav() {
-//        //don't show thumbs on web-portfolio page
-//        if( !is_page('web-portfolio') ){
-//            if (!is_page('landing-page')){
+    function skm_thumbs_nav() {
+        //don't show thumbs on web-portfolio page
+        if( !is_page('web-portfolio') ){
+            if (!is_page('landing-page')){
             ?>
-            <!--<div class="skm-title">-->
-                <!--<a href="/" title="Stacy Mark - Paintings">-->
-                    <!--<span class="hdr-name">STACY MARK  <span style="font-size:0.8em;padding:0 5px">|</span>  </span><span class="hdr-paintings">Paintings</span>-->
-                <!--</a>-->
-            <!--</div>skm-title-->
-                <!--<ul class="ptg-thumbs">-->
+            <div class="skm-title">
+                <a href="/" title="Stacy Mark - Paintings">
+                    <span class="hdr-name">STACY MARK  <span style="font-size:0.8em;padding:0 5px">|</span>  </span><span class="hdr-paintings">Paintings</span>
+                </a>
+            </div>
+                <ul class="ptg-thumbs">
                 <?php
-//                $thumbs = new WP_Query('category_name=Painting');
-//                $x = 0;
-//                while ( $thumbs->have_posts() ) {
-//                    $thumbs->the_post();
-//                    global $post;
-//                    echo '<li class="ptg-thumb">';
-//                    echo '<a href="' . get_permalink() . '">' . get_the_post_thumbnail( $post->ID, 'thumbnail' ) . '</a>';
-//                    echo '</li>';
-//                }
-//                echo '</ul><br class="clearfix"/>';
-//                wp_reset_query();
-//            }
-//        }
-//    }
+                $thumbs = new WP_Query('category_name=Painting');
+                $x = 0;
+                while ( $thumbs->have_posts() ) {
+                    $thumbs->the_post();
+                    global $post;
+                    echo '<li class="ptg-thumb">';
+                    echo '<a href="' . get_permalink() . '">' . get_the_post_thumbnail( $post->ID, 'thumbnail' ) . '</a>';
+                    echo '</li>';
+                }
+                echo '</ul><br class="clearfix"/>';
+                wp_reset_query();
+            }
+        }
+    }
     
     // remove image dimensions
     add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );

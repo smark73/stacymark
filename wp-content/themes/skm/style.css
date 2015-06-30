@@ -123,6 +123,16 @@ input[type="search"] {
 /* # Defaults
 ---------------------------------------------------------------------------------------------------- */
 
+.hidden{
+    display:none;
+    visibility:hidden;
+    height:0;
+}
+.visible{
+    display:block;
+    visibility: visible;
+}
+
 /* SITE HEADER */
 .hdr-name,
 .ptgs-hdr a {
@@ -364,6 +374,97 @@ html {overflow-y: scroll;}
 .sales, .service{font-weight:500;color:rgba(0,0,0,0.7);font-size:1.2em;margin:3px 10px;}
 .sales a, .service a{font-weight:700;color:#0066cc;text-decoration:none;}
 .sales a:hover, .service a:hover{color:#0066cc;}
+
+
+// Toggle contact on web portfolio
+/*.navbar-search{
+    float:right;
+}*/
+.web-contact{
+    clear:both;
+    display:block;
+    opacity:0;
+    width:100%;
+    margin:0;
+    padding:0;
+    display:block;
+    text-align: center;
+    background:#262626;
+    position:relative;
+    z-index: 1000;
+}
+.web-contact-toggle{
+    display:inline-block;
+    cursor:pointer;
+}
+
+a.web-contact-toggle:hover{
+    color:#fff;
+}
+.web-contact .web-contact-form{
+    width:90%;
+    margin:auto;
+}
+.web-contact-hide{
+    -webkit-animation: web-contact-close 1s;
+    -moz-animation: web-contact-close 1s;
+    -o-animation: web-contact-close 1s;
+    animation: web-contact-close 1s;
+    animation-iteration-count: 1;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+.web-contact-show{
+    -webkit-animation: web-contact-open 1s;
+    -moz-animation: web-contact-open 1s;
+    -o-animation: web-contact-open 1s;
+    animation: web-contact-open 1s;
+    animation-iteration-count: 1;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    height:100%;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+
+@-webkit-keyframes web-contact-open{
+    0% { opacity: 0; height: 0; }
+    100% { opacity: 1; height: 100%; }
+}
+@-moz-keyframes web-contact-open{
+    0% { opacity: 0; height: 0; }
+    100% { opacity: 1; height: 100%; }
+}
+@-o-keyframes web-contact-open{
+    0% { opacity: 0; height: 0; }
+    100% { opacity: 1; height: 100%; }
+}
+@keyframes web-contact-open{
+    0% { opacity: 0; height: 0; }
+    100% { opacity: 1; height: 100%; }
+}
+
+@-webkit-keyframes web-contact-close{
+    0% { opacity: 1; height: 100%; }
+    100% { opacity: 0; height: 0; }
+}
+@-moz-keyframes web-contact-close{
+    0% { opacity: 1; height: 100%; }
+    100% { opacity: 0; height: 0; }
+}
+@-o-keyframes web-contact-close{
+    0% { opacity: 1; height: 100%; }
+    100% { opacity: 0; height: 0; }
+}
+@keyframes web-contact-close{
+    0% { opacity: 1; height: 100%; }
+    100% { opacity: 0; height: 0; }
+}
+
 
 
 /* ## Typographical Elements
