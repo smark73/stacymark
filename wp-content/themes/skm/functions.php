@@ -109,6 +109,22 @@ function child_theme_setup(){
     //--------END FAVICON------------
     
     
+    //------- HEAD META ---------
+    //* Add Viewport meta tag for mobile browsers (requires HTML5 theme support)
+    add_theme_support( 'genesis-responsive-viewport' );
+    
+    add_action( 'genesis_meta', 'child_meta_info' );
+    function child_meta_info(){
+        ?>
+        <meta name="author" content="Stacy Mark">
+        <meta name="dcterms.dateCopyrighted" content="2000">
+        <meta name="dcterms.rights" content="All Rights Reserved">
+        <meta name="dcterms.rightsHolder" content="Stacy Mark">
+        <?php
+    }
+    //--------  END HEAD META ---------
+    
+    
     //---- SLIDER WIDGETS ----------------
     genesis_register_sidebar( array(
         'id' => 'paladin-slider',
@@ -141,17 +157,14 @@ function child_theme_setup(){
         'description' => 'Widget Area to hold a Slider ',
     ));            
     
-   //-----------------------------------------
     
+   //-----------------------------------------
     // CUSTOMIZE OUR HEADER
-    // remove site title, site description
-    // insert thumbnails
     remove_action( 'genesis_site_title', 'genesis_seo_site_title' );
     remove_action( 'genesis_site_description', 'genesis_seo_site_description');
-    
 
-    //* HEADER 
-    add_action( 'genesis_header', 'skm_hdr_title' );
+    //* HEADER !!! NOT USED !!!
+    //add_action( 'genesis_header', 'skm_hdr_title' );
     function skm_hdr_title() {
         //don't show thumbs on web-portfolio page
         if( !is_page('web-portfolio') ){
@@ -168,8 +181,7 @@ function child_theme_setup(){
         }
     }
     
-    
-    //* THUMBNAIL Nav
+    //* THUMBNAIL Nav !!! NOT USED !!!
     //add_action( 'genesis_header', 'skm_thumbs_nav' );
     function skm_thumbs_nav() {
         //don't show thumbs on web-portfolio page
@@ -197,15 +209,15 @@ function child_theme_setup(){
             }
         }
     }
-    
     // remove image dimensions
     add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
     add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
-
     function remove_thumbnail_dimensions( $html ) {
         $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
         return $html;
     }
+    
+    //* END HEADER ------------------------------------
     
     
     //* FOOTER Customization
@@ -214,7 +226,7 @@ function child_theme_setup(){
     function skm_custom_footer() {
         if (!is_page('landing-page')){
         ?>
-            <p class="copyright" data-enhance=”false” data-role=”none”>&copy; Copyright 2015 <a href="http://stacymark.com/" data-enhance=”false” data-role=”none”>Stacy Mark</a> &middot; All Rights Reserved  |  An <a href="http://ambitionsweb.com" target="_blank" title="Ambitions Website Design">AmbitionsWeb</a> Project</p>
+            <p class="copyright" data-enhance="false" data-role="none"><?php echo do_shortcode( '[footer_copyright]');?> <a href="http://stacymark.com/" data-enhance="false" data-role="none">Stacy Mark</a> &middot; All Rights Reserved  |  An <a href="http://ambitionsweb.com" target="_blank" title="Ambitions Website Design">Ambitions Web</a> Project</p>
         <?php
         }
     }
