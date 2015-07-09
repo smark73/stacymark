@@ -48,9 +48,8 @@ function page_loop(){
                     'orderby' => 'rand',
                     ));
 
-                // init vars to create 1 larger random image
+                // init vars to create 1 larger image
                 $el='';
-                //$rand_num1 = rand(1,6);
                 
                 while ( $thumbs->have_posts() ) {
                     $thumbs->the_post();
@@ -196,9 +195,9 @@ function add_scripts_to_btm() {
                 });
                 
                 //layout grid after each image loads
-                $grid.imagesLoaded().progress( function(){
-                    $grid.isotope('layout');
-                });
+                //$grid.imagesLoaded().progress( function(){
+                    //$grid.isotope('layout');
+                //});
                 
                 // filter items on button click
                 $('.ptgs-hdr').on( 'click', 'a', function() {
