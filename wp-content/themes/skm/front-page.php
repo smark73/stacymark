@@ -67,7 +67,6 @@ function page_loop(){
                         $ptg_cats .= " ";
                     }
                     
-                    
                     //wp_get_attachment_image_src($attachment_id) returns an array with
                     //[0] => url
                     //[1] => width
@@ -75,45 +74,17 @@ function page_loop(){
                     //[3] => boolean: true if $url is a resized image, false if it is the original or if no image is available.
                     $full_img = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
                     $lg_img = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
-
-                    //echo $lg_img[1] . "x" . $lg_img[2];
-
-                    // check image width & height
-                    //if( $lg_img[1] >= $lg_img[2] ){
-                        //wider than tall
-                        //give class based on width
-                        //$big_grid_class_x = 'grid-item--width2';
-                        //var_dump($big_grid_class_x);
-                    //} else {
-                        //taller than wide
-                        //give class based on height
-                        //$big_grid_class_x = 'grid-item--height2';
-                        //var_dump($big_grid_class_x);
-                    //}
-
-                    // first one, plus others we add to array, are given the grid-item--width2/height2 class
-//                    $el+=1;
-//                    $array_of_bigs = array(1);
-//
-//                    if( in_array( $el, $array_of_bigs) ){
-//                        $big_grid_class = $big_grid_class_x;
-//                        $wp_img_size = 'large';
-//                    } else {
-//                        $big_grid_class= 'normal-size';
-//                        $wp_img_size = 'medium';
-//                    }
-                    
+  
                     // create 1 larger image
                     $el+=1;
                     $big_grid_class_x = 'grid-item--width2';
-
-                    if( $el == 1 ){
-                        $big_grid_class = $big_grid_class_x;
-                        $wp_img_size = 'large';
-                    } else {
+                    //if( $el == 1 ){
+                        //$big_grid_class = $big_grid_class_x;
+                        //$wp_img_size = 'large';
+                    //} else {
                         $big_grid_class= 'normal-size';
                         $wp_img_size = 'medium';
-                    }
+                    //}
                     
                     //generate random background color for each grid-item
                     $rand_num2 = rand(2,6)/10;
