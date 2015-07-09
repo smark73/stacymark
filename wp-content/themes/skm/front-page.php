@@ -33,6 +33,9 @@ function skm_cust_pg_hdr() {
             <a title="Surreal Paintings" class="ptg-filter-btn" data-filter=".surreal">
                 Surreal
             </a>
+            <a title="Other Paintings" class="ptg-filter-btn" data-filter=".other">
+                Other
+            </a>
         </div>
     <?php
 }
