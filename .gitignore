@@ -22,5 +22,8 @@ wp-content/plugins/*
 wp-content/themes/*
 !wp-content/themes/skm/
 
+wp-content/themes/skm/gulpfile.js
+wp-content/themes/skm/bower.json
+
 /nbproject/*
 
