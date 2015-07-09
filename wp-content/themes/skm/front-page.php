@@ -196,9 +196,9 @@ function add_scripts_to_btm() {
                 });
                 
                 //layout grid after each image loads
-                //$grid.imagesLoaded().progress( function(){
-                    //$grid.isotope('layout');
-                //});
+                $grid.imagesLoaded().progress( function(){
+                    $grid.isotope('layout');
+                });
                 
                 // filter items on button click
                 $('.ptgs-hdr').on( 'click', 'a', function() {
