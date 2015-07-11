@@ -225,8 +225,9 @@ function child_theme_setup(){
     add_action( 'genesis_footer', 'skm_custom_footer' );
     function skm_custom_footer() {
         if (!is_page('landing-page')){
+            $ambitionsweb = '  |  An <a href="http://ambitionsweb.com" target="_blank" title="Ambitions Website Design">Ambitions Web</a> Project</p>';
         ?>
-            <p class="copyright" data-enhance="false" data-role="none"><?php echo do_shortcode( '[footer_copyright]');?> <a href="http://stacymark.com/" data-enhance="false" data-role="none">Stacy Mark</a> &middot; All Rights Reserved  |  An <a href="http://ambitionsweb.com" target="_blank" title="Ambitions Website Design">Ambitions Web</a> Project</p>
+            <p class="copyright" data-enhance="false" data-role="none"><?php echo do_shortcode( '[footer_copyright]');?> <a href="http://stacymark.com/" data-enhance="false" data-role="none">Stacy Mark</a> &middot; All Rights Reserved.
         <?php
         }
     }

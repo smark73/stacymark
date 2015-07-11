@@ -20,29 +20,28 @@ add_action( 'genesis_loop', 'web_portfolio_loop' );
 
 function web_portfolio_hdr() {
     ?>
-        <div class="web-portfolio-title">
+        <div class="web-portfolio-top-bar">
             <a href="/web-portfolio" title="Stacy Mark - Web Projects">
-                STACY MARK  <span class="vert-sep">|</span> <span class="hdr-web">Latest Web Projects</span>
+                STACY MARK  <span class="vert-sep"> | </span> <span class="hdr-web">Latest Web Projects</span>
             </a>
             <span class="vert-sep">|</span> 
             <a class="web-contact-toggle">
                 Contact
             </a>
             <div class="web-contact web-contact-hide hidden">
-                (928) 225-9830
-                stacy@stacymark.com
+                (928) 225-9830   |   <a href="mailto:stacy@stacymark.com">stacy@stacymark.com</a>
                 <div class="web-contact-form">
-                    <?php echo do_shortcode( '[gravityform id="1" title="false" description="false"]' );?>
+                    <?php echo do_shortcode( '[gravityform id="1" title="false" description="false" ajax="true"]' );?>
                 </div>
             </div>
             <div class="clearfix"></div>
         </div>
 
-        <div class="skm-title web-portfolio-hdr">
+        <div class="web-portfolio-hdr">
 
             <div class="one-third first web-portfolio-left">
                 <h2>About Stacy</h2>
-                <p class="about-stacy">I am a Designer and Front-End Developer with an eye for detail and the work ethic to get it done right!  My career in web design has touched all aspects of the process.  For more than 10 years I have combined my skills to handle multiple tasks such as &CenterDot; <span class="about-hl">layout and UI design</span> &CenterDot;  <span class="about-hl">animations and interaction design</span> &CenterDot; <span class="about-hl">website and app development</span> &CenterDot; <span class="about-hl">custom WordPress themes and plugins</span> &CenterDot; <span class="about-hl">SEO and Analytics</span>
+                <p class="about-stacy">I am a Web Developer and Designer with an eye for detail and the work ethic to get it done right!  My career in web design has touched all aspects of the process.  For more than 10 years I have combined my skills to handle multiple tasks such as &CenterDot; <span class="about-hl">layout and UI design</span> &CenterDot;  <span class="about-hl">animations and interaction design</span> &CenterDot; <span class="about-hl">website and app development</span> &CenterDot; <span class="about-hl">custom WordPress themes and plugins</span> &CenterDot; <span class="about-hl">SEO and Analytics</span>
             </div>
             
             <div class="two-thirds web-portfolio-right">

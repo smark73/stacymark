@@ -24,6 +24,30 @@ add_action( 'genesis_before_header', 'skm_cust_pg_hdr' );
 function skm_cust_pg_hdr() {
     ?>
         <div class="ptgs-hdr">
+            <div class="ptg-top-bar">
+                <div class="two-thirds first ptg-top-bar-lft">
+                    <a href="/" title="Stacy Mark - Paintings">
+                        <span class="hdr-name">STACY MARK</span>
+                        <span class="ptg-vsep"> | </span>
+                        <span class="hdr-paintings">PAINTINGS</span>
+                    </a>
+                </div>
+                <div class="one-third ptg-top-bar-rt">
+                    <a class="ptg-contact-toggle">
+                        CONTACT
+                    </a>
+                </div>
+                
+                <div class="clearfix"></div>
+                
+                <div class="ptg-contact web-contact-hide hidden">
+                    <div class="ptg-contact-form">
+                        <?php echo do_shortcode( '[gravityform id="2" title="false" description="false" ajax="true"]' );?>
+                    </div>
+                </div>
+                
+            </div>
+            
             <a  href="/" title="All Paintings" class="ptg-filter-btn" data-filter="*">
                 View All
             </a>
@@ -43,7 +67,6 @@ function skm_cust_pg_hdr() {
 function page_loop(){
     ?>
             <div class="skm-gallery grid">
-
 
                 <?php
                 $thumbs = new WP_Query(array(
@@ -80,16 +103,16 @@ function page_loop(){
                     // create 1 larger image
                     $el+=1;
                     $big_grid_class_x = 'grid-item--width2';
-                    //if( $el == 1 ){
-                        //$big_grid_class = $big_grid_class_x;
-                        //$wp_img_size = 'large';
-                    //} else {
+                    if( $el <= 2 ){
+                        $big_grid_class = $big_grid_class_x;
+                        $wp_img_size = 'large';
+                    } else {
                         $big_grid_class= 'normal-size';
                         $wp_img_size = 'medium';
-                    //}
+                    }
                     
                     //generate random background color for each grid-item
-                    $rand_num2 = rand(2,6)/10;
+                    $rand_num2 = rand(23,37)/100;
                     
                     //populate the data-index attr with the array of indexes
                     $ptg_index = $el - 1;
@@ -209,6 +232,36 @@ function add_scripts_to_btm() {
                   $grid.isotope({ filter: filterValue });
                   
                 });
+                
+                
+            // START toggle ptg-contact in navbar
+            //store our targets in vars
+            var $ptgContactToggle = jQuery(document).find('.ptg-contact-toggle');
+            var $ptgContact = jQuery(document).find('.ptg-contact');
+            var $ptgContactForm = jQuery(document).find('.ptg-contact-form');
+
+            //init search-form styles and classes
+            $ptgContactForm.addClass('hidden');
+            $ptgContactForm.css({opacity:0});
+            //$ptgContact.hide();
+
+            //toggle function
+            $ptgContactToggle.click(function(){
+                //ptg-contact-nav is hidden until first click (otherwise shows on slow page loads)
+                $ptgContact.removeClass('hidden');
+                //$ptgContact.show();
+                //
+                $ptgContact.toggleClass('web-contact-hide web-contact-show');
+                
+                if(($ptgContactForm).hasClass('hidden')){
+                    var ptgContactWait;
+                    clearTimeout(ptgContactWait);
+                    ptgContactWait = setTimeout(function(){$ptgContactForm.toggleClass('hidden visible').animate({opacity:1});} , 100);
+                } else {
+                    $ptgContactForm.animate({opacity:0}).toggleClass('hidden visible');
+                }
+            });
+            // END
                 
             
             //PhotoSwipe
