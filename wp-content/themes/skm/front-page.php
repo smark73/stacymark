@@ -32,10 +32,34 @@ function skm_cust_pg_hdr() {
                         <span class="hdr-paintings">PAINTINGS</span>
                     </a>
                 </div>
+                
                 <div class="one-third ptg-top-bar-rt">
-                    <a class="ptg-contact-toggle">
-                        CONTACT
-                    </a>
+                        <div class="sidexside">
+                            <?php
+                                wp_nav_menu( array(
+                                    'menu'          => 'Sort Paintings',
+                                    'container'     => 'div',
+                                    'container_class'   => 'genesis-nav-menu sort-ptg-menu',
+                                    'container_id'      => '',
+                                    'menu_class'        => 'menu',
+                                    'menu_id'           => '',
+                                    'echo'          => true,
+                                    'fallback_cb'   => false,
+                                    'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                    'before'          => '',
+                                    'after'           => '',
+                                    'link_before'     => '',
+                                    'link_after'      => '',
+                                    'depth'         => 0, 
+                                    'walker'        => new sort_paintings_walker_nav_menu
+                                ) );
+                            ?>
+                        </div>
+                        <div class="sidexside">
+                            <a class="ptg-contact-toggle">
+                                CONTACT
+                            </a>
+                        </div>
                 </div>
                 
                 <div class="clearfix"></div>
@@ -48,18 +72,6 @@ function skm_cust_pg_hdr() {
                 
             </div>
             
-            <a  href="/" title="All Paintings" class="ptg-filter-btn" data-filter="*">
-                View All
-            </a>
-            <a title="Abstract Landscape Paintings" class="ptg-filter-btn" data-filter=".abstract-landscape">
-                Abstract Landscapes
-            </a>
-            <a title="Surreal Paintings" class="ptg-filter-btn" data-filter=".surreal">
-                Surreal
-            </a>
-            <a title="Other Paintings" class="ptg-filter-btn" data-filter=".other">
-                Other
-            </a>
         </div>
     <?php
 }

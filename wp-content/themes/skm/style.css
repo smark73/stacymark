@@ -184,6 +184,11 @@ a.ptg-filter-btn:hover{
     border:1px solid transparent;
     background:rgba(153,146,116,0.1);
 }
+
+div.sidexside {
+    display:inline-block;
+}
+
 p.bio-desc{
     padding:40px;
     text-align:left;
@@ -261,7 +266,8 @@ li.ptg-thumb{
 .ptg-contact-form .validation_message{
     color:yellow;
 }
-a.ptg-contact-toggle{
+a.ptg-contact-toggle,
+.sort-ptg-menu ul li a {
     display:inline-block;
     cursor:pointer;
     color:#b3ac9d;
@@ -270,10 +276,16 @@ a.ptg-contact-toggle{
     padding:5px;
     font-size:0.8em;
 }
-
-a.ptg-contact-toggle:hover{
+.sort-ptg-menu ul li a{
+    margin:0 20px 0 0;
+    padding:10px;
+    font-size:0.9em;
+}
+a.sort-btn{}
+a.ptg-contact-toggle:hover,
+a.sort-btn:hover {
     background:rgba(255,255,255,0.05);
-    color:#d4cfc5;
+    color:#e5554e;
 }
 
 
