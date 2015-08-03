@@ -153,6 +153,19 @@ function web_portfolio_loop(){
 
         <div class="webport">
             <div class="one-third first">
+                <h3>Landing Pages</h3>
+                <a href="/web-portfolio/landing-page/" target="_blank">View Example &raquo;</a>
+                <p>Here's an example of a landing page that demonstrates my understanding of a call-to-action with high probability of success in attaining customer information.</p>
+                <p class="webtech">HTML5, CSS3, Photoshop, SEO, Google Analytics</p>
+            </div>
+            <div class="two-thirds">
+                <a href="/web-portfolio/landing-page/" target="_blank"><img src="/wp-content/uploads/slider-land-page.jpg" width="790" height="420 "style="width:auto;height:auto;margin:auto"/></a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        
+        <div class="webport">
+            <div class="one-third first">
                 <h3>And more ...</h3>
                 <p>My custom WordPress theme is used on multiple radio station websites.  This theme is highly 'ad-driven' for sales of banner ads and page takeovers.</p>
                 <p class="webtech">HTML5, CSS3, LESS, Grunt, JavaScript, jQuery, PHP, MySQL, Git, WordPress, Photoshop, Illustrator, Flash, SEO, Google Analytics</p>
