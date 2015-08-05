@@ -102,7 +102,7 @@ function web_portfolio_loop(){
         <div class="webport">
             <div class="one-third first">
                 <h3>Twin Peaks Digital</h3>
-                <a href="http://paladinradio.com" target="_blank">twinpeaksdigital.com</a>
+                <a href="http://twinpeaksdigital.com" target="_blank">twinpeaksdigital.com</a>
                 <p>Twin Peaks Digital asked me to refresh their identity with a brighter, more modern look.  I supplied mood boards in which colors were chosen and updated their logo design.  Then a new site was created with flat-design and mobile responsiveness as the guide.  I have also worked aggressively on the SEO of this site, to maintain a high position in Google for specific search terms that are important to the business.</p>
                 <p class="webtech">WordPress, HTML5, CSS3, JavaScript, jQuery, PHP, MySQL, Git, Photoshop, SEO, Google Analytics</p>
             </div>
