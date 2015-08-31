@@ -77,7 +77,10 @@ function skm_cust_pg_hdr() {
         </div>
 
         <div class="hp-slider">
-            <?php echo do_shortcode( '[metaslider id=135]' ); ?>
+            <?php
+                //echo do_shortcode( '[metaslider id=135]' ); DEV
+                echo do_shortcode( '[metaslider id=197]' );
+            ?>
         </div>
     <?php
 }
@@ -103,7 +106,9 @@ function page_loop(){
                     ?>
                 </div>
                 <div class="one-half">
-                    <img src="/wp-content/uploads/evening-on-the-hillside-hidden-path.jpg" alt="" style="width:auto;height:auto;max-height:300px;">
+                    <a href="/paintings-surreal" title="Surreal Paintings">
+                        <img src="/wp-content/uploads/magic-suds.jpg" alt="Magic Suds oil painting" style="width:auto;height:auto;max-height:300px;">
+                    </a>
                 </div>
 
             </div>
