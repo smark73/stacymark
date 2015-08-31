@@ -145,7 +145,7 @@ input[type="search"] {
 .hdr-paintings {
     color:#b3ac9d;
     letter-spacing: 10px;
-    font-size:0.8em;
+    font-size:0.6em;
 }
 .ptg-vsep{
     font-size:0.8em;
@@ -156,7 +156,7 @@ input[type="search"] {
     text-align:center;
     margin:0 auto;
     padding:10px;
-    background:#4b4842;
+    background:#3a3835;
 }
 .ptg-top-bar-lft{
     text-align: middle;
@@ -178,7 +178,7 @@ a.ptg-filter-btn{
     padding:4px 7px;
     background:transparent;
     border:1px solid transparent;
-    font-size:0.8em;
+    font-size:0.6em;
 }
 a.ptg-filter-btn:hover{
     border:1px solid transparent;
@@ -266,7 +266,9 @@ li.ptg-thumb{
 .ptg-contact-form .validation_message{
     color:yellow;
 }
+
 a.ptg-contact-toggle,
+.ptgs-menu ul li a,
 .sort-ptg-menu ul li a {
     display:inline-block;
     cursor:pointer;
@@ -274,12 +276,13 @@ a.ptg-contact-toggle,
     height:100%;
     margin:0;
     padding:5px;
-    font-size:0.8em;
+    font-size:0.7em;
 }
+.ptgs-menu ul li a,
 .sort-ptg-menu ul li a{
     margin:0 20px 0 0;
     padding:10px;
-    font-size:0.9em;
+    font-size:0.8em;
 }
 a.sort-btn{}
 a.ptg-contact-toggle:hover,
