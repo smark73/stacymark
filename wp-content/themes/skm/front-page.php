@@ -126,32 +126,33 @@ function add_scripts_to_btm() {
         <script type="text/javascript">
             jQuery(document).ready(function($){
 
-            // START toggle ptg-contact in navbar
-            //store our targets in vars
-            var $ptgContactToggle = jQuery(document).find('.ptg-contact-toggle');
-            var $ptgContact = jQuery(document).find('.ptg-contact');
-            var $ptgContactForm = jQuery(document).find('.ptg-contact-form');
+                // START toggle ptg-contact in navbar
+                //store our targets in vars
+                var $ptgContactToggle = jQuery(document).find('.ptg-contact-toggle');
+                var $ptgContact = jQuery(document).find('.ptg-contact');
+                var $ptgContactForm = jQuery(document).find('.ptg-contact-form');
 
-            //init search-form styles and classes
-            $ptgContactForm.addClass('hidden');
-            $ptgContactForm.css({opacity:0});
-            //$ptgContact.hide();
+                //init search-form styles and classes
+                $ptgContactForm.addClass('hidden');
+                $ptgContactForm.css({opacity:0});
+                //$ptgContact.hide();
 
-            //toggle function
-            $ptgContactToggle.click(function(){
-                //ptg-contact-nav is hidden until first click (otherwise shows on slow page loads)
-                $ptgContact.removeClass('hidden');
-                //$ptgContact.show();
-                //
-                $ptgContact.toggleClass('web-contact-hide web-contact-show');
-                
-                if(($ptgContactForm).hasClass('hidden')){
-                    var ptgContactWait;
-                    clearTimeout(ptgContactWait);
-                    ptgContactWait = setTimeout(function(){$ptgContactForm.toggleClass('hidden visible').animate({opacity:1});} , 100);
-                } else {
-                    $ptgContactForm.animate({opacity:0}).toggleClass('hidden visible');
-                }
+                //toggle function
+                $ptgContactToggle.click(function(){
+                    //ptg-contact-nav is hidden until first click (otherwise shows on slow page loads)
+                    $ptgContact.removeClass('hidden');
+                    //$ptgContact.show();
+                    //
+                    $ptgContact.toggleClass('web-contact-hide web-contact-show');
+
+                    if(($ptgContactForm).hasClass('hidden')){
+                        var ptgContactWait;
+                        clearTimeout(ptgContactWait);
+                        ptgContactWait = setTimeout(function(){$ptgContactForm.toggleClass('hidden visible').animate({opacity:1});} , 100);
+                    } else {
+                        $ptgContactForm.animate({opacity:0}).toggleClass('hidden visible');
+                    }
+                });
             });
             // END
         </script>
