@@ -25,6 +25,10 @@ function web_portfolio_hdr() {
                 STACY MARK  <span class="vert-sep"> | </span> <span class="hdr-web">Web Portfolio</span>
             </a>
             <span class="vert-sep">|</span> 
+            <a href="/wp-content/uploads/stacy-mark-resume.pdf" target="_blank">
+                Resum&eacute;
+            </a>
+            <span class="vert-sep">|</span> 
             <a class="web-contact-toggle">
                 Contact
             </a>
@@ -134,7 +138,7 @@ function web_portfolio_loop(){
                 <h3>Stacy Mark - Paintings Portfolio</h3>
                 <a href="http://stacymark.com" target="_blank">View Example &raquo;</a>
                 <p>This is an online gallery of paintings that I have done.  I make use of JavaScript for an effective UI on desktop and mobile devices, with a responsive grid and touch swipe capabilities.</p>
-                <p class="webtech">HTML5, CSS3, JavaScript, jQuery, PhotoSwipe, Isotope Grid</p>
+                <p class="webtech">HTML5, CSS3, JavaScript, jQuery, PhotoSwipe, Isotope Grid, Git, Mobile UI</p>
             </div>
             <div class="two-thirds">
                 <a href="http://stacymark.com" target="_blank"><img src="/wp-content/uploads/slider-skm-1.jpg" width="790" height="500 "style="width:auto;height:auto;margin:auto"/></a>
