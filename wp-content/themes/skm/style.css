@@ -367,19 +367,26 @@ html {overflow-y: scroll;}
     padding:20px;
 }
 .web-portfolio-top-bar a:hover{color:#ffffff;}
-.web-portfolio-hdr{margin:1% auto 0;padding:2% 2% 0;width:90%;font-size:0.8em;}
-.web-portfolio-left{ text-align:left;padding:1% 0 1% 4%;color:#fff;}
-.web-portfolio-right{border-left:2px solid rgba(0,0,0,0.1);text-align:left;padding-left:2%;}
+.web-portfolio-hdr{margin:-20px auto 0;padding:0 2% 0;width:100%;font-size:0.8em;}
+.web-portfolio-left{ text-align:left;padding:1%;color:#fff;}
+.web-portfolio-right{border-left:2px solid rgba(0,0,0,0.1);text-align:left;padding:1% 1% 1% 2%;margin-top:30px;}
 .web-portfolio-right-tech{display:block}
 .web-tech-hdr{color:#f2f2f2;}
 .about-stacy {font-size:1.1em;color:#f2f2f2;font-weight:500;text-shadow:1px 1px 1px rgba(0,0,0,.2);}
 .about-hl{font-weight:700;text-shadow:1px 1px 1px rgba(0,0,0,.4);color:#c4e5ff;}
 
-.hdr-web{
-    color:#2195f2;
-}
+.hdr-web{color:#2195f2;}
+.project-showcase{text-align:center;margin:auto;color:#ffffff;}
 
-.webport-wrap{margin-top:-6%;background:rgba(255,255,255,0.2)}
+.proficiency-list{min-width:420px;overflow:visible;}
+/*.proficiency-list span:after{ content: '\2022';}*/
+.proficiency-list li:hover{ background:rgba(255,255,255,0.2);}
+
+.prof-list-1{float:left;width:140px;}
+.prof-list-2{margin:auto;width:140px;}
+.prof-list-3{float:right;width:140px;}
+
+.webport-wrap{margin-top:1%;background:rgba(255,255,255,0.2);padding-top:20px;}
 .webport{background:#fff;padding:2% 2% 4%;width:100%;margin:4% auto 10%;}
 .webport-img{max-height:500px;width:auto;}
 .webtech{font-size:0.8em;color:#666;}

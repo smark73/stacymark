@@ -22,7 +22,7 @@ function web_portfolio_hdr() {
     ?>
         <div class="web-portfolio-top-bar">
             <a href="/web-portfolio" title="Stacy Mark - Web Projects">
-                STACY MARK  <span class="vert-sep"> | </span> <span class="hdr-web">Latest Web Projects</span>
+                STACY MARK  <span class="vert-sep"> | </span> <span class="hdr-web">Web Portfolio</span>
             </a>
             <span class="vert-sep">|</span> 
             <a class="web-contact-toggle">
@@ -36,56 +36,60 @@ function web_portfolio_hdr() {
             </div>
             <div class="clearfix"></div>
         </div>
-
-        <div class="web-portfolio-hdr">
-
-            <div class="one-third first web-portfolio-left">
-                <h2>About Stacy</h2>
-                <p class="about-stacy">I am a Web Developer and Designer with an eye for detail and the work ethic to get it done right!  My career in web design has touched all aspects of the process.  For more than 10 years I have combined my skills to handle multiple tasks such as &CenterDot; <span class="about-hl">layout and UI design</span> &CenterDot;  <span class="about-hl">animations and interaction design</span> &CenterDot; <span class="about-hl">website and app development</span> &CenterDot; <span class="about-hl">custom WordPress themes and plugins</span> &CenterDot; <span class="about-hl">SEO and Analytics</span>
-            </div>
-            
-            <div class="two-thirds web-portfolio-right">
-                
-                <div class="web-portfolio-right-tech">
-                    <h4 class="web-tech-hdr">Design and development portfolio of recent projects:</h4>
-                    <br>
-                    <div class="one-half first">
-                        <h4>Design Technology</h4>
-                        <ul>
-                            <li>HTML5 and CSS3</li>
-                            <li>JavaScript and jQuery</li>
-                            <li>Bootstrap</li>
-                            <li>CSS Preprocessors (LESS)</li>
-                            <li>Photoshop, Illustrator, and Flash</li>
-                        </ul>
-                    </div>
-                
-                    <div class="one-half">
-                        <h4>Development Technology</h4>
-                        <ul>
-                            <li>PHP and MySQL</li>
-                            <li>Task runners (Grunt)</li>
-                            <li>WordPress</li>
-                            <li>Symfony2</li>
-                            <li>Git version control</li>
-                        </ul>
-                    </div>
-                    
-                </div>
-                
-            </div>
-            
-            <div class='clearfix'></div>
-            
-        </div>
     <?php
 }
 
 function web_portfolio_loop(){
     ?>
+    <div class="web-portfolio-hdr">
 
+        <div class="one-half first web-portfolio-left">
+            <h2>About Stacy</h2>
+            <p class="about-stacy">My combined interests and skills in web development and graphic design make me a well rounded asset for any web team.  I have an eye for detail and problem-solving aptitude that allows me to fill many roles competently.  For more than 10 years I have combined my skills to handle multiple tasks such as &CenterDot; <span class="about-hl">layout and UI design</span> &CenterDot;  <span class="about-hl">animations and interaction design</span> &CenterDot; <span class="about-hl">website and app development</span> &CenterDot; <span class="about-hl">custom WordPress themes and plugins</span> &CenterDot; <span class="about-hl">SEO and Analytics</span>
+        </div>
+
+        <div class="one-half web-portfolio-right">
+
+            <div class="web-portfolio-right-tech">
+                <h4 class="web-tech-hdr">Design and Development Proficiency:</h4>
+                <div class="proficiency-list">
+                    <ul class="prof-list-3">
+                        <li>Grunt</li>
+                        <li>Git</li>
+                        <li>WordPress</li>
+                        <li>Symfony2</li>
+                        <li>Bootstrap</li>
+                        <li>Linux</li>
+                        <li>Apache</li>
+                        <li>.htaccess</li>
+                    </ul>
+                    <ul class="prof-list-1">
+                        <li>Adobe CC</li>
+                        <li>Photoshop</li>
+                        <li>Illustrator</li>
+                        <li>DreamWeaver</li>
+                        <li>Flash</li>
+                        <li>Netbeans IDE</li>
+                    </ul>
+                    <ul class="prof-list-2">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>LESS</li>
+                        <li>JavaScript</li>
+                        <li>jQuery</li>
+                        <li>PHP</li>
+                        <li>MySQL</li>
+                        <li>OOP</li>
+                        <li>MVC</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class='clearfix'></div>
+
+    </div>
     <div class="webport-wrap">
-        
+        <h2 class="project-showcase">Project Showcase</h2>
         <div class="webport">
             <div class="one-third first">
                 <h3>Paladin Radio</h3>
@@ -111,6 +115,32 @@ function web_portfolio_loop(){
             </div>
             <div class="clearfix"></div>
         </div>
+        
+        <div class="webport">
+            <div class="one-third first">
+                <h3>Landing Pages</h3>
+                <a href="/web-portfolio/landing-page/" target="_blank">View Example &raquo;</a>
+                <p>Here's an example of a landing page that demonstrates my understanding of a call-to-action with high probability of success in attaining customer information.</p>
+                <p class="webtech">HTML5, CSS3, Photoshop, SEO, Google Analytics</p>
+            </div>
+            <div class="two-thirds">
+                <a href="/web-portfolio/landing-page/" target="_blank"><img src="/wp-content/uploads/slider-land-page.jpg" width="790" height="420 "style="width:auto;height:auto;margin:auto"/></a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        
+        <div class="webport">
+            <div class="one-third first">
+                <h3>Stacy Mark - Paintings Portfolio</h3>
+                <a href="http://stacymark.com" target="_blank">View Example &raquo;</a>
+                <p>This is an online gallery of paintings that I have done.  I make use of JavaScript for an effective UI on desktop and mobile devices, with a responsive grid and touch swipe capabilities.</p>
+                <p class="webtech">HTML5, CSS3, JavaScript, jQuery, PhotoSwipe, Isotope Grid</p>
+            </div>
+            <div class="two-thirds">
+                <a href="http://stacymark.com" target="_blank"><img src="/wp-content/uploads/slider-skm-1.jpg" width="790" height="500 "style="width:auto;height:auto;margin:auto"/></a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
 
         <div class="webport">
             <div class="one-third first">
@@ -127,19 +157,6 @@ function web_portfolio_loop(){
 
         <div class="webport">
             <div class="one-third first">
-                <h3>92.9 KAFF Country</h3>
-                <a href="http://kaff.gcmaz.com" target="_blank">kaff.com</a>
-                <p>92.9 KAFF is Northern Arizona's number one modern country radio station.  My work on this site has been ongoing and I have developed a very customized WordPress theme for the Great Circle Media group of websites of which this station is a part.  Since this is a radio station, BOLD and IN YOUR FACE is the style.  Every spot on the web page has potential to inject banner ads or page take over graphics.</p>
-                <p class="webtech">HTML5, CSS3, LESS, Grunt, JavaScript, jQuery, PHP, MySQL, Git, WordPress, Photoshop, Illustrator, Flash, SEO, Google Analytics</p>
-            </div>
-            <div class="two-thirds">
-                <?php genesis_widget_area( 'kaff-slider' );?>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-
-        <div class="webport">
-            <div class="one-third first">
                 <h3>KAFF News</h3>
                 <a href="http://gcmaz.com/kaff-news" target="_blank">kaffnews.com</a>
                 <p>KAFF News needed an easy to use CMS for the news team to post stories and interact with the audience, so I customized a WordPress theme for them.  High level SEO work has been done to optimize the news feeds and meet the specific requirements that Google sets for news sources.</p>
@@ -147,19 +164,6 @@ function web_portfolio_loop(){
             </div>
             <div class="two-thirds">
                 <?php genesis_widget_area( 'news-slider' );?>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-
-        <div class="webport">
-            <div class="one-third first">
-                <h3>Landing Pages</h3>
-                <a href="/web-portfolio/landing-page/" target="_blank">View Example &raquo;</a>
-                <p>Here's an example of a landing page that demonstrates my understanding of a call-to-action with high probability of success in attaining customer information.</p>
-                <p class="webtech">HTML5, CSS3, Photoshop, SEO, Google Analytics</p>
-            </div>
-            <div class="two-thirds">
-                <a href="/web-portfolio/landing-page/" target="_blank"><img src="/wp-content/uploads/slider-land-page.jpg" width="790" height="420 "style="width:auto;height:auto;margin:auto"/></a>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -219,6 +223,21 @@ function add_scripts_to_btm() {
     </script>
     <?php    
 }
+
+//NOT USED EXTRA SAVED
+//            <div class="webport">
+//            <div class="one-third first">
+//                <h3>92.9 KAFF Country</h3>
+//                <a href="http://kaff.gcmaz.com" target="_blank">kaff.com</a>
+//                <p>92.9 KAFF is Northern Arizona's number one modern country radio station.  My work on this site has been ongoing and I have developed a very customized WordPress theme for the Great Circle Media group of websites of which this station is a part.  Since this is a radio station, BOLD and IN YOUR FACE is the style.  Every spot on the web page has potential to inject banner ads or page take over graphics.</p>
+//                <p class="webtech">HTML5, CSS3, LESS, Grunt, JavaScript, jQuery, PHP, MySQL, Git, WordPress, Photoshop, Illustrator, Flash, SEO, Google Analytics</p>
+//            </div>
+//            <div class="two-thirds">
+//                <?php genesis_widget_area( 'kaff-slider' ); ? //>
+//            </div>
+//            <div class="clearfix"></div>
+//        </div>
+    
 
 // genesis child theme
 genesis();
