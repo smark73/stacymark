@@ -324,6 +324,19 @@ function child_theme_setup(){
     
     
     
+    //check if  on DEV or LIVE site
+    function live_or_local(){
+        if( strpos( $_SERVER['HTTP_HOST'], '.dev') !== false ){
+            //on .dev site
+            $liveOrLocal = 'local';
+        } else {
+            $liveOrLocal = 'live';
+        }
+        return $liveOrLocal;
+    }
+
+    
+    
     /**
      * Remove Genesis Page Templates
      *

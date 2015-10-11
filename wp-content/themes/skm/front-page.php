@@ -78,8 +78,14 @@ function skm_cust_pg_hdr() {
 
         <div class="hp-slider">
             <?php
-                //echo do_shortcode( '[metaslider id=135]' ); DEV
-                echo do_shortcode( '[metaslider id=197]' );
+                // show proper meta slider for live or local site
+                if (live_or_local() == 'local'){
+                    //dev
+                    echo do_shortcode( '[metaslider id=135]' );
+                } else {
+                    //live
+                    echo do_shortcode( '[metaslider id=197]' );
+                }
             ?>
         </div>
     <?php
