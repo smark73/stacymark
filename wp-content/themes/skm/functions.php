@@ -45,7 +45,7 @@ function child_theme_setup(){
     //* Enqueue Google Fonts
     add_action( 'wp_enqueue_scripts', 'genesis_sample_google_fonts' );
     function genesis_sample_google_fonts() {
-            wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:400|Rock+Salt', array(), CHILD_THEME_VERSION );
+            wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:400|Oswald:700,400,300', array(), CHILD_THEME_VERSION );
     }
 
     //* Add HTML5 markup structure
@@ -225,9 +225,10 @@ function child_theme_setup(){
     add_action( 'genesis_footer', 'skm_custom_footer' );
     function skm_custom_footer() {
         if (!is_page('landing-page')){
+            //store ambitionsweb in case want to put back
             $ambitionsweb = '  |  An <a href="http://ambitionsweb.com" target="_blank" title="Ambitions Website Design">Ambitions Web</a> Project</p>';
         ?>
-            <p class="copyright" data-enhance="false" data-role="none"><?php echo do_shortcode( '[footer_copyright]');?> <a href="http://stacymark.com/" data-enhance="false" data-role="none">Stacy Mark</a> &middot; All Rights Reserved.
+            <p class="copyright" data-enhance="false" data-role="none"><?php echo do_shortcode( '[footer_copyright]');?> <a href="http://stacymark.com/" data-enhance="false" data-role="none">Stacy Mark</a> &middot; All Rights Reserved.  |  <a href="/contact-stacy">Contact Stacy</a>
         <?php
         }
     }
@@ -241,11 +242,14 @@ function child_theme_setup(){
         if (is_page( 'landing-page' )){
             $classes[] = 'landing-page';
         }
+        if (is_page( 'contact-stacy' )){
+            $classes[] = 'contact-pg';
+        }
         return $classes;
     }
     
     
-    
+    // !! NOT USED !!
     //* ----------CUSTOM NAV WALKER FOR SORT PAINTINGS MENU ----------------------
     // add custom data-filter attributes to our "Sort Paintings" menu items
     class sort_paintings_walker_nav_menu extends Walker_Nav_Menu {
