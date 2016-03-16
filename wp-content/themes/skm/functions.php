@@ -161,7 +161,12 @@ function child_theme_setup(){
         'name' => 'SKM Slider',
         'description' => 'Widget Area to hold a Slider ',
     )); 
-    
+    genesis_register_sidebar( array(
+        'id' => 'icwnaz-slider',
+        'name' => 'ICWNAZ Slider',
+        'description' => 'Widget Area to hold a Slider ',
+    )); 
+
    //-----------------------------------------
     // CUSTOMIZE OUR HEADER
     remove_action( 'genesis_site_title', 'genesis_seo_site_title' );

@@ -110,6 +110,19 @@ function web_portfolio_loop(){
 
         <div class="webport">
             <div class="one-third first">
+                <h3>It Can Wait (Northern Arizona)</h3>
+                <a href="http://itcanwaitnaz.com" target="_blank">itcanwaitnaz.com</a>
+                <p>Northern Arizona's "It Can Wait" Campaign to stop texting while triving.  Display's pledges in a responsive grid for viewability on all screens.  The UI encourages users to view and share pledges.</p>
+                <p class="webtech">HTML5, CSS3, JavaScript, jQuery, Git</p>
+            </div>
+            <div class="two-thirds">
+                <?php genesis_widget_area( 'icwnaz-slider' );?>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="webport">
+            <div class="one-third first">
                 <h3>Paladin Radio</h3>
                 <a href="http://paladinradio.com" target="_blank">paladinradio.com</a>
                 <p>Paladin Radio asked me for an update to their website which reflected their business in a professional way and would allow for easy content management.  The end result is a custom themed WordPress site which is mobile responsive and captures the awesomeness that is Paladin.</p>
