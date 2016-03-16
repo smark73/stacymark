@@ -94,6 +94,20 @@ function web_portfolio_loop(){
     </div>
     <div class="webport-wrap">
         <h2 class="project-showcase">Project Showcase</h2>
+
+        <div class="webport">
+            <div class="one-third first">
+                <h3>Stacy Mark - Paintings Portfolio</h3>
+                <a href="/paintings-abstract-landscape/" target="_blank">Open Gallery &raquo;</a>
+                <p>This is an online gallery of paintings that I have done.  I make use of JavaScript for an enhanced UI on desktop and mobile devices.  It makes use of a responsive grid and touch swipe capabilities for effectiveness on all screens.</p>
+                <p class="webtech">HTML5, CSS3, JavaScript, jQuery, PhotoSwipe, Isotope Grid, Git, Mobile UI</p>
+            </div>
+            <div class="two-thirds">
+                <?php genesis_widget_area( 'skm-slider' );?>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
         <div class="webport">
             <div class="one-third first">
                 <h3>Paladin Radio</h3>
@@ -133,18 +147,6 @@ function web_portfolio_loop(){
             <div class="clearfix"></div>
         </div>
         
-        <div class="webport">
-            <div class="one-third first">
-                <h3>Stacy Mark - Paintings Portfolio</h3>
-                <a href="http://stacymark.com" target="_blank">View Example &raquo;</a>
-                <p>This is an online gallery of paintings that I have done.  I make use of JavaScript for an effective UI on desktop and mobile devices, with a responsive grid and touch swipe capabilities.</p>
-                <p class="webtech">HTML5, CSS3, JavaScript, jQuery, PhotoSwipe, Isotope Grid, Git, Mobile UI</p>
-            </div>
-            <div class="two-thirds">
-                <a href="http://stacymark.com" target="_blank"><img src="/wp-content/uploads/slider-skm-1.jpg" width="790" height="500 "style="width:auto;height:auto;margin:auto"/></a>
-            </div>
-            <div class="clearfix"></div>
-        </div>
 
         <div class="webport">
             <div class="one-third first">

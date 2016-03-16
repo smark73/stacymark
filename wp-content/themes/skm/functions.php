@@ -156,7 +156,11 @@ function child_theme_setup(){
         'name' => 'More Slider',
         'description' => 'Widget Area to hold a Slider ',
     ));            
-    
+    genesis_register_sidebar( array(
+        'id' => 'skm-slider',
+        'name' => 'SKM Slider',
+        'description' => 'Widget Area to hold a Slider ',
+    )); 
     
    //-----------------------------------------
     // CUSTOMIZE OUR HEADER
