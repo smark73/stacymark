@@ -95,6 +95,7 @@ function web_portfolio_loop(){
     <div class="webport-wrap">
         <h2 class="project-showcase">Project Showcase</h2>
 
+
         <div class="webport">
             <div class="one-third first">
                 <h3>Stacy Mark - Paintings Portfolio</h3>
@@ -107,6 +108,7 @@ function web_portfolio_loop(){
             </div>
             <div class="clearfix"></div>
         </div>
+
 
         <div class="webport">
             <div class="one-third first">
@@ -121,6 +123,21 @@ function web_portfolio_loop(){
             <div class="clearfix"></div>
         </div>
 
+
+        <div class="webport">
+            <div class="one-third first">
+                <h3>KAFF News</h3>
+                <a href="http://gcmaz.com/kaff-news" target="_blank">kaffnews.com</a>
+                <p>KAFF News needed an easy to use CMS for the news team to post stories and interact with the audience, so I customized a WordPress theme for them.  High level SEO work has been done to optimize the news feeds and meet the specific requirements that Google sets for news sources.</p>
+                <p class="webtech">HTML5, CSS3, LESS, Grunt, JavaScript, jQuery, PHP, MySQL, Git, WordPress, Photoshop, Illustrator, Flash, SEO, Google Analytics</p>
+            </div>
+            <div class="two-thirds">
+                <?php genesis_widget_area( 'news-slider' );?>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+
         <div class="webport">
             <div class="one-third first">
                 <h3>Paladin Radio</h3>
@@ -134,6 +151,7 @@ function web_portfolio_loop(){
             <div class="clearfix"></div>
         </div>
 
+
         <div class="webport">
             <div class="one-third first">
                 <h3>Twin Peaks Digital</h3>
@@ -146,6 +164,7 @@ function web_portfolio_loop(){
             </div>
             <div class="clearfix"></div>
         </div>
+        
         
         <div class="webport">
             <div class="one-third first">
@@ -174,18 +193,6 @@ function web_portfolio_loop(){
             <div class="clearfix"></div>
         </div>
 
-        <div class="webport">
-            <div class="one-third first">
-                <h3>KAFF News</h3>
-                <a href="http://gcmaz.com/kaff-news" target="_blank">kaffnews.com</a>
-                <p>KAFF News needed an easy to use CMS for the news team to post stories and interact with the audience, so I customized a WordPress theme for them.  High level SEO work has been done to optimize the news feeds and meet the specific requirements that Google sets for news sources.</p>
-                <p class="webtech">HTML5, CSS3, LESS, Grunt, JavaScript, jQuery, PHP, MySQL, Git, WordPress, Photoshop, Illustrator, Flash, SEO, Google Analytics</p>
-            </div>
-            <div class="two-thirds">
-                <?php genesis_widget_area( 'news-slider' );?>
-            </div>
-            <div class="clearfix"></div>
-        </div>
         
         <div class="webport">
             <div class="one-third first">
