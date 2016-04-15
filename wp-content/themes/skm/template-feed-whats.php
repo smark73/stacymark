@@ -3,11 +3,12 @@
 Template Name: Feed: Whats
  * use WP functions to get and display feed
 */
-global $station;
+//global $station;
+$station = 'kaff';
 ?>
 <div class="in-cnt-wrp row">
     <div class="centered rbn-hdg">
-        <?php get_template_part('templates/page', 'header'); ?>
+
     </div>
     <?php
         if (function_exists('fetch_feed') ) {
