@@ -18,7 +18,7 @@ $station = 'kaff';
                 return 600;  //10 mins
             }
             add_filter('wp_feed_cache_transient_lifetime', 'clear_feed_cache');
-            $feed = fetch_feed('http://gcmaz.com/?feed=whats');
+            $feed = fetch_feed('http://gcmaz.com/whats-happening/feed');
             //$feed->enable_cache(false);
             //$feed->set_cache_duration(0);
             $feed->enable_order_by_date(false);
