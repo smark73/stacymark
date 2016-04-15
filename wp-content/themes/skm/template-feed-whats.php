@@ -4,7 +4,6 @@ Template Name: Feed: Whats
  * use WP functions to get and display feed
 */
 //global $station;
-$station = 'kaff';
 ?>
 <div class="in-cnt-wrp row">
     <div class="centered rbn-hdg">
@@ -13,11 +12,11 @@ $station = 'kaff';
     <?php
         if (function_exists('fetch_feed') ) {
             //clear feed cache
-            function clear_feed_cache($secs){
+            //function clear_feed_cache($secs){
                 //return 0;  //set to zero
-                return 600;  //10 mins
-            }
-            add_filter('wp_feed_cache_transient_lifetime', 'clear_feed_cache');
+                //return 600;  //10 mins
+            //}
+            //add_filter('wp_feed_cache_transient_lifetime', 'clear_feed_cache');
             $feed = fetch_feed('http://gcmaz.com/whats-happening/feed');
             //$feed->enable_cache(false);
             //$feed->set_cache_duration(0);
@@ -25,7 +24,7 @@ $station = 'kaff';
             $limit = $feed->get_item_quantity(999); // specify number of items
             $items = $feed->get_items(0, $limit); // create an array of items
             //remove feed cache filter
-            remove_filter('wp_feed_cache_transient_lifetime', 'clear_feed_cache');
+            //remove_filter('wp_feed_cache_transient_lifetime', 'clear_feed_cache');
         }
     ?>
     
@@ -33,7 +32,7 @@ $station = 'kaff';
     
     <?php foreach ($items as $item) : ?>
         <?php foreach ($item->get_categories() as $item_cat) : ?>
-            <?php if ($item_cat->get_label() == $station) : ?>
+            <?php if ($item_cat->get_label() == 'kaff') : ?>
                 <?php $counter +=1;?>
     
                 <article>
