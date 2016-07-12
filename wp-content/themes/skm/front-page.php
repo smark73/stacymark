@@ -61,7 +61,7 @@ function page_loop(){
     ?>
             <div class="wrap">
 
-                <div class="one-half first" style="background-color:rgba(255,255,255, 0.1);padding:20px;">
+                <div class="" style="background-color:rgba(255,255,255, 0.1);padding:20px;">
                     <?php
                     $home_post_args = array(
                         'post_type' => 'page',
@@ -76,11 +76,6 @@ function page_loop(){
                         }
                     }
                     ?>
-                </div>
-                <div class="one-half">
-                    <a href="/paintings-surreal" title="Surreal Paintings">
-                        <img src="/wp-content/uploads/magic-suds.jpg" alt="Magic Suds oil painting" style="width:auto;height:auto;max-height:300px;">
-                    </a>
                 </div>
 
             </div>
