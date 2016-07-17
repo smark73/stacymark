@@ -20,7 +20,6 @@ add_action( 'genesis_loop', 'page_loop' );
 
 
 // custom page header
-add_action( 'genesis_before_header', 'skm_cust_pg_hdr' );
 function skm_cust_pg_hdr() {
     ?>
         <div class="ptgs-hdr">
@@ -56,6 +55,9 @@ function skm_cust_pg_hdr() {
         </div>
     <?php
 }
+add_action( 'genesis_before_header', 'skm_cust_pg_hdr' );
+
+
 
 function page_loop(){
     ?>

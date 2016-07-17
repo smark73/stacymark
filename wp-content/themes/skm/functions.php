@@ -93,6 +93,16 @@ function child_theme_setup(){
         wp_enqueue_script('photoswipe', $src_pswp_js, false);
         wp_enqueue_script('photoswipe-ui', $src_pswp_ui_js, false);
         wp_enqueue_script('isotope', '//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.min.js', true);
+
+        // ptg scripts
+        //<script type="text/javascript" src="/wp-content/themes/skm/js/ptg-scripts.js"></script>
+        wp_register_script('ptg-scripts', get_stylesheet_directory_uri(). '/js/ptg-scripts.js', true );
+        wp_enqueue_script( 'ptg-scripts' );
+
+        // menu scripts
+        //<script type="text/javascript" src="/wp-content/themes/skm/js/menu-scripts.js"></script>
+        wp_register_script('menu-scripts', get_stylesheet_directory_uri(). '/js/menu-scripts.js', true);
+        wp_enqueue_script( 'menu-scripts' );
     }
     
     //add_action('genesis_after_footer', 'add_scripts_to_body_btm');
@@ -167,28 +177,14 @@ function child_theme_setup(){
         'description' => 'Widget Area to hold a Slider ',
     )); 
 
+
    //-----------------------------------------
     // CUSTOMIZE OUR HEADER
+
     remove_action( 'genesis_site_title', 'genesis_seo_site_title' );
     remove_action( 'genesis_site_description', 'genesis_seo_site_description');
 
-    //* HEADER !!! NOT USED !!!
-    //add_action( 'genesis_header', 'skm_hdr_title' );
-    function skm_hdr_title() {
-        //don't show thumbs on web-portfolio page
-        if( !is_page('web-portfolio') ){
-            if (!is_page('landing-page')){
-            ?>
-            <div class="skm-title">
-                <a href="/" title="Stacy Mark - Paintings">
-                    <span class="hdr-name">STACY MARK  <span style="font-size:0.8em;padding:0 5px">|</span>  </span><span class="hdr-paintings">Paintings</span>
-                </a>
-            </div>
-            <?php
-            wp_reset_query();
-            }
-        }
-    }
+    
     
     //* THUMBNAIL Nav !!! NOT USED !!!
     //add_action( 'genesis_header', 'skm_thumbs_nav' );
