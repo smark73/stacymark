@@ -47,6 +47,8 @@ function skm_ptg_loop() {
 	    
 	    echo '</section>';
 
+	    do_action('genesis_post_content');
+
     echo '</div>';
 
 }
