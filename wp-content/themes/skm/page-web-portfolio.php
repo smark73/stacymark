@@ -29,6 +29,10 @@ function web_portfolio_hdr() {
                 Resum&eacute;
             </a>
             <span class="vert-sep">|</span> 
+            <a href="https://github.com/smark73" title="GitHub" target="_blank">
+                GitHub
+            </a>
+            <span class="vert-sep">|</span> 
             <a class="web-contact-toggle">
                 Contact
             </a>
