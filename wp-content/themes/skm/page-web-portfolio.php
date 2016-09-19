@@ -55,36 +55,34 @@ function web_portfolio_loop(){
         <div class="one-half web-portfolio-right">
 
             <div class="web-portfolio-right-tech">
-                <h4 class="web-tech-hdr">Design and Development Proficiency:</h4>
+                <h4 class="web-tech-hdr">Design and Development:</h4>
                 <div class="proficiency-list">
                     <ul class="prof-list-3">
-                        <li>Grunt</li>
-                        <li>Git</li>
                         <li>WordPress</li>
-                        <li>Symfony2</li>
                         <li>Bootstrap</li>
-                        <li>Linux</li>
-                        <li>Apache</li>
-                        <li>.htaccess</li>
+                        <li>Bourbon/Neat</li>
+                        <li>Symfony2</li>
                     </ul>
                     <ul class="prof-list-1">
+                        <li>Linux</li>
+                        <li>Apache</li>
+                        <li>Vagrant</li>
                         <li>Adobe CC</li>
                         <li>Photoshop</li>
                         <li>Illustrator</li>
-                        <li>DreamWeaver</li>
                         <li>Flash</li>
-                        <li>Netbeans IDE</li>
                     </ul>
                     <ul class="prof-list-2">
                         <li>HTML5</li>
                         <li>CSS3</li>
-                        <li>LESS</li>
+                        <li>SCSS/SASS/LESS</li>
                         <li>JavaScript</li>
                         <li>jQuery</li>
                         <li>PHP</li>
                         <li>MySQL</li>
+                        <li>Task Runners (Gulp/Grunt)</li>
+                        <li>Git</li>
                         <li>OOP</li>
-                        <li>MVC</li>
                     </ul>
                 </div>
             </div>
@@ -94,6 +92,22 @@ function web_portfolio_loop(){
     </div>
     <div class="webport-wrap">
         <h2 class="project-showcase">Project Showcase</h2>
+
+
+        <div class="webport">
+            <div class="one-third first">
+                <h3>Great Circle Media / KAFF News</h3>
+                <a href="http://gcmaz.com" target="_blank">gcmaz.com</a>
+                <br/>
+                <a href="http://gcmaz.com/kaff-news" target="_blank">kaffnews.com</a>
+                <p>Great Circle Media needed an easy to use CMS for their KAFF News team to post stories and interact with the audience, as well as a centralized CMS for all the radio stations in the media group.  This centralized WordPress CMS is used by the "promotions" teams to create posts for all the external radio station websites.</p>
+                <p class="webtech">HTML5, CSS3, SCSS, Gulp, JavaScript, jQuery, PHP, MySQL, Git, WordPress, Photoshop, Illustrator, SEO, Google Analytics</p>
+            </div>
+            <div class="two-thirds">
+                <?php genesis_widget_area( 'news-slider' );?>
+            </div>
+            <div class="clearfix"></div>
+        </div>
 
 
         <div class="webport">
@@ -119,20 +133,6 @@ function web_portfolio_loop(){
             </div>
             <div class="two-thirds">
                 <?php genesis_widget_area( 'icwnaz-slider' );?>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-
-
-        <div class="webport">
-            <div class="one-third first">
-                <h3>KAFF News</h3>
-                <a href="http://gcmaz.com/kaff-news" target="_blank">kaffnews.com</a>
-                <p>KAFF News needed an easy to use CMS for the news team to post stories and interact with the audience, so I customized a WordPress theme for them.  High level SEO work has been done to optimize the news feeds and meet the specific requirements that Google sets for news sources.</p>
-                <p class="webtech">HTML5, CSS3, LESS, Grunt, JavaScript, jQuery, PHP, MySQL, Git, WordPress, Photoshop, Illustrator, Flash, SEO, Google Analytics</p>
-            </div>
-            <div class="two-thirds">
-                <?php genesis_widget_area( 'news-slider' );?>
             </div>
             <div class="clearfix"></div>
         </div>
