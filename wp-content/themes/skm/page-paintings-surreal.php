@@ -116,13 +116,6 @@ function page_loop(){
     
 }
 
-add_action('genesis_after_footer', 'add_scripts_to_btm');
-function add_scripts_to_btm() {
-    ?>
-        <script type="text/javascript" src="/wp-content/themes/skm/js/ptg-scripts.js"></script>
-        <script type="text/javascript" src="/wp-content/themes/skm/js/menu-scripts.js"></script>
-<?php
-}
     
 
 // genesis child theme

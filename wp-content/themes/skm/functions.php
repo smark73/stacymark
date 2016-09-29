@@ -42,11 +42,54 @@ function child_theme_setup(){
     define( 'CHILD_THEME_URL', 'http://ambitionsweb.com' );
     define( 'CHILD_THEME_VERSION', '1.0' );
 
-    //* Enqueue Google Fonts
-    add_action( 'wp_enqueue_scripts', 'genesis_sample_google_fonts' );
-    function genesis_sample_google_fonts() {
-            wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:400|Oswald:700,400,300', array(), CHILD_THEME_VERSION );
+
+    //* Enqueue 
+    function skm_enqueue_reqs() {
+        // fonts
+        wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:400|Oswald:700,400,300', array(), CHILD_THEME_VERSION );
+        
+        //jquery mobile
+        wp_register_style('jquery-mobile-css', 'http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css');
+        wp_enqueue_style('jquery-mobile-css');
+        //jquery
+        wp_register_script('jquery', '//code.jquery.com/jquery-2.1.4.min.js');
+        wp_enqueue_script('jquery', true);
+
+        //klass
+        wp_register_script('klass', '//cdnjs.cloudflare.com/ajax/libs/klass/1.4.0/klass.min.js');
+        wp_enqueue_script('klass', true);
+
+        //photoswipe styles
+        $src_pswp_css = get_stylesheet_directory_uri() . '/PhotoSwipe/dist/photoswipe.css';
+        $src_pswp_skin = get_stylesheet_directory_uri() . '/PhotoSwipe/dist/default-skin/default-skin.css';
+        wp_register_style('photoswipe-css', $src_pswp_css);
+        wp_enqueue_style('photoswipe-css');
+        wp_register_style('photoswipe-skin', $src_pswp_skin);
+        wp_enqueue_style('photoswipe-skin');
+        
+        //photoswipe scripts
+        $src_pswp_js = get_stylesheet_directory_uri() . '/PhotoSwipe/dist/photoswipe.min.js';
+        $src_pswp_ui_js = get_stylesheet_directory_uri() . '/PhotoSwipe/dist/photoswipe-ui-default.min.js';
+        wp_register_script('photoswipe', $src_pswp_js);
+        wp_enqueue_script('photoswipe', false);
+        wp_register_script('photoswipe-ui', $src_pswp_ui_js);
+        wp_enqueue_script('photoswipe-ui', false);
+
+        //isotope
+        //$src_iso = get_stylesheet_directory_uri() . '/isotope/dist/isotope.pkgd.min.js';
+        wp_register_script('isotope', '//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.min.js');
+        wp_enqueue_script('isotope', true);
+        
+        // skm styles
+        wp_register_style( 'skm-styles', get_stylesheet_directory_uri() . '/style.min.css', array(), CHILD_THEME_VERSION );
+        wp_enqueue_style( 'skm-styles' );
+        // skm scripts
+        wp_register_script('skm-scripts', get_stylesheet_directory_uri(). '/js/script.min.js', true );
+        wp_enqueue_script( 'skm-scripts' );
+
     }
+    add_action( 'wp_enqueue_scripts', 'skm_enqueue_reqs' );
+
 
     //* Add HTML5 markup structure
     add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
@@ -60,50 +103,11 @@ function child_theme_setup(){
     
     // -------------- ENQUE STYLES and SCRIPTS -------------------
     
-    add_action( 'genesis_meta', 'add_reqs_to_head' );
+
     function add_reqs_to_head() {
-        wp_enqueue_style('jquery-mobile-css', 'http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css');
         
-        //store photoswipe styles loc
-        $src_pswp_css = get_stylesheet_directory_uri() . '/PhotoSwipe/dist/photoswipe.css';
-        $src_pswp_skin = get_stylesheet_directory_uri() . '/PhotoSwipe/dist/default-skin/default-skin.css';
-        
-        wp_register_style('photoswipe-css', $src_pswp_css);
-        wp_register_style('photoswipe-skin', $src_pswp_skin);
-        
-        wp_enqueue_style('photoswipe-css', $src_pswp_css);
-        wp_enqueue_style('photoswipe-skin', $src_pswp_skin);
-        
-        //store photoswipe script loc
-        $src_pswp_js = get_stylesheet_directory_uri() . '/PhotoSwipe/dist/photoswipe.min.js';
-        $src_pswp_ui_js = get_stylesheet_directory_uri() . '/PhotoSwipe/dist/photoswipe-ui-default.min.js';
-        //store isotope location
-        //$src_iso = get_stylesheet_directory_uri() . '/isotope/dist/isotope.pkgd.min.js';
-        
-        wp_register_script('jquery', '//code.jquery.com/jquery-2.1.4.min.js');
-        //wp_register_script('jquery-mobile', '//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js');
-        wp_register_script('klass', '//cdnjs.cloudflare.com/ajax/libs/klass/1.4.0/klass.min.js');
-        wp_register_script('photoswipe', $src_pswp_js);
-        wp_register_script('photoswipe-ui', $src_pswp_ui_js);
-        wp_register_script('isotope', '//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.min.js');
-                
-        wp_enqueue_script('jquery', '//code.jquery.com/jquery-2.1.4.min.js', true);
-        //wp_enqueue_script('jquery-mobile', '//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js', true);
-        wp_enqueue_script('klass', '//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js', true);
-        wp_enqueue_script('photoswipe', $src_pswp_js, false);
-        wp_enqueue_script('photoswipe-ui', $src_pswp_ui_js, false);
-        wp_enqueue_script('isotope', '//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.min.js', true);
-
-        // ptg scripts
-        //<script type="text/javascript" src="/wp-content/themes/skm/js/ptg-scripts.js"></script>
-        wp_register_script('ptg-scripts', get_stylesheet_directory_uri(). '/js/ptg-scripts.js', true );
-        wp_enqueue_script( 'ptg-scripts' );
-
-        // menu scripts
-        //<script type="text/javascript" src="/wp-content/themes/skm/js/menu-scripts.js"></script>
-        wp_register_script('menu-scripts', get_stylesheet_directory_uri(). '/js/menu-scripts.js', true);
-        wp_enqueue_script( 'menu-scripts' );
     }
+    //add_action( 'genesis_meta', 'add_reqs_to_head' );
     
     //add_action('genesis_after_footer', 'add_scripts_to_body_btm');
     //function add_scripts_to_body_btm() {
