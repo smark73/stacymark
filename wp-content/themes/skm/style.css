@@ -663,6 +663,7 @@ html {
 
 .web-tech-hdr {
   color: #f2f2f2;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 
 .about-stacy {
@@ -685,8 +686,14 @@ html {
 
 .project-showcase {
   text-align: center;
-  margin: auto;
-  color: #ffffff;
+}
+
+h2.project-showcase {
+  color: #fff;
+  font-weight: 600;
+  text-shadow:2px 2px 2px rgba(0,0,0,.1);
+  margin: 0 auto 20px;
+  padding: 0;
 }
 
 .proficiency-list {
@@ -727,7 +734,7 @@ html {
   background: #fff;
   padding: 2% 2% 4%;
   width: 100%;
-  margin: 4% auto 10%;
+  margin: 0 auto 10%;
   font-weight: 500;
 }
 

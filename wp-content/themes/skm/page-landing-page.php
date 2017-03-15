@@ -35,7 +35,7 @@ function lp_hdr() {
             </div>
             <div class="two-thirds second">
                 <h1>
-                    <span>THE ALL NEW</span><span class="autoyear">2015</span> <span class="autoname">Hyundai Sonata</span>
+                    <span>THE ALL NEW</span><span class="autoyear">2018</span> <span class="autoname">Hyundai Sonata</span>
                 </h1>
             </div>
             <div class="clearfix"></div>
@@ -87,7 +87,7 @@ function lp_footer() {
             <div class="one-half first lp-details">
                 <h3>Details of the Promotion</h3>
                 <p>
-                    25% Off MSRP includes HMA Rebate and Dealer Discounts. Available to all consumers on all 2015 model years Sonatas.
+                    25% Off MSRP includes HMA Rebate and Dealer Discounts. Available to all consumers on all 2018 model year Sonatas.
                 </p>
                 <h4>Available right now at Your Hyundai Dealer!</h4>
                 <div class="clearfix"></div>
@@ -107,7 +107,7 @@ function lp_footer() {
         </div>
         
         <div class="lp-foot-b">
-            <p>Copyright © 2015 Business Name - All Rights Reserved </p>
+            <p>Copyright © 2018 Business Name - All Rights Reserved </p>
         </div>
         <div class="clearfix"></div>
         
