@@ -53,7 +53,7 @@ function web_portfolio_loop(){
 
         <div class="one-half first web-portfolio-left">
             <h2>About Stacy</h2>
-            <p class="about-stacy">My combined interests and skills in web development and graphic design make me a well rounded asset for any web team.  I have an eye for detail and problem-solving aptitude that allows me to fill many roles competently.  For more than 10 years I have combined my skills to handle multiple tasks such as &CenterDot; <span class="about-hl">layout and UI design</span> &CenterDot;  <span class="about-hl">animations and interaction design</span> &CenterDot; <span class="about-hl">website and app development</span> &CenterDot; <span class="about-hl">custom WordPress themes and plugins</span> &CenterDot; <span class="about-hl">SEO and Analytics</span>
+            <p class="about-stacy">My background in web development and graphic design make me a well rounded asset for any web team.  I have an eye for detail and problem-solving aptitude that allows me to fill many roles competently.  For more than 10 years I have combined my skills to handle multiple tasks such as:<br/><span class="about-hl">UI/UX Design</span> &CenterDot; <span class="about-hl">Website Development</span> &CenterDot; <span class="about-hl">Custom WordPress Themes</span> &CenterDot; <span class="about-hl">WordPress Plugins</span> &CenterDot; <span class="about-hl">SEO and Analytics</span> &CenterDot; <span class="about-hl">Email Marketing Campaigns</span>
         </div>
 
         <div class="one-half web-portfolio-right">
@@ -77,16 +77,15 @@ function web_portfolio_loop(){
                         <li>Flash</li>
                     </ul>
                     <ul class="prof-list-2">
-                        <li>HTML5</li>
-                        <li>CSS3</li>
+                        <li>HTML(5)</li>
+                        <li>CSS(3)</li>
                         <li>SCSS/SASS/LESS</li>
                         <li>JavaScript</li>
                         <li>jQuery</li>
                         <li>PHP</li>
                         <li>MySQL</li>
-                        <li>Task Runners (Gulp/Grunt)</li>
+                        <li>Gulp/Grunt</li>
                         <li>Git</li>
-                        <li>OOP</li>
                     </ul>
                 </div>
             </div>

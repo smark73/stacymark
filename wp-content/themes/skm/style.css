@@ -676,6 +676,7 @@ html {
   font-weight: 700;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
   color: #c4e5ff;
+  font-size: 1.2em;
 }
 
 .hdr-web {
@@ -691,11 +692,14 @@ html {
 .proficiency-list {
   min-width: 420px;
   overflow: visible;
+  color: #444;
 }
 
 /*.proficiency-list span:after{ content: '\2022';}*/
 .proficiency-list li:hover {
-  background: rgba(255, 255, 255, 0.2);
+  color: #000;
+  text-shadow:1px 1px 1px rgba(255,255,255,.2)
+  /*background: rgba(255, 255, 255, 0.2);*/
 }
 
 .prof-list-1 {
@@ -724,6 +728,11 @@ html {
   padding: 2% 2% 4%;
   width: 100%;
   margin: 4% auto 10%;
+  font-weight: 500;
+}
+
+.webport a {
+  font-weight: 600;
 }
 
 .webport-img {
