@@ -48,7 +48,15 @@ function web_portfolio_hdr() {
 }
 
 function web_portfolio_loop(){
+
+    global $post;
+
+    // check if post password protection enabled and entered
+    $need_pw = ( post_password_required() ) ? true : false;
+
+    if( $need_pw === false || !post_password_required() ) {
     ?>
+
     <div class="web-portfolio-hdr">
 
         <div class="one-half first web-portfolio-left">
@@ -210,7 +218,14 @@ function web_portfolio_loop(){
         </div>
         
     </div>
+
     <?php
+    } else {
+        echo "<div style='width:60%;font-weight:500;margin:auto;'>";
+        the_content();
+        echo "</div>";
+    }
+
 }
 
 
@@ -250,7 +265,7 @@ function add_scripts_to_btm() {
         });
         // END
     </script>
-    <?php    
+    <?php
 }
 
 //NOT USED EXTRA SAVED
@@ -270,4 +285,3 @@ function add_scripts_to_btm() {
 
 // genesis child theme
 genesis();
-
