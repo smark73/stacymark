@@ -55,7 +55,7 @@ function page_loop(){
                     ));
 
                 // init vars to create 1 larger image
-                $el='';
+                $el=0;
                 
                 while ( $thumbs->have_posts() ) {
                     $thumbs->the_post();

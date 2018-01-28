@@ -46,7 +46,7 @@ function skm_cust_pg_hdr() {
                 // show proper meta slider for live or local site
                 if (live_or_local() == 'local'){
                     //dev
-                    echo do_shortcode( '[metaslider id=135]' );
+                    echo do_shortcode( '[metaslider id=197]' );
                 } else {
                     //live
                     echo do_shortcode( '[metaslider id=197]' );
