@@ -1,0 +1,115 @@
+
+.hdr-wrap__subpg {
+
+    .ptgs-hdr {
+        font-family:  'Oswald', sans-serif;
+        // vertical-align:  top;
+        // background: #f3f1ef;
+        background: none;
+        // position: relative;
+        width: 100%;
+        // z-index: 1000;
+        // height: 50px;
+        height: 60px;
+        padding-top: 20px;
+        // border: 1px solid black;
+    }
+    .ptg-top-bar {
+        text-align:  center;
+        margin: 0 auto;
+        padding-top: 0;
+        width: 100%;
+        height: 100%;
+        // position: relative;
+        // z-index: 1000;
+
+        // display: grid;
+        // grid-template-columns: 30% 70%;
+        // grid-template-rows: 1fr;
+        // border: 1px solid white;
+    }
+    .ptg-top-bar-title {
+        // grid-area: 1 / 1 / 2 / 2;
+        // z-index: 1000;
+        padding: 5px;
+    }
+    .ptg-top-bar-links {
+        // grid-area: 1 / 2 / 2 / 3;
+        // z-index: 1000;
+    }
+
+    .ptgs-menu{
+        text-align: center;
+    }
+    .ptgs-menu ul{
+        margin: auto;
+        // width: 200px;
+        text-align: center;
+        font-size: 1em;
+    }
+    .ptgs-menu ul li{
+        // width: 100%;
+        padding: 0 10px;
+        display: inline-block;
+    }
+    .ptgs-menu ul li a{
+        font-weight: 400;
+        color: #565450;
+        text-shadow: 0 0 8px rgba(0,0,0,.1);
+    }
+
+    .hdr-name{
+        color: #8f9088;
+        font-size: .8em;
+        // margin-left: 50px;
+        font-weight:  200;
+        text-shadow: 1px 1px 8px rgba(0,0,0,.1);
+        // z-index: 1000;
+        padding: 5px;
+    }
+
+}
+
+
+
+
+
+
+
+/* # Media Queries
+---------------------------------------------------------------------------------------------------- */
+
+@media only screen and (min-width:  1200px){
+
+}
+
+@media only screen and (max-width:  1200px) {
+
+}
+
+@media only screen and (max-width:  970px) {
+        
+}
+
+@media only screen and (max-width:  960px) {
+
+}
+
+@media only screen and (max-width:  800px) {
+
+
+
+    .hdr-wrap__subpg {
+
+        .ptg-top-bar-links {
+
+        }
+    }
+
+
+}
+
+@media only screen and (max-width:  500px) {
+
+
+}

@@ -1,0 +1,79 @@
+.home-pg {
+
+}
+
+.home-spacer {
+	width: 100%;
+	height: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+	background: 
+		linear-gradient(to bottom, rgba(23,21,18,.7) 0%, rgba(23,21,18,.5) 100%),
+		linear-gradient(to right, rgba(23,21,18,.7) 0%, rgba(23,21,18,.5) 100%),
+		url(images/fading-lands.jpg) no-repeat center center;
+	background-size: cover;
+	background-blend-mode: multiply;
+	padding: 2vw;
+}
+
+.home-spacer-txt,
+.home-spacer-txt-sm {
+	font-family:  'Oswald', sans-serif;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 400;
+    color: #826e57;
+    text-shadow:
+        0 0 5px rgba(0,0,0,.5),
+        1px 1px 8px rgba(0,0,0,.3);
+}
+.home-spacer-txt-sm {
+    font-size: 1em;
+    color: #6f6253;
+}
+.home-slider {
+    // z-index: 0;
+    // top: 0;
+    // left: 0;
+    width: 100%;
+    // display: block;
+    // margin-top: 50vw;
+    // position: relative;
+}
+
+.home-content-wrap {
+
+    h2 {
+    	color: #6b3f29;
+    	font-size: calc(.8em + .8vw);
+    }
+
+    a {
+    	color: #1B3336;
+    }
+
+    // background: rgba(255,255,255, 0.1);
+    // padding: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    color: #4F4D49;
+}
+
+.home-content-left {
+	grid-area: 1 / 1 / 2 / 2;
+	padding: 1vw;
+}
+.home-content-right {
+	grid-area: 1 / 2 / 2 / 3;
+	padding: 1vw;
+}
+
+
+@media only screen and (max-width: 600px) {
+	.home-spacer {
+		height: 80vw;
+	}
+}
