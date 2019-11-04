@@ -10,18 +10,6 @@ var SkmSite = {
 
             $(document).ready(function() {
 
-                // START Paintings menu
-                // var $ptgsMenuBox = jQuery(document).find('.ptgs-menu-box');
-
-                // $ptgsMenuBox.mouseenter(function(){
-                //     jQuery(this).stop().animate({top: -50}, 100);
-                // });
-
-                // $ptgsMenuBox.mouseleave(function(){
-                //     jQuery(this).stop().animate({top: -230}, 100);
-                // });
-                // END
-
             });
         });
         
