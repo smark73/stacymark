@@ -19,7 +19,7 @@ var uglify = require('gulp-uglify');
 
 // Set assets paths.
 var paths = {
-	css: ['./sass/*.css', '!*.min.css'],
+	css: ['./*.css', '!*.min.css'],
 	php: ['./*.php', './**/*.php'],
 	sass: 'sass/**/*.scss',
 	concat_scripts: 'js/concat/*.js',
@@ -48,7 +48,7 @@ function handleErrors () {
  * Delete style.css and style.min.css before we minify and optimize
  */
 gulp.task('clean:styles', function() {
-	return del(['./sass/style.css', './sass/style.min.css']);
+	return del(['./style.css', './style.min.css']);
 });
 
 /**
@@ -59,7 +59,7 @@ gulp.task('clean:styles', function() {
  * https://www.npmjs.com/package/gulp-autoprefixer
  * https://www.npmjs.com/package/css-mqpacker
  */
-gulp.task('postcss', gulp.series('clean:styles'), function() {
+gulp.task('postcss', ['clean:styles'], function() {
 	return gulp.src('./sass/*.scss', paths.css)
 
 	// Deal with errors.
@@ -97,7 +97,7 @@ gulp.task('postcss', gulp.series('clean:styles'), function() {
  *
  * https://www.npmjs.com/package/gulp-cssnano
  */
-gulp.task('cssnano', gulp.series('postcss'), function() {
+gulp.task('cssnano', ['postcss'], function() {
 	return gulp.src('./sass/style.css')
 	.pipe(plumber({ errorHandler: handleErrors }))
 	.pipe(cssnano({
@@ -112,7 +112,7 @@ gulp.task('cssnano', gulp.series('postcss'), function() {
  *
  * https://www.npmjs.com/package/sass-lint
  */
-gulp.task('sass:lint', gulp.series('cssnano'), function() {
+gulp.task('sass:lint', ['cssnano'], function() {
 	gulp.src([
 		'./sass/**/*.scss'
 	])
@@ -134,7 +134,7 @@ gulp.task('clean:scripts', function() {
  * Concatenate javascripts after they're clobbered.
  * https://www.npmjs.com/package/gulp-concat
  */
-gulp.task('concat', gulp.series('clean:scripts'), function() {
+gulp.task('concat', ['clean:scripts'], function() {
 	return gulp.src(paths.concat_scripts)
 	.pipe(plumber({ errorHandler: handleErrors }))
 	.pipe(sourcemaps.init())
@@ -147,7 +147,7 @@ gulp.task('concat', gulp.series('clean:scripts'), function() {
   * Minify javascripts after they're concatenated.
   * https://www.npmjs.com/package/gulp-uglify
   */
-gulp.task('uglify', gulp.series('concat'), function() {
+gulp.task('uglify', ['concat'], function() {
 	return gulp.src(paths.scripts)
 	.pipe(rename({suffix: '.min'}))
 	.pipe(uglify({
@@ -165,14 +165,14 @@ gulp.task('uglify', gulp.series('concat'), function() {
 gulp.task('watch', function() {
 
 	// Run tasks when files change.
-	gulp.watch(paths.sass, gulp.series('styles'));
-	gulp.watch(paths.scripts, gulp.series('scripts'));
-	gulp.watch(paths.concat_scripts, gulp.series('scripts'));
+	gulp.watch(paths.sass, ['styles']);
+	gulp.watch(paths.scripts, ['scripts']);
+	gulp.watch(paths.concat_scripts, ['scripts']);
 });
 
 /**
  * Create indivdual tasks.
  */
-gulp.task('scripts', gulp.series('uglify'));
-gulp.task('styles', gulp.series('cssnano'));
-gulp.task('default', gulp.series('styles', 'scripts'));
+gulp.task('scripts', ['uglify']);
+gulp.task('styles', ['cssnano']);
+gulp.task('default', ['styles', 'scripts']);
