@@ -5,3 +5,29 @@
     	url(images/contact-pg.jpg) no-repeat center center;
     background-size:  cover;
 }
+
+/* customize gravity form */
+.contact-pg input,
+.contact-pg textarea {
+	border: 1px solid #280c0c;
+	box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+.contact-pg form {
+	max-width: 800px;
+	margin:  0 auto 50px;
+	font-weight: 600;
+	text-shadow: 1px 1px 5px rgba(0,0,0,.5);
+}
+.contact-pg input[type="submit"]{
+	border: none;
+	width: 100%;
+	display:block;
+	margin: 10px auto;
+	text-align: center;
+	padding: 20px;
+	background: #4F4D49;
+}
+.contact-pg input[type="submit"]:hover{
+	border: none;
+	background: #280C0C;
+}
