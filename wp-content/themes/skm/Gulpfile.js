@@ -89,7 +89,7 @@ gulp.task('postcss', ['clean:styles'], function() {
 	.pipe(sourcemaps.write())
 
 	// Create style.css.
-	.pipe(gulp.dest('./sass/'));
+	.pipe(gulp.dest('./'));
 });
 
 /**
@@ -98,7 +98,7 @@ gulp.task('postcss', ['clean:styles'], function() {
  * https://www.npmjs.com/package/gulp-cssnano
  */
 gulp.task('cssnano', ['postcss'], function() {
-	return gulp.src('./sass/style.css')
+	return gulp.src('./style.css')
 	.pipe(plumber({ errorHandler: handleErrors }))
 	.pipe(cssnano({
 		safe: true // Use safe optimizations
