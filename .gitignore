@@ -22,9 +22,3 @@ wp-content/plugins/*
 wp-content/themes/*
 !wp-content/themes/skm/
 
-<<<<<<< HEAD
-# wp-content/themes/skm/gulpfile.js
-=======
-wp-content/themes/skm/gulpfile.js
->>>>>>> 7bb88b4a00e2536a87e0970f02c416a6dc1b65fe
-wp-content/themes/skm/bower.json
